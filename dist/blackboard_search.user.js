@@ -14,11 +14,6 @@
 // @require     https://cdnjs.cloudflare.com/ajax/libs/lz-string/1.4.4/lz-string.js
 // ==/UserScript==
 //aaaaa
-import 'lodash';
-import 'jquery';
-import 'featherlight';
-import 'lz-string';
-import 'fuse.js';
 
 if (window.location.href.indexOf('/courseMenu.jsp') !== -1) return;
 
