@@ -41,7 +41,6 @@ link.onload = (function BlackboardSearch() {
             this.callback = function() {};
             this.courseId = '';
             this.retryCount = 0;
-            this.delim = ' > ';
             this.treeData = {};
             this.locked = false;
         }
@@ -153,7 +152,7 @@ link.onload = (function BlackboardSearch() {
                 this.courseId +'&newWindow=true'; // &openInParentWindow=true
             this.iframe.onload = this.iframeOnLoad.bind(this);
             this.iframe.style.width = '210px';
-            //this.iframe.style.display = 'none';
+            this.iframe.style.display = 'none';
             
             document.getElementById('navigationPane').appendChild(this.iframe);
         }
@@ -181,6 +180,7 @@ link.onload = (function BlackboardSearch() {
             this.parser = new BlackboardTreeParser();
 
             this.config = new GM_configStruct();
+            this.weekDefinitions = [];
             this.initialiseSettings();
 
             if (!this.courseDataObject.hasOwnProperty(this.pageCourseId)) {
@@ -195,31 +195,42 @@ link.onload = (function BlackboardSearch() {
             }
             let query = this.searchBox.value.trim();
 
+            let selectedRowInResults = false;
             if (!query) {
-                _.forEach(this.linkItems, function(item) {
+                for (let i = 0; i < this.linkItems.length; i++) {
+                    const item = this.linkItems[i];
                     if (item.label[1] === 'Announcements') {
                         this.searchResults.appendChild(item.element);
                         $(item.element).fadeIn(200);
+                        if (item.element === this.selectedRow)
+                            selectedRowInResults = true;
                     }
-                }.bind(this));
+                }
+                console.log(this.selectedRow);
+                if (!this.selectedRow) {
+                    this.selectRow(this.searchResults.firstElementChild);
+                    selectedRowInResults = true;
+                }
             } else {
-                let results = _.map(
-                    this.fuse.search(query).slice(0, 50),
-                    (e) => {return e.element}
-                );
+                let results = this.fuse.search(query);
                 
-                if (!this.selectedRow && results.length)
-                    this.selectRow(results[0]);
-                for (let i = 0; i < results.length; i++) {
-                    let r = $(results[i]);
-                    this.searchResults.appendChild(results[i]);
-                    r.hide().fadeIn(200);
+                for (let i = 0; i < Math.min(results.length, 50); i++) {
+                    let r = results[i].element;
+                    this.searchResults.appendChild(r);
+                    $(r).hide().fadeIn(200);
+                    if (r === this.selectedRow)
+                        selectedRowInResults = true;
                 }
-                if (results.indexOf(this.selectedRow) === -1)
-                    this.selectRow(null);
-                if (event) {
-                    event.preventDefault();
+                if (!this.selectedRow && results.length) {
+                    this.selectRow(results[0].element);
+                    selectedRowInResults = true;
                 }
+            }
+            if (!selectedRowInResults) 
+                this.selectRow(null);
+
+            if (event) {
+                event.preventDefault();
             }
             return false;
         }
@@ -241,7 +252,7 @@ link.onload = (function BlackboardSearch() {
         selectRow(row) {
             if (row) {
                 row.classList.add('search-selected');
-                row.firstElementChild.focus();                
+                row.firstElementChild.focus();
                 this.searchBox.focus();
             }
             if (this.selectedRow)
@@ -275,29 +286,76 @@ link.onload = (function BlackboardSearch() {
         }
 
         updateTime() {
-            this.clock.textContent = new Date().toLocaleTimeString(
-                undefined, {hour: '2-digit', minute: '2-digit'});
+            this.timeSpan.textContent = new Date().toLocaleTimeString(  
+                    undefined, {hour: '2-digit', minute: '2-digit'});
+
             if ($.featherlight.current()) {
                 setTimeout(this.updateTime.bind(this), 60000-Date.now()%60000);
             }
         }
 
-        createSearchForm(rootNode=null) {
+        updateDateAndCalendar() {
+            this.dateSpan.textContent = new Date().toLocaleDateString();
+
+            let now = new Date();
+            let msPerWeek = 7*24*60*60*1000;
+            for (let d = 0; d < this.weekDefinitions.length; d++) {
+                const w = this.weekDefinitions[d];
+                if (now >= w.startDate && now < w.endDate) {
+                    this.weekSpan.textContent = 'Week ' + 
+                        (Math.floor((now-w.startDate)/msPerWeek) + w.startNum);
+                }
+            }
+
+            if ($.featherlight.current()) {
+                let msPerDay = 24*60*60*1000;
+                setTimeout(this.updateDateAndCalendar.bind(this), 
+                    msPerDay-Date.now()%msPerDay);
+            }
+        }
+
+        createElement(element, options) {
+            var el = document.createElement(element);
+            if (options)
+                _.assign(el, options);
+            return el;
+        }
+
+        createWindow(rootNode) {
             this.searchWindow = document.createElement('div');
             this.searchWindow.id = 'userscript-search-window';
 
             this.header = document.createElement('div');
             this.header.id = 'userscript-header';
             
-            this.calendar = document.createElement('span');
-            this.calendar.id = 'userscript-calendar';
-            
-            this.clock = document.createElement('span');
-            this.clock.id = 'userscript-clock';
-            
-            this.calendar.appendChild(this.clock);
-            
+            this.dateTimeSpan = document.createElement('span');
+            this.dateTimeSpan.id = 'userscript-date-time';
+            this.timeSpan = document.createElement('span');
+            this.timeSpan.id = 'userscript-time';
+            this.dateSpan = document.createElement('span');
+            this.dateSpan.id = 'userscript-date';
+            this.dateTimeSpan.appendChild(this.timeSpan);
+            this.dateTimeSpan.appendChild(document.createElement('br'));
+            this.dateTimeSpan.appendChild(this.dateSpan);
+
             this.updateTime();
+            this.header.appendChild(this.dateTimeSpan);
+
+            this.calendar = this.createElement('span', {
+                id: 'userscript-calendar'
+            });
+            this.weekSpan = this.createElement('span', {
+                id: 'userscript-week',
+                textContent: 'Week 4',
+            });
+            this.calendar.appendChild(this.weekSpan);
+            this.calendar.appendChild(this.createElement('br'));
+            this.semesterSpan = this.createElement('span', {
+                id: 'userscript-semester',
+                textContent: 'Semester 1, 2018',
+            });
+            this.calendar.appendChild(this.semesterSpan);
+            this.updateDateAndCalendar();
             this.header.appendChild(this.calendar);
 
             this.searchWindow.appendChild(this.header);
@@ -322,8 +380,7 @@ link.onload = (function BlackboardSearch() {
             this.searchButton = document.createElement('input');
             this.searchButton.type = 'submit';
             this.searchButton.style.display = 'none';
-            this.searchButton.onclick = (() => {return false;});
-        
+            this.searchButton.onclick = _.noop;
             this.searchForm.appendChild(this.searchButton);
         
             this.searchWindow.appendChild(this.searchForm);
@@ -352,7 +409,6 @@ link.onload = (function BlackboardSearch() {
             
             this.searchWindow.appendChild(this.footerDiv);
 
-            if (rootNode) this.appendSearchForm(rootNode);
             return this.searchWindow;
         }
 
@@ -373,6 +429,10 @@ link.onload = (function BlackboardSearch() {
                 console.log('already updating');
                 this.coursesToUpdate.push(courseId);
             }
+        }
+
+        getCourseObject(courseId) {
+            return this.courseDataObject[courseId];
         }
 
         maybeUpdateCourse(courseObject) {
@@ -403,8 +463,8 @@ link.onload = (function BlackboardSearch() {
                 let courseId = treeData.courseId;
                 this.courseDataObject[courseId] = treeData;
             }
-            if (_.keys(this.coursesToUpdate).length === 0) {
-                this.updateLinkElements();
+            if (this.coursesToUpdate.length === 0) {
+                this.refreshLinkElements();
                 this.storeCourseData();
             } else {
                 let course = this.coursesToUpdate.pop();
@@ -413,7 +473,8 @@ link.onload = (function BlackboardSearch() {
         }
 
         storeCourseData() {
-            this.config.set('CourseDataLZ', LZString.compressToUTF16(JSON.stringify(this.courseDataObject)));
+            this.config.set('CourseDataLZ', 
+                LZString.compressToUTF16(JSON.stringify(this.courseDataObject)));
             this.config.save();
         }
 
@@ -421,7 +482,7 @@ link.onload = (function BlackboardSearch() {
             return textArray.join(' > ');
         }
 
-        updateLinkElements() {
+        refreshLinkElements() {
             _.remove(this.linkItems, function() {return true;});
             _.forEach(_.values(this.courseDataObject), function(o) {
                 this.linkItems.push(...o.items);
@@ -435,6 +496,29 @@ link.onload = (function BlackboardSearch() {
                 item.element = li;
             }.bind(this));
             return this.linkItems;
+        }
+
+        refreshWeekDefinitions() {
+            _.remove(this.weekDefinitions);
+            let weekLines = this.config.get('WeekDefinitions').split('\n');
+
+            let weekRegex = /^(\d{4})-(\d{1,2})-(\d{1,2})\s+(\d{4})-(\d{1,2})-(\d{1,2})\s+(\d+)\s+(.+)$/;
+            for (let index = 0; index < weekLines.length; index++) {
+                let line = weekLines[index].trim();
+                let w = weekRegex.exec(line);
+                let start = new Date(Number(w[1]), Number(w[2])-1, Number(w[3]), 0, 0, 0);
+                let end = new Date(Number(w[4]), Number(w[5])-1, Number(w[6]), 24, 0, 0);
+                let numStart = Number(w[7]);
+                let text = w[8];
+                this.weekDefinitions.push({
+                    startDate: start,
+                    endDate: end,
+                    startNum: numStart,
+                    text: text,
+                });
+            }
+            console.log(this.weekDefinitions);
+
         }
 
         initialiseSettings() {
@@ -462,8 +546,13 @@ link.onload = (function BlackboardSearch() {
                         type: 'textarea',
                         default: `2018-02-19 2018-04-01 1 Semester 1
 2018-04-02 2018-04-15 1 Mid-semester break
-2018-04-16 2018-06-03 7 Semester 1`
+2018-04-16 2018-06-03 7 Semester 1`,
                     }
+                },
+                events: {
+                    save: function(values) {
+                        this.updateSettings();
+                    }.bind(this)
                 },
                 css: `
                 #BlackboardSearchConfig * { 
@@ -551,7 +640,8 @@ link.onload = (function BlackboardSearch() {
             let courseData = JSON.parse(LZString.decompressFromUTF16(this.config.get('CourseDataLZ')));
 
             _.assign(this.courseDataObject, courseData);
-            this.updateLinkElements();
+            this.refreshLinkElements();
+            this.refreshWeekDefinitions();
         }
 
         showConfig() {
@@ -570,7 +660,7 @@ link.onload = (function BlackboardSearch() {
 
     let searchManager = new BlackboardSearchManager(match[1]);
     searchManager.maybeUpdateAllCourses()
-    let searchWindow = searchManager.createSearchForm();
+    let searchWindow = searchManager.createWindow();
     
     const SPACE = ' '.charCodeAt(0);
     
