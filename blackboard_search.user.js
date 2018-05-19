@@ -13,7 +13,7 @@
 // @require     https://openuserjs.org/src/libs/sizzle/GM_config.js
 // @require     https://cdnjs.cloudflare.com/ajax/libs/lz-string/1.4.4/lz-string.js
 // ==/UserScript==
-//aaaaa
+
 import 'lodash';
 import 'jquery';
 import 'featherlight';
@@ -42,18 +42,25 @@ link.onload = (function BlackboardSearch() {
     let $ = jQuery.noConflict(true);
 
     class BlackboardTreeParser {
-        constructor(courseId) {
-            this.courseId = courseId;
+        constructor() {
             this.callback = function() {};
+            this.courseId = '';
             this.retryCount = 0;
             this.delim = ' > ';
             this.treeData = {};
+            this.locked = false;
         }
 
-        parseTree(callback) {
+        parseTree(courseId, callback) {
+            this.courseId = courseId;
             this.callback = callback;
             this.retryCount = 0;
+            this.locked = true;
             this.appendIFrame();
+        }
+
+        isUpdating() {
+            return this.locked;
         }
 
         parseOneUL(listNode, rootName) {
@@ -61,7 +68,7 @@ link.onload = (function BlackboardSearch() {
                 if (listNode.children[j].tagName.toUpperCase() === 'LI') {
                     let li = listNode.children[j];
                     let text = li.children[2].textContent.trim();
-                    let thisName = rootName + this.delim + text;
+                    let thisName = _.concat(rootName, text);
                     this.treeData.items.push({
                         'link': li.children[2].href,
                         'label': thisName
@@ -82,7 +89,7 @@ link.onload = (function BlackboardSearch() {
                 'items': [],
             };
             for (let i = 0; i < rootDiv.children.length; i++) {
-                this.parseOneUL(rootDiv.children[i], this.courseCode);
+                this.parseOneUL(rootDiv.children[i], [this.courseCode]);
             }
             return this.treeData;
         }
@@ -109,8 +116,9 @@ link.onload = (function BlackboardSearch() {
                     retry.call(this);
                     return false;
                 }
-                //this.iframe.parentNode.removeChild(this.iframe);
+                this.iframe.parentNode.removeChild(this.iframe);
                 this.retryCount = 0;
+                this.locked = false;
                 return this.callback(tree);
             }
         }
@@ -134,7 +142,7 @@ link.onload = (function BlackboardSearch() {
             console.log('iframe that: ');
             console.log(this);
             if (this.iframe.contentDocument.getElementById('courseMapButton'))
-                console.log('iframe invalid');
+                this.callback(null);
             else
                 this.bootstrapTreeParse.call(this);
         }
@@ -157,8 +165,8 @@ link.onload = (function BlackboardSearch() {
     }
 
     class BlackboardSearchManager {
-        constructor() {
-            this.courseDataObjects = [];
+        constructor(pageCourseId) {
+            this.courseDataObject = {};
             this.linkItems = [];
             this.fuse = new Fuse(this.linkItems, {
                 shouldSort: true,
@@ -172,9 +180,17 @@ link.onload = (function BlackboardSearch() {
                 threshold: 0.2,
             });
             this.selectedRow = null;
+            this.coursesToUpdate = [];
+            this.pageCourseId = pageCourseId;
+
+            this.parser = new BlackboardTreeParser();
 
             this.config = new GM_configStruct();
             this.initialiseSettings();
+
+            if (!this.courseDataObject.hasOwnProperty(this.pageCourseId)) {
+                this.updateCourse(this.pageCourseId);
+            }
         }
 
         doSearch(event) {
@@ -182,23 +198,33 @@ link.onload = (function BlackboardSearch() {
             while (this.searchResults.hasChildNodes()) {
                 this.searchResults.removeChild(this.searchResults.lastChild);
             }
-            let results = _.map(
-                this.fuse.search(this.searchBox.value.trim()).slice(0, 50),
-                (e) => {return e.element}
-            );
-            
-            console.log(results);
-            if (!this.selectedRow && results.length)
-                this.selectRow(results[0]);
-            for (let i = 0; i < results.length; i++) {
-                let r = $(results[i]);
-                this.searchResults.appendChild(results[i]);
-                r.hide().fadeIn(200);
-            }
-            if (results.indexOf(this.selectedRow) === -1)
-                this.selectRow(null);
-            if (event) {
-                event.preventDefault();
+            let query = this.searchBox.value.trim();
+
+            if (!query) {
+                _.forEach(this.linkItems, function(item) {
+                    if (item.label[1] === 'Announcements') {
+                        this.searchResults.appendChild(item.element);
+                        $(item.element).fadeIn(200);
+                    }
+                }.bind(this));
+            } else {
+                let results = _.map(
+                    this.fuse.search(query).slice(0, 50),
+                    (e) => {return e.element}
+                );
+                
+                if (!this.selectedRow && results.length)
+                    this.selectRow(results[0]);
+                for (let i = 0; i < results.length; i++) {
+                    let r = $(results[i]);
+                    this.searchResults.appendChild(results[i]);
+                    r.hide().fadeIn(200);
+                }
+                if (results.indexOf(this.selectedRow) === -1)
+                    this.selectRow(null);
+                if (event) {
+                    event.preventDefault();
+                }
             }
             return false;
         }
@@ -253,9 +279,34 @@ link.onload = (function BlackboardSearch() {
             event.preventDefault();
         }
 
+        updateTime() {
+            this.clock.textContent = new Date().toLocaleTimeString(
+                undefined, {hour: '2-digit', minute: '2-digit'});
+            if ($.featherlight.current()) {
+                setTimeout(this.updateTime.bind(this), 60000-Date.now()%60000);
+            }
+        }
+
         createSearchForm(rootNode=null) {
             this.searchWindow = document.createElement('div');
             this.searchWindow.id = 'userscript-search-window';
+
+            this.header = document.createElement('div');
+            this.header.id = 'userscript-header';
+            
+            this.calendar = document.createElement('span');
+            this.calendar.id = 'userscript-calendar';
+            
+            this.clock = document.createElement('span');
+            this.clock.id = 'userscript-clock';
+            
+            this.calendar.appendChild(this.clock);
+            
+            this.updateTime();
+            this.header.appendChild(this.calendar);
+
+            this.searchWindow.appendChild(this.header);
+
 
             this.searchForm = document.createElement('form');
             this.searchForm.id = 'userscript-search-form';
@@ -315,84 +366,197 @@ link.onload = (function BlackboardSearch() {
         }
 
         updateAllCourses() {
-
+            _.forEach(_.keys(this.courseDataObject), function (id) {
+                this.updateCourse(id);
+            }.bind(this));
         }
 
-        updateCourseId(courseId) {
-            let parser = new BlackboardTreeParser(courseId);
-            parser.parseTree(this.parseTreeCallback.bind(this));
+        updateCourse(courseId) {
+            if (!this.parser.isUpdating()) {
+                this.parser.parseTree(courseId, this.parseTreeCallback.bind(this));
+            } else {
+                console.log('already updating');
+                this.coursesToUpdate.push(courseId);
+            }
+        }
+
+        maybeUpdateCourse(courseObject) {
+            let courseId = courseObject.courseId;
+            let updateInterval;
+            if (courseId === this.pageCourseId) 
+                updateInterval = this.config.get('CurrentCourseUpdateInterval');
+            else
+                updateInterval = this.config.get('OtherCourseUpdateInterval');
+
+            if (Date.now() - courseObject.time > updateInterval*60000) {
+                console.log('updating '+courseId);
+                this.updateCourse(courseObject.courseId);
+            }
+            console.log(this.pageCourseId);
+            console.log('not updating ' + courseId);
+            console.log(Date.now() - courseObject.time);
+            console.log(updateInterval*60000);
+        }
+
+        maybeUpdateAllCourses() {
+            _.forEach(this.courseDataObject, this.maybeUpdateCourse.bind(this));
         }
 
         parseTreeCallback(treeData) {
-            console.log(JSON.stringify(treeData, undefined, 2)); 
-            this.courseDataObjects.push(treeData);
-            this.updateLinkItems();
-            console.log(this.linkItems);
+            if (treeData) {
+                console.log(JSON.stringify(treeData, undefined, 2)); 
+                let courseId = treeData.courseId;
+                this.courseDataObject[courseId] = treeData;
+            }
+            if (_.keys(this.coursesToUpdate).length === 0) {
+                this.updateLinkElements();
+                this.storeCourseData();
+            } else {
+                let course = this.coursesToUpdate.pop();
+                this.updateCourse(course, true);
+            }
         }
 
         storeCourseData() {
-            console.log('old data:')
-            console.log(JSON.parse(LZString.decompressFromUTF16(this.config.get('CourseData'))));
-            
-            this.config.set('CourseData', LZString.compressToUTF16(JSON.stringify(this.courseDataObjects)));
-
-            console.log('saved:');
-            console.log(this.config.get('CourseData'));
+            this.config.set('CourseDataLZ', LZString.compressToUTF16(JSON.stringify(this.courseDataObject)));
             this.config.save();
         }
 
-        updateLinkItems() {
-            this.storeCourseData();
-            _.remove(this.linkItems);
-            _.forEach(this.courseDataObjects, function(o) {
+        formatLinkText(textArray) {
+            return textArray.join(' > ');
+        }
+
+        updateLinkElements() {
+            _.remove(this.linkItems, function() {return true;});
+            _.forEach(_.values(this.courseDataObject), function(o) {
                 this.linkItems.push(...o.items);
             }.bind(this));
-            for (let i = 0; i < this.linkItems.length; i++) {
-                let item = this.linkItems[i];
+            _.forEach(this.linkItems, function(item) {
                 let li = document.createElement('li');
                 let a = document.createElement('a');
                 a.href = item.link;
-                a.textContent = item.label;
+                a.textContent = this.formatLinkText(item.label);
                 li.appendChild(a);
                 item.element = li;
-            }
+            }.bind(this));
             return this.linkItems;
         }
 
         initialiseSettings() {
             this.config.init({
                 id: 'BlackboardSearchConfig',
-                title: 'Blackboard Search Options',
+                title: 'Search Options',
                 fields: {
-                    'Name': {
-                        label: 'Name',
-                        type: 'text',
-                        default: 'hello world'
+                    'CourseDataLZ': {
+                        type: 'hidden',
+                        default: LZString.compressToUTF16("{}")
                     },
-                    'CourseData': {
-                        label: 'Course Data Objects',
-                        type: 'hidden'
+                    'CurrentCourseUpdateInterval': {
+                        label: 'Active update interval (minutes)',
+                        title: 'How often to update when a course page is visited.',
+                        type: 'unsigned float',
+                        default: 120
+                    },
+                    'OtherCourseUpdateInterval': {
+                        label: 'Background update interval (minutes)',
+                        type: 'unsigned float',
+                        default: 360
+                    },
+                    'WeekDefinitions': {
+                        label: 'Calendar',
+                        type: 'textarea',
+                        default: `2018-02-19 2018-04-01 1 Semester 1
+2018-04-02 2018-04-15 1 Mid-semester break
+2018-04-16 2018-06-03 7 Semester 1`
                     }
                 },
                 css: `
                 #BlackboardSearchConfig * { 
                     font-family: 'Segoe UI', 'Helvetica';
                 }
+
+                body#BlackboardSearchConfig  {
+                    padding: 10px;
+                }
                 
                 #BlackboardSearchConfig .config_var, #BlackboardSearchConfig .field_label {
-                    font-size: 13pt;
+                    font-size: 11pt;
+                    height: 2em;
+                }
+
+                #BlackboardSearchConfig .config_var {
+                    display: table;
+                    width: 100%;
+                    text-align: right;
                 }
 
                 #BlackboardSearchConfig .field_label {
+                    display: table-cell;
+                    width: 70%;
+                    vertical-align: middle;
+                    text-align: left;
                     font-weight: normal;
                 }
                 
-                #BlackboardSearchConfig input[type="text"] {
-                    height: 2.5em;
+                #BlackboardSearchConfig input[type="text"], #BlackboardSearchConfig textarea {
+                    height: 2em;
+                    width: 100%;
+                    float: right;
+                    padding-left: 2px;
                 }
+
+                #BlackboardSearchConfig textarea {
+                    resize: vertical;
+                }
+
+                #BlackboardSearchConfig_resetLink {
+                }
+
+                #BlackboardSearchConfig button, #BlackboardSearchConfig .saveclose_buttons {
+                    font-weight: normal;
+                    font-size: 12pt;
+                    border-width: 1px;
+                    border-radius: 5px;
+                    border-color: #272727;
+                    border-style: solid;
+                    padding: 3px 20px 3px 20px;
+                    color: #272727;
+                    background-color: transparent;
+                    transition-property: background-color color;
+                    transition-duration: 500ms;
+                }
+
+                button:focus {
+                    outline: 0;
+                }
+
+                #BlackboardSearchConfig button:hover {
+                    background-color: #272727;
+                    color: white;
+                }
+
+                #BlackboardSearchConfig #BlackboardSearchConfig_closeBtn {
+                    margin-right: 0px;
+                }
+
+                #BlackboardSearchConfig #BlackboardSearchConfig_WeekDefinitions_field_label {
+                    vertical-align: top;
+                    width: 30%;
+                }
+
+                #BlackboardSearchConfig #BlackboardSearchConfig_field_WeekDefinitions {
+                    height: 9em;
+                    font-family: monospace;
+                }
+
 
                 `
             });
+            
+            let courseData = JSON.parse(LZString.decompressFromUTF16(this.config.get('CourseDataLZ')));
+
+            _.assign(this.courseDataObject, courseData);
+            this.updateLinkElements();
         }
 
         showConfig() {
@@ -400,8 +564,6 @@ link.onload = (function BlackboardSearch() {
             this.config.open();
         }
     }
-
-
 
     console.log('Blackboard search starting.');
     //debugger;
@@ -411,9 +573,9 @@ link.onload = (function BlackboardSearch() {
     let match = courseIDRegex.exec(window.location.href);
     if (!match) return;
 
-    let search = new BlackboardSearchManager();
-    search.updateCourseId(match[1]);
-    let searchWindow = search.createSearchForm();
+    let searchManager = new BlackboardSearchManager(match[1]);
+    searchManager.maybeUpdateAllCourses()
+    let searchWindow = searchManager.createSearchForm();
     
     const SPACE = ' '.charCodeAt(0);
     
@@ -428,6 +590,8 @@ link.onload = (function BlackboardSearch() {
                     let input = document.querySelector('#userscript-search-input');
                     input.focus();
                     input.select();
+                    searchManager.updateTime();
+                    searchManager.doSearch();
                 },
             });
         }
