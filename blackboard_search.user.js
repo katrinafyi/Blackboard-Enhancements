@@ -300,7 +300,13 @@ link.onload = (function BlackboardSearch() {
         }
 
         updateDateAndCalendar() {
-            this.dateSpan.textContent = new Date().toLocaleDateString();
+            this.dateSpan.textContent = new Date().toLocaleDateString(undefined,
+            {
+                weekday: 'long',
+                day: 'numeric',
+                month: 'long',
+                year: 'numeric'
+            });
 
             let now = new Date();
             let msPerWeek = 7*24*60*60*1000;
@@ -309,6 +315,8 @@ link.onload = (function BlackboardSearch() {
                 if (now >= w.startDate && now < w.endDate) {
                     this.weekSpan.textContent = 'Week ' + 
                         (Math.floor((now-w.startDate)/msPerWeek) + w.startNum);
+                    this.semesterSpan.textContent = w.name;
+                    break;
                 }
             }
 
@@ -519,7 +527,7 @@ link.onload = (function BlackboardSearch() {
                     startDate: start,
                     endDate: end,
                     startNum: numStart,
-                    text: text,
+                    name: text,
                 });
             }
             console.log(this.weekDefinitions);
