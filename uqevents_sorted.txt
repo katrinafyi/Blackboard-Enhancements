@@ -1,0 +1,149 @@
+20180101	New Year`s Day public holiday
+20180101	Research Quarter 1 commences
+20180102	First date to request a program change through mySI-net for Semester 1
+20180102	Summer Semester 2017/2018 - last date to drop courses or cancel enrolment without academic penalty
+20180102	Summer Semester 2017/2018 classes recommence after mid-semester break
+20180105	Show cause response due for students who were asked to show cause in an earlier semester and have interrupted their studies, who wish to return in Semester 1 2018
+20180116	UQ College - Trimester 1 Tertiary Preparation Program Orientation
+20180118	UQ College - Trimester 1 Associate Degree Business Orientation
+20180119	UQ College - Trimester 1 - due date to enrol
+20180122	Faculty of Humanities and Social Sciences commences roll-out for class sign-on for courses delivered in Semester 1
+20180122	UQ College - Trimester 1 classes commence
+20180123	Faculty of Science commences roll-out for class sign-on for courses delivered in Semester 1
+20180124	Faculty of Engineering, Architecture and Information Technology commences roll-out for class sign-on for courses delivered in Semester 1
+20180125	Faculty of Business, Economics and Law commences roll-out for class sign-on for courses delivered in Semester 1
+20180126	Australia Day public holiday
+20180126	Due date to enrol* for domestic students in Semester 1
+20180127	Summer Semester 2017/2018 classes end
+20180129	Faculty of Health and Behavioural Sciences commences roll-out for class sign-on for courses delivered in Semester 1
+20180129	Faculty of Medicine commences roll-out for class sign-on for courses delivered in Semester 1
+20180129	Summer Semester 2017/2018 revision period 29 January - 2 February 2018
+20180201	Research Quarter 1 - census date/final date to cancel without financial penalty
+20180202	Summer Semester 2017/2018 - last date to withdraw from a course in mySI-net incurring financial liability and academic penalty
+20180202	UQ College - Trimester 1 - due date for payment of fees and charges
+20180202	UQ College - Trimester 1 - last date to amend enrolment
+20180203	Summer Semester 2017/2018 examination period 3 - 10 February 2018
+20180209	Last date to request a program change through mySI-net for Semester 1
+20180210	Summer Semester 2017/2018 examinations end and Summer Semester 2017/2018 ends
+20180212	Orientation Week 12 - 16 February 2018
+20180216	Due date to enrol* for international students in Semester 1
+20180216	UQ College - Trimester 1 - census date/last date to drop courses or cancel enrolment without financial liability
+20180219	Semester 1 Classes Commence*
+20180222	Summer Semester 2017/2018 finalisation of grades
+20180302	Semester 1 - due date for payment of tuition fees
+20180302	Semester 1 - final date for addition of courses or alteration of enrolment
+20180310	Summer Semester 2017/2018 deferred and supplementary examinations 10 March 2018
+20180316	UQ College - Trimester 1 - last date to withdraw without academic penalty, financial liability remains
+20180329	Semester 1 classes end before mid-semester break
+20180330	Good Friday public holiday
+20180331	Easter Saturday public holiday
+20180331	Research Quarter 1 ends
+20180331	Semester 1 - census date/last date to drop courses or cancel enrolment without financial liability
+20180401	Easter Sunday public holiday
+20180401	Research Quarter 2 commences
+20180401	UQ College - Trimester 2 - show cause responses due for students who were asked to show cause in an earlier semester and have interrupted their studies, who wish to return in Trimester 2 2018
+20180402	Easter Monday public holiday
+20180402	Semester 1 mid-semester break commences*
+20180402	Universities Australia Common Vacation Week
+20180404	Gold Coast 2018 Commonwealth Games 4 - 15 April
+20180409	Extra Vacation Week aligning with Gold Coast Commonwealth Games
+20180416	Semester 1 classes recommence after mid-semester break*
+20180416	UQ College - Trimester 1 revision period 16 - 20 April 2018
+20180416	UQ College - Trimester 2 course add function opens
+20180420	UQ College - Trimester 1 - last date to withdraw from course via mySI-net, incurring academic penalty and financial liability
+20180423	UQ College - Trimester 1 examination period 23 - 28 April 2018
+20180425	ANZAC Day public holiday
+20180428	UQ College - Trimester 1 ends
+20180430	Semester 1 - last date to drop courses or cancel enrolment without academic penalty
+20180501	Research Quarter 2 - census date/final date to cancel without financial penalty
+20180504	UQ College - Trimester 1 finalisation of grades
+20180507	Labour Day public holiday
+20180508	UQ College - Trimester 2 Tertiary Preparation Program Orientation
+20180511	UQ College - Trimester 2 - due date to enrol
+20180514	UQ College - Trimester 2 classes commence
+20180525	UQ College - Trimester 2 - due date for payment of fees and charges
+20180525	UQ College - Trimester 2 - last date to amend enrolment
+20180602	Semester 1 classes end*
+20180604	Semester 1 revision period 4 - 8 June 2018
+20180604	Summer Semester 2018/2019 enrolments open
+20180608	Semester 1 - last date to withdraw from a course in mySI-net incurring financial liability and academic penalty
+20180608	UQ College - Trimester 2 - census date/last date to drop courses or cancel enrolment without financial liability
+20180609	Semester 1 examination period 9 - 23 June 2018
+20180623	Semester 1 examination period ends/Semester 1 ends
+20180630	Research Quarter 2 ends
+20180630	Show cause response due for students who were asked to show cause in an earlier semester and have interrupted their studies, who wish to return in Semester 2 2018
+20180701	Research Quarter 3 commences
+20180702	Universities Australia Common Vacation Week
+20180704	Semester 1 finalisation of grades
+20180704	Semester 2 - first date to request a program change through mySI-net
+20180706	UQ College - Trimester 2 - last date to withdraw without academic penalty, financial liability remains
+20180709	Faculty of Humanities and Social Sciences commences roll-out for class sign-on for courses delivered in Semester 2
+20180710	Faculty of Science commences roll-out for class sign-on for courses delivered in Semester 2
+20180711	Faculty of Engineering, Architecture and Information Technology commences roll-out for class sign-on for courses delivered in Semester 2
+20180712	Faculty of Business, Economics and Law commences roll-out for class sign-on for courses delivered in Semester 2
+20180713	Faculty of Health and Behavioural Sciences commences roll-out for class sign-on for courses delivered in Semester 2
+20180713	Faculty of Medicine commences roll-out for class sign-on for courses delivered in Semester 2
+20180713	Semester 2 - due date to enrol* for domestic students
+20180713	Semester 2 - last date to request a program change through mySI-net
+20180715	UQ College - Trimester 3 - show cause responses due for students who were asked to show cause in an earlier semester and have interrupted their studies, who wish to return in Trimester 3 2018
+20180716	Graduations period 16 - 20 July 2018
+20180716	Mid-year Orientation Week 16 - 20 July 2018
+20180718	Semester 1 deferred and supplementary examination period 18 - 20 July 2018
+20180720	Semester 2 - due date to enrol* for international students
+20180723	Semester 2 classes commence*
+20180801	Research Quarter 3 - census date/final date to cancel without financial penalty
+20180803	Semester 2 - due date for payment of tuition fees
+20180803	Semester 2 - final date for addition of courses or alteration of enrolment
+20180806	UQ College - Trimester 2 revision period 6 - 10 August 2018
+20180806	UQ College - Trimester 3 course add function opens
+20180810	UQ College - Trimester 2 - last date to withdraw from course via mySI-net, incurring academic penalty and financial liability
+20180813	Royal Queensland Show public holiday (Gatton area only - Gatton campus closed)
+20180813	UQ College - Trimester 2 examination period 13 - 18 August 2018
+20180815	Royal Queensland Show public holiday (Brisbane Area only - St Lucia and Herston Campus closed)
+20180818	UQ College - Trimester 2 ends
+20180824	UQ College - Trimester 2 finalisation of grades
+20180828	UQ College - Trimester 3 Tertiary Preparation Program Orientation
+20180830	UQ College - Trimester 3 Associate Degree in Business Orientation
+20180831	Semester 2 - census date/last date to drop courses or cancel enrolment without financial liability
+20180831	UQ College - Trimester 3 - due date to enrol
+20180903	UQ College - Trimester 3 classes commence
+20180910	Summer Semester 2018/2019 class timetable available to students
+20180914	UQ College - Trimester 3 - due date for payment of fees and charges
+20180914	UQ College - Trimester 3 - last date to amend enrolment
+20180922	Semester 2 classes end before mid-semester break
+20180924	Semester 2 mid-semester break commences*
+20180924	Universities Australia Common Vacation Week
+20180928	UQ College - Trimester 3 - census date/last date to drop courses or cancel enrolment without financial liability
+20180930	Research Quarter 3 ends
+20180930	Semester 2 - last date to drop courses or cancel enrolment without academic penalty
+20181001	Queen’s Birthday public holiday
+20181001	Research Quarter 4 commences
+20181002	Semester 2 classes recommence after mid-semester break*
+20181026	UQ College - Trimester 3 - last date to withdraw without academic penalty, financial liability remains
+20181027	Semester 2 classes end*
+20181029	Semester 2 revision period 29 October - 2 November 2018
+20181031	Summer Semester 2018/2019 applications for cross-institutional enrolment due
+20181031	Summer Semester 2018/2019 applications for non-award enrolment due
+20181101	Research Quarter 4 - census date/final date to cancel without financial penalty
+20181102	Semester 2 - last date to withdraw from a course in mySI-net incurring financial liability and academic penalty
+20181103	Semester 2 examination period 3 - 17 November 2018
+20181109	Summer Semester 2018/2019 - due date for enrolment*
+20181117	Semester 2 examination period ends/Semester 2 ends
+20181119	Semester 1 and 2 2019 enrolments open for continuing students
+20181126	Summer Semester 2018/2019 classes commence
+20181126	UQ College - Trimester 3 revision period 26 - 31 November 2018
+20181128	Semester 2 finalisation of grades
+20181130	UQ College - Trimester 3 - Last date to withdraw from course via mySI-net, incurring academic penalty and financial liability
+20181201	UQ College - Trimester 1 - show cause responses due for students who were asked to show cause in an earlier semester and have interrupted their studies, who wish to return in Trimester 1 2019
+20181203	Graduations period 3 - 21 December 2018
+20181203	UQ College - Trimester 3 -  examination period 3 - 7 December 2018
+20181207	Summer Semester 2018/2019 - due date for payment of tuition fees
+20181207	Summer Semester 2018/2019 - final date for addition or substitution of courses
+20181207	UQ College - Trimester 3 ends
+20181212	Semester 2 deferred and supplementary examination period 12 - 14 December 2018
+20181214	UQ College - Trimester 3 finalisation of grades
+20181218	Summer Semester 2018/2019 - census date/last date to drop courses or cancel enrolment without financial liability
+20181221	Summer Semester 2018/2019 classes end before mid-semester break
+20181224	Summer Semester 2018/2019 mid-semester break commences
+20181225	Christmas Day public holiday
+20181226	Boxing Day public holiday

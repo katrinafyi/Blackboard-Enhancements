@@ -131,7 +131,7 @@ link.onload = (function BlackboardSearch() {
             }
 
             this.courseName = courseTitle.replace(codeMatch[0] + ' ', '');
-            this.courseCode = courseCode.join('/');
+            this.courseCode = courseCode.join('\u200A/\u200A');
 
             console.log('iframe that: ');
             console.log(this);
@@ -180,6 +180,9 @@ link.onload = (function BlackboardSearch() {
             this.parser = new BlackboardTreeParser();
 
             this.config = new GM_configStruct();
+            /**
+             * @type {Object<string, Date>[]}
+             */
             this.weekDefinitions = [];
             this.initialiseSettings();
 
@@ -188,8 +191,8 @@ link.onload = (function BlackboardSearch() {
             }
         }
 
-        doSearch(event) {
-            if (!$.featherlight.current()) return false;
+        doSearch(event, force=false) {
+            if (!force && !$.featherlight.current()) return false;
             while (this.searchResults.hasChildNodes()) {
                 this.searchResults.removeChild(this.searchResults.lastChild);
             }
@@ -285,16 +288,16 @@ link.onload = (function BlackboardSearch() {
             event.preventDefault();
         }
 
-        updateTime() {
+        tickTime() {
             this.timeSpan.textContent = new Date().toLocaleTimeString(  
                     undefined, {hour: '2-digit', minute: '2-digit'});
 
             if ($.featherlight.current()) {
-                setTimeout(this.updateTime.bind(this), 60000-Date.now()%60000);
+                setTimeout(this.tickTime.bind(this), 60000-Date.now()%60000);
             }
         }
 
-        updateDateAndCalendar() {
+        tickDateAndCalendar() {
             this.dateSpan.textContent = new Date().toLocaleDateString(undefined,
             {
                 weekday: 'long',
@@ -303,13 +306,18 @@ link.onload = (function BlackboardSearch() {
                 year: 'numeric'
             });
 
+            this.semesterSpan.textContent = '';
+            this.weekSpan.textContent = '';
+
             let now = new Date();
             let msPerWeek = 7*24*60*60*1000;
+            console.log('updating calendar');
+            console.log(this.weekDefinitions);
             for (let d = 0; d < this.weekDefinitions.length; d++) {
                 const w = this.weekDefinitions[d];
                 if (now >= w.startDate && now < w.endDate) {
                     this.weekSpan.textContent = 'Week ' + 
-                        (Math.floor((now-w.startDate)/msPerWeek) + w.startNum);
+                        (Math.max(Math.floor((now-w.startMonday) / msPerWeek), 0) + w.startNum);
                     this.semesterSpan.textContent = w.name;
                     break;
                 }
@@ -317,9 +325,14 @@ link.onload = (function BlackboardSearch() {
 
             if ($.featherlight.current()) {
                 let msPerDay = 24*60*60*1000;
-                setTimeout(this.updateDateAndCalendar.bind(this), 
+                setTimeout(this.tickDateAndCalendar.bind(this), 
                     msPerDay-Date.now()%msPerDay);
             }
+        }
+
+        refreshTimeElements() {
+            this.tickTime();
+            this.tickDateAndCalendar();
         }
 
         createElement(element, options) {
@@ -346,7 +359,7 @@ link.onload = (function BlackboardSearch() {
             this.dateTimeSpan.appendChild(document.createElement('br'));
             this.dateTimeSpan.appendChild(this.dateSpan);
 
-            this.updateTime();
+            this.tickTime();
             this.header.appendChild(this.dateTimeSpan);
 
             this.calendar = this.createElement('span', {
@@ -363,7 +376,7 @@ link.onload = (function BlackboardSearch() {
                 textContent: 'Semester 1, 2018',
             });
             this.calendar.appendChild(this.semesterSpan);
-            this.updateDateAndCalendar();
+            this.tickDateAndCalendar();
             this.header.appendChild(this.calendar);
 
             this.searchWindow.appendChild(this.header);
@@ -472,7 +485,7 @@ link.onload = (function BlackboardSearch() {
                 this.courseDataObject[courseId] = treeData;
             }
             if (this.coursesToUpdate.length === 0) {
-                this.refreshLinkElements();
+                this.updateLinks();
                 this.storeCourseData();
             } else {
                 let course = this.coursesToUpdate.pop();
@@ -490,7 +503,7 @@ link.onload = (function BlackboardSearch() {
             return textArray.join(' > ');
         }
 
-        refreshLinkElements() {
+        updateLinks() {
             _.remove(this.linkItems, function() {return true;});
             _.forEach(_.values(this.courseDataObject), function(o) {
                 this.linkItems.push(...o.items);
@@ -506,27 +519,57 @@ link.onload = (function BlackboardSearch() {
             return this.linkItems;
         }
 
-        refreshWeekDefinitions() {
+        updateWeekDefinitions() {
+            console.log(this);
             _.remove(this.weekDefinitions);
             let weekLines = this.config.get('WeekDefinitions').split('\n');
 
-            let weekRegex = /^(\d{4})-(\d{1,2})-(\d{1,2})\s+(\d{4})-(\d{1,2})-(\d{1,2})\s+(\d+)\s+(.+)$/;
+            let weekRegex = /^(\d{4})-(\d{1,2})-(\d{1,2})\s+(\d{4})-(\d{1,2})-(\d{1,2})\s+(\d+)?\s+(.+)$/;
             for (let index = 0; index < weekLines.length; index++) {
                 let line = weekLines[index].trim();
-                let w = weekRegex.exec(line);
-                let start = new Date(Number(w[1]), Number(w[2])-1, Number(w[3]), 0, 0, 0);
-                let end = new Date(Number(w[4]), Number(w[5])-1, Number(w[6]), 24, 0, 0);
-                let numStart = Number(w[7]);
-                let text = w[8];
-                this.weekDefinitions.push({
-                    startDate: start,
-                    endDate: end,
-                    startNum: numStart,
-                    name: text,
-                });
+                try {
+                    console.log(line);
+                    let w = weekRegex.exec(line);
+                    if (!w) {
+                        console.log('Invalid week definition: '+line);
+                        continue;
+                    }
+                    let start = new Date(Number(w[1]), Number(w[2])-1, Number(w[3]), 0, 0, 0);
+                    let end = new Date(Number(w[4]), Number(w[5])-1, Number(w[6]), 24, 0, 0);
+                    
+                    // Relative Monday. For calculating week number.
+                    // If 'start' falls on a weekend, startMonday will be 
+                    // the _following_ Monday. Otherwise, it is the preceding
+                    // Monday. Clone date object.
+                    let startMonday = new Date(start.getTime());
+                    // Where 1 = Monday, ..., 7 = Sunday.
+                    let startDayOfWeek = (startMonday.getDay()+6) % 7 + 1;
+                    if (startDayOfWeek >= 6) {
+                        startMonday.setDate(
+                            startMonday.getDate() + 7 - startDayOfWeek + 1);
+                    } else {
+                        startMonday.setDate(
+                            startMonday.getDate() - startDayOfWeek + 1);
+                    }
+
+                    let numStart;
+                    if (!w[7]) 
+                        numStart = 1;
+                    else 
+                        numStart = Number(w[7]);
+                    let text = w[8];
+                    this.weekDefinitions.push({
+                        startDate: start,
+                        startMonday: startMonday,
+                        endDate: end,
+                        startNum: numStart,
+                        name: text,
+                    });
+                } catch (e) {
+                    console.log('Invalid week definition: ' + line);
+                }
             }
             console.log(this.weekDefinitions);
-
         }
 
         initialiseSettings() {
@@ -553,14 +596,29 @@ link.onload = (function BlackboardSearch() {
                         label: 'Calendar',
                         type: 'textarea',
                         default: `2018-02-19 2018-04-01 1 Semester 1
-2018-04-02 2018-04-15 1 Mid-semester break
-2018-04-16 2018-06-03 7 Semester 1`,
+2018-04-02 2018-04-15 1 Mid-semester Break — Semester 1
+2018-04-16 2018-06-03 7 Semester 1
+2018-06-04 2018-06-08 1 Revision Period — Semester 1
+2018-06-09 2018-06-24 1 Examination Period — Semester 1
+2018-07-23 2018-09-23 1 Semester 2
+2018-09-24 2018-09-30 1 Mid-semester Break — Semester 2
+2018-10-02 2018-10-28 10 Semester 2
+2018-10-29 2018-11-02 1 Revision Period — Semester 2
+2018-11-03 2018-11-18 1 Examination Period — Semester 2
+2019-02-25 2019-04-21 1 Semester 1
+2019-04-22 2019-04-28 1 Mid-semester Break — Semester 1
+2019-04-29 2019-06-02 9 Semester 1
+2019-06-03 2019-06-07 1 Revision Period — Semester 1
+2019-06-08 2019-06-23 1 Examination Period — Semester 1
+2019-07-22 2019-09-29 1 Semester 2
+2019-09-30 2019-10-06 1 Mid-semester Break — Semester 2
+2019-10-08 2019-10-27 11 Semester 2
+2019-10-28 2019-11-01 1 Revision Period — Semester 2
+2019-11-02 2019-11-17 1 Examination Period — Semester 2`,
                     }
                 },
                 events: {
-                    save: function(values) {
-                        this.updateSettings();
-                    }.bind(this)
+                    save: this.updateWeekDefinitions.bind(this),
                 },
                 css: `
                 #BlackboardSearchConfig * { 
@@ -648,8 +706,8 @@ link.onload = (function BlackboardSearch() {
             let courseData = JSON.parse(LZString.decompressFromUTF16(this.config.get('CourseDataLZ')));
 
             _.assign(this.courseDataObject, courseData);
-            this.refreshLinkElements();
-            this.refreshWeekDefinitions();
+            this.updateLinks();
+            this.updateWeekDefinitions();
         }
 
         showConfig() {
@@ -679,12 +737,15 @@ link.onload = (function BlackboardSearch() {
                 openSpeed: 50,
                 closeSpeed: 200,
                 persist: true,
+                beforeOpen: function() {
+                    searchManager.refreshTimeElements();
+                    searchManager.doSearch(undefined, true);
+                },
                 afterOpen: function() {
                     let input = document.querySelector('#userscript-search-input');
                     input.focus();
                     input.select();
-                    searchManager.updateTime();
-                    searchManager.doSearch();
+                    
                 },
             });
         }
