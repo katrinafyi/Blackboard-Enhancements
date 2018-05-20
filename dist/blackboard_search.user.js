@@ -21,16 +21,7 @@ if (window.location.href.indexOf('/courseMenu.jsp') !== -1) return;
 //code.iamkate.com
 function Queue(){var a=[],b=0;this.getLength=function(){return a.length-b};this.isEmpty=function(){return 0==a.length};this.enqueue=function(b){a.push(b)};this.dequeue=function(){if(0!=a.length){var c=a[b];2*++b>=a.length&&(a=a.slice(b),b=0);return c}};this.peek=function(){return 0<a.length?a[b]:void 0}};
 
-
-let cssId = 'featherlightCSS';  
-let head  = document.getElementsByTagName('head')[0];
-let link  = document.createElement('link');
-link.id   = cssId;
-link.rel  = 'stylesheet';
-link.type = 'text/css';
-link.href = 'https://cdnjs.cloudflare.com/ajax/libs/featherlight/1.7.13/featherlight.min.css';
-link.media = 'all';
-link.onload = (function BlackboardSearch() {
+function BlackboardSearch() {
 
     // 2^53 - 1
     let MAX_INT = Number.MAX_SAFE_INTEGER || 9007199254740991;
@@ -64,6 +55,7 @@ link.onload = (function BlackboardSearch() {
                     let text = li.children[2].textContent.trim();
                     let thisName = _.concat(rootName, text);
                     this.treeData.items.push({
+                        'courseId': this.courseId,
                         'link': li.children[2].href,
                         'label': thisName
                     });
@@ -79,11 +71,11 @@ link.onload = (function BlackboardSearch() {
                 'time': Date.now(),
                 'courseId': this.courseId,
                 'courseName': this.courseName,
-                'courseCode': this.courseCode,
+                'courseCodes': this.courseCode,
                 'items': [],
             };
             for (let i = 0; i < rootDiv.children.length; i++) {
-                this.parseOneUL(rootDiv.children[i], [this.courseCode]);
+                this.parseOneUL(rootDiv.children[i], [this.courseCode.join('\u200A/\u200A')]);
             }
             return this.treeData;
         }
@@ -117,24 +109,29 @@ link.onload = (function BlackboardSearch() {
             }
         }
 
-        iframeOnLoad() {
-            console.log(this);
-            let courseTitle = this.iframe.contentDocument.querySelector('#courseMenu_link').textContent;
+        parseCourseTitle(courseTitle) {
             let codeMatch = /^\[([A-Z0-9/]+)\]/i.exec(courseTitle);
             if (!codeMatch) throw new Error('No matched course code: ' + courseTitle);
             let letters = codeMatch[1].slice(0, 4);
             let courseCode = codeMatch[1].split('/');
             for (let c = 0; c < courseCode.length; c++) {
-                if (courseCode[c].length <= 4) {
+                if (courseCode[c].length < 8) {
                     courseCode[c] = letters + courseCode[c];
                 }
             }
+            return {
+                name: courseTitle.replace(codeMatch[0], '').trim(),
+                codes: courseCode
+            };
+        }
 
-            this.courseName = courseTitle.replace(codeMatch[0] + ' ', '');
-            this.courseCode = courseCode.join('\u200A/\u200A');
+        iframeOnLoad() {
+            let parsed = this.parseCourseTitle(
+                this.iframe.contentDocument.getElementById('courseMenu_link').textContent);
 
-            console.log('iframe that: ');
-            console.log(this);
+            this.courseName = parsed.name;
+            this.courseCode = parsed.codes;
+
             if (this.iframe.contentDocument.getElementById('courseMapButton'))
                 this.callback(null);
             else
@@ -167,11 +164,11 @@ link.onload = (function BlackboardSearch() {
                 tokenize: true,
                 matchAllTokens: true,
                 maxPatternLength: 32,
-                minMatchCharLength: 2,
+                minMatchCharLength: 5,
                 keys: [
-                    'label'
+                    'text'
                 ],
-                threshold: 0.2,
+                threshold: 0.3,
             });
             this.selectedRow = null;
             this.coursesToUpdate = [];
@@ -184,15 +181,35 @@ link.onload = (function BlackboardSearch() {
              * @type {Object<string, Date>[]}
              */
             this.weekDefinitions = [];
+            this.selectedCourses = [];
             this.initialiseSettings();
 
-            if (!this.courseDataObject.hasOwnProperty(this.pageCourseId)) {
-                this.updateCourse(this.pageCourseId);
+            this.checkCurrentCourse();
+        }
+
+        checkCurrentCourse() {
+            if (!this.pageCourseId) 
+                return;
+            if (this.courseDataObject.hasOwnProperty(this.pageCourseId))
+                return;
+            let parsedCourse = this.parser.parseCourseTitle(
+                document.getElementById('courseMenu_link').textContent);
+            let codes = parsedCourse.codes;
+
+            for (let i = 0; i < codes.length; i++) {
+                if (this.selectedCourses.indexOf(codes[i]) !== -1) {
+                    console.log('adding current page');
+                    this.queueUpdateCourse(this.pageCourseId);
+                    return true;
+                }
             }
+            console.log('not adding current page');
+            return false;
         }
 
         doSearch(event, force=false) {
             if (!force && !$.featherlight.current()) return false;
+
             while (this.searchResults.hasChildNodes()) {
                 this.searchResults.removeChild(this.searchResults.lastChild);
             }
@@ -209,10 +226,8 @@ link.onload = (function BlackboardSearch() {
                             selectedRowInResults = true;
                     }
                 }
-                console.log(this.selectedRow);
-                if (!this.selectedRow) {
+                if (!selectedRowInResults && this.searchResults.firstElementChild) {
                     this.selectRow(this.searchResults.firstElementChild);
-                    selectedRowInResults = true;
                 }
             } else {
                 let results = this.fuse.search(query);
@@ -224,13 +239,10 @@ link.onload = (function BlackboardSearch() {
                     if (r === this.selectedRow)
                         selectedRowInResults = true;
                 }
-                if (!this.selectedRow && results.length) {
+                if (!selectedRowInResults && results.length) {
                     this.selectRow(results[0].element);
-                    selectedRowInResults = true;
                 }
             }
-            if (!selectedRowInResults) 
-                this.selectRow(null);
 
             if (event) {
                 event.preventDefault();
@@ -311,8 +323,6 @@ link.onload = (function BlackboardSearch() {
 
             let now = new Date();
             let msPerWeek = 7*24*60*60*1000;
-            console.log('updating calendar');
-            console.log(this.weekDefinitions);
             for (let d = 0; d < this.weekDefinitions.length; d++) {
                 const w = this.weekDefinitions[d];
                 if (now >= w.startDate && now < w.endDate) {
@@ -381,7 +391,6 @@ link.onload = (function BlackboardSearch() {
 
             this.searchWindow.appendChild(this.header);
 
-
             this.searchForm = document.createElement('form');
             this.searchForm.id = 'userscript-search-form';
             
@@ -443,7 +452,7 @@ link.onload = (function BlackboardSearch() {
             }.bind(this));
         }
 
-        updateCourse(courseId) {
+        queueUpdateCourse(courseId) {
             if (!this.parser.isUpdating()) {
                 this.parser.parseTree(courseId, this.parseTreeCallback.bind(this));
             } else {
@@ -465,13 +474,9 @@ link.onload = (function BlackboardSearch() {
                 updateInterval = this.config.get('OtherCourseUpdateInterval');
 
             if (Date.now() - courseObject.time > updateInterval*60000) {
-                console.log('updating '+courseId);
-                this.updateCourse(courseObject.courseId);
+                console.log('Updating '+courseId);
+                this.queueUpdateCourse(courseObject.courseId);
             }
-            console.log(this.pageCourseId);
-            console.log('not updating ' + courseId);
-            console.log(Date.now() - courseObject.time);
-            console.log(updateInterval*60000);
         }
 
         maybeUpdateAllCourses() {
@@ -489,7 +494,7 @@ link.onload = (function BlackboardSearch() {
                 this.storeCourseData();
             } else {
                 let course = this.coursesToUpdate.pop();
-                this.updateCourse(course, true);
+                this.queueUpdateCourse(course, true);
             }
         }
 
@@ -499,7 +504,7 @@ link.onload = (function BlackboardSearch() {
             this.config.save();
         }
 
-        formatLinkText(textArray) {
+        formatLinkText(textArray, shorten=false) {
             return textArray.join(' > ');
         }
 
@@ -515,12 +520,33 @@ link.onload = (function BlackboardSearch() {
                 a.textContent = this.formatLinkText(item.label);
                 li.appendChild(a);
                 item.element = li;
+                item.text = this.formatLinkText(item.label);
+                item.courseCode = item.label[0];
             }.bind(this));
             return this.linkItems;
         }
 
-        updateWeekDefinitions() {
-            console.log(this);
+        inCourseDataObject(courseCode) {
+            for (const id in this.courseDataObject) {
+                if (this.courseDataObject.hasOwnProperty(id)) {
+                    const courseData = this.courseDataObject[id];
+                    if (courseData.courseCodes.indexOf(courseCode) !== -1)
+                        return true;
+                }
+            }
+            return false;
+        }
+
+        inSelectedCourses(courseCodes) {
+            for (let i = 0; i < courseCodes.length; i++) {
+                if (this.selectedCourses.indexOf(courseCodes[i]) !== -1)
+                    return true;                
+            }
+            return false;
+        }
+
+        updateSettings() {
+            // Parse week definitions text box into dates.
             _.remove(this.weekDefinitions);
             let weekLines = this.config.get('WeekDefinitions').split('\n');
 
@@ -528,7 +554,6 @@ link.onload = (function BlackboardSearch() {
             for (let index = 0; index < weekLines.length; index++) {
                 let line = weekLines[index].trim();
                 try {
-                    console.log(line);
                     let w = weekRegex.exec(line);
                     if (!w) {
                         console.log('Invalid week definition: '+line);
@@ -569,7 +594,42 @@ link.onload = (function BlackboardSearch() {
                     console.log('Invalid week definition: ' + line);
                 }
             }
-            console.log(this.weekDefinitions);
+
+            // Parse enabled courses into list.
+            _.remove(this.selectedCourses);
+            let splitCourses = this.config.get('SelectedCourses').split('\n');
+            for (let i = 0; i < splitCourses.length; i++) {
+                const code = splitCourses[i];
+                if (code.trim()) {
+                    this.selectedCourses.push(code);
+                }
+                
+            }
+            
+            // Delete courses no longer in list.
+            for (const courseId in this.courseDataObject) {
+                if (this.courseDataObject.hasOwnProperty(courseId)) {
+                    if (!this.inSelectedCourses(this.courseDataObject[courseId].courseCodes)) {
+                        console.log('deleting: ' + courseId);
+                        this.deleteCourse(courseId);
+                    }
+                }
+            }
+
+            
+        }
+
+        deleteCourse(idToDelete) {
+            let deletedItems = _.remove(this.linkItems, function (item) {
+                return item.courseId === idToDelete;
+            });
+            for (let i = 0; i < deletedItems.length; i++) {
+                const item = deletedItems[i];
+                if (item.element.parentNode) 
+                    item.element.parentNode.removeChild(item.element);
+            }
+            delete this.courseDataObject[idToDelete];
+            this.storeCourseData();
         }
 
         initialiseSettings() {
@@ -591,6 +651,11 @@ link.onload = (function BlackboardSearch() {
                         label: 'Background update interval (minutes)',
                         type: 'unsigned float',
                         default: 360
+                    },
+                    'SelectedCourses': {
+                        label: 'Enabled courses',
+                        type: 'textarea',
+                        default: '',
                     },
                     'WeekDefinitions': {
                         label: 'Calendar',
@@ -618,96 +683,16 @@ link.onload = (function BlackboardSearch() {
                     }
                 },
                 events: {
-                    save: this.updateWeekDefinitions.bind(this),
+                    save: this.updateSettings.bind(this),
                 },
-                css: `
-                #BlackboardSearchConfig * { 
-                    font-family: 'Segoe UI', 'Helvetica';
-                }
-
-                body#BlackboardSearchConfig  {
-                    padding: 10px;
-                }
-                
-                #BlackboardSearchConfig .config_var, #BlackboardSearchConfig .field_label {
-                    font-size: 11pt;
-                    height: 2em;
-                }
-
-                #BlackboardSearchConfig .config_var {
-                    display: table;
-                    width: 100%;
-                    text-align: right;
-                }
-
-                #BlackboardSearchConfig .field_label {
-                    display: table-cell;
-                    width: 70%;
-                    vertical-align: middle;
-                    text-align: left;
-                    font-weight: normal;
-                }
-                
-                #BlackboardSearchConfig input[type="text"], #BlackboardSearchConfig textarea {
-                    height: 2em;
-                    width: 100%;
-                    float: right;
-                    padding-left: 2px;
-                }
-
-                #BlackboardSearchConfig textarea {
-                    resize: vertical;
-                }
-
-                #BlackboardSearchConfig_resetLink {
-                }
-
-                #BlackboardSearchConfig button, #BlackboardSearchConfig .saveclose_buttons {
-                    font-weight: normal;
-                    font-size: 12pt;
-                    border-width: 1px;
-                    border-radius: 5px;
-                    border-color: #272727;
-                    border-style: solid;
-                    padding: 3px 20px 3px 20px;
-                    color: #272727;
-                    background-color: transparent;
-                    transition-property: background-color color;
-                    transition-duration: 500ms;
-                }
-
-                button:focus {
-                    outline: 0;
-                }
-
-                #BlackboardSearchConfig button:hover {
-                    background-color: #272727;
-                    color: white;
-                }
-
-                #BlackboardSearchConfig #BlackboardSearchConfig_closeBtn {
-                    margin-right: 0px;
-                }
-
-                #BlackboardSearchConfig #BlackboardSearchConfig_WeekDefinitions_field_label {
-                    vertical-align: top;
-                    width: 30%;
-                }
-
-                #BlackboardSearchConfig #BlackboardSearchConfig_field_WeekDefinitions {
-                    height: 9em;
-                    font-family: monospace;
-                }
-
-
-                `
+                css: configCss,
             });
             
             let courseData = JSON.parse(LZString.decompressFromUTF16(this.config.get('CourseDataLZ')));
 
             _.assign(this.courseDataObject, courseData);
             this.updateLinks();
-            this.updateWeekDefinitions();
+            this.updateSettings();
         }
 
         showConfig() {
@@ -717,7 +702,6 @@ link.onload = (function BlackboardSearch() {
     }
 
     console.log('Blackboard search starting.');
-    //debugger;
     
 
     let courseIDRegex = /[?&]course_id=([^&?]+)/i;
@@ -740,21 +724,225 @@ link.onload = (function BlackboardSearch() {
                 beforeOpen: function() {
                     searchManager.refreshTimeElements();
                     searchManager.doSearch(undefined, true);
+                    if (document.body.scrollHeight > document.body.clientHeight) {
+                        document.body.style.paddingRight = '17px';
+                        document.getElementsByClassName('global-nav-bar-wrap')[0].style.right = '17px';
+                    }
                 },
                 afterOpen: function() {
                     let input = document.querySelector('#userscript-search-input');
                     input.focus();
                     input.select();
-                    
                 },
+                afterClose: function() {
+                    document.body.style.paddingRight = '0px';
+                    document.getElementsByClassName('global-nav-bar-wrap')[0].style.right = '0px';
+                }
             });
         }
     }
     
-
     document.addEventListener('keydown', keyboardShortcut, false);
+}
 
-});
+let configCss = `
+#BlackboardSearchConfig * { 
+    font-family: 'Segoe UI', 'Helvetica';
+}
 
-head.appendChild(link);
+body#BlackboardSearchConfig  {
+    padding: 10px;
+}
 
+#BlackboardSearchConfig .config_var, #BlackboardSearchConfig .field_label {
+    font-size: 11pt;
+    height: 2em;
+}
+
+#BlackboardSearchConfig .config_var {
+    display: table;
+    width: 100%;
+    text-align: right;
+}
+
+#BlackboardSearchConfig .field_label {
+    display: table-cell;
+    width: 70%;
+    vertical-align: middle;
+    text-align: left;
+    font-weight: normal;
+}
+
+#BlackboardSearchConfig input[type="text"], #BlackboardSearchConfig textarea {
+    height: 2em;
+    width: 100%;
+    float: right;
+    padding-left: 2px;
+}
+
+#BlackboardSearchConfig textarea {
+    resize: vertical;
+}
+
+#BlackboardSearchConfig_resetLink {
+}
+
+#BlackboardSearchConfig button, #BlackboardSearchConfig .saveclose_buttons {
+    font-weight: normal;
+    font-size: 12pt;
+    border-width: 1px;
+    border-radius: 5px;
+    border-color: #272727;
+    border-style: solid;
+    padding: 3px 20px 3px 20px;
+    color: #272727;
+    background-color: transparent;
+    transition-property: background-color color;
+    transition-duration: 500ms;
+}
+
+button:focus {
+    outline: 0;
+}
+
+#BlackboardSearchConfig button:hover {
+    background-color: #272727;
+    color: white;
+}
+
+#BlackboardSearchConfig #BlackboardSearchConfig_closeBtn {
+    margin-right: 0px;
+}
+
+#BlackboardSearchConfig #BlackboardSearchConfig_WeekDefinitions_field_label {
+    vertical-align: top;
+    padding-top: 3px;
+    width: 30%;
+}
+
+#BlackboardSearchConfig #BlackboardSearchConfig_field_WeekDefinitions {
+    height: 9em;
+    font-family: monospace;
+    white-space: nowrap;
+    overflow-x: auto;
+}
+
+#BlackboardSearchConfig #BlackboardSearchConfig_SelectedCourses_field_label {
+    vertical-align: top;
+    padding-top: 3px;
+}
+
+#BlackboardSearchConfig #BlackboardSearchConfig_field_SelectedCourses {
+    height: 5.5em;
+    font-family: monospace;
+}
+`;
+
+let mainCss = `
+.featherlight-content {
+    border-bottom: 5px !important;
+    padding-bottom: 15px !important;
+    width: 50% !important;
+}
+
+#userscript-search-input {
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 3px;
+    margin-bottom: 1px;
+}
+
+ul#userscript-search-results {
+    list-style-type: none;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 19em;
+    margin: 0;
+    overflow-x: auto;
+    overflow-y: auto;    
+}
+
+ul#userscript-search-results > li {
+    padding: 5px;
+    display:block;
+    text-overflow: ellipsis;
+    transition-property: background-color;
+    transition-duration: 100ms;
+    
+}
+
+ul#userscript-search-results > li> a:hover {
+    text-decoration: underline;
+}
+
+li.search-selected {    
+    background-color: #e7e7e7;
+}
+
+ul#userscript-search-results > li > a {
+    text-decoration: none;
+}
+
+#userscript-search-window {
+    font-size: 13pt;
+    font-weight: normal;
+    font-family: 'Segoe UI', 'Helvetica';
+}
+
+#userscript-search-input {
+    width: 100%;
+}
+
+#userscript-search-footer {
+    text-align: right;
+    color: grey;
+    font-size: 12pt;
+}
+
+#userscript-search-footer > span {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+iframe#BlackboardSearchConfig { 
+    width: 35% !important; 
+    min-width: 400px !important;
+}
+
+#userscript-header {
+    display: table;
+    text-align: left;
+    width: 100%;
+    margin-bottom: 8px;
+}
+
+#userscript-header > span {
+    display:table-cell;
+}
+
+#userscript-time, #userscript-week {
+    font-size: 20pt;
+}
+
+#userscript-calendar {
+    text-align: right;
+}
+`;
+
+
+let style = document.createElement('style');
+style.type = 'text/css';
+style.id = 'userscript-search-style';
+style.appendChild(document.createTextNode(mainCss));
+document.head.appendChild(style);
+
+let cssId = 'userscript-featherlight-css';  
+let link  = document.createElement('link');
+link.id   = cssId;
+link.rel  = 'stylesheet';
+link.type = 'text/css';
+link.href = 'https://cdnjs.cloudflare.com/ajax/libs/featherlight/1.7.13/featherlight.min.css';
+link.media = 'all';
+link.onload = BlackboardSearch;
+
+document.head.appendChild(link);
