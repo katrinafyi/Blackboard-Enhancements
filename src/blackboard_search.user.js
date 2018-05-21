@@ -105,7 +105,7 @@ function BlackboardSearch() {
         },
         {
             baseUrl: 'https://ilearn.bond.edu.au/',
-            courseRegexParser: /^([^_]+)_[^ ]+ \((.*)\)$/,
+            courseRegex: /^([^_]+)_[^ ]+ \((.*)\)$/,
         }
     ];
 
