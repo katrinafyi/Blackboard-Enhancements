@@ -458,7 +458,7 @@ function BlackboardSearch() {
 
         updateAllCourses() {
             _.forEach(_.keys(this.courseDataObject), function (id) {
-                this.updateCourse(id);
+                this.queueUpdateCourse(id);
             }.bind(this));
         }
 
