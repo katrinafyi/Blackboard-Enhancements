@@ -16,26 +16,35 @@ for (const line of scriptFile.split('\n')) {
     userscriptHeader += line + '\n';
 }
 
-module.exports = {
-    entry: scriptRoot + '/src/' + scriptName+scriptExt,
-    output: {
-        filename: scriptName + scriptExt,
-        path: path.resolve(scriptRoot, 'dist')
-    },
-    mode: 'none',
-    devtool: 'source-map',
-    plugins: [
-        new webpack.BannerPlugin({
-            raw: true,
-            banner: userscriptHeader,
-            entryOnly: true
-        })],
-    externals: {
-        'jquery': 'jQuery',
-        'lodash': '_',
-        'gm_config': 'GM_configStruct',
-        'fuse.js': 'Fuse',
-        'lz-string': 'LZString',
-        'featherlight': 'jQuery.featherlight',
-    }
+module.exports = function (env) {
+    let debug = env.production !== true;
+    let version = require('./package.json').version;
+
+    return {
+        entry: scriptRoot + '/src/' + scriptName+scriptExt,
+        output: {
+            filename: scriptName + (debug?'.dev':'') + scriptExt,
+            path: path.resolve(scriptRoot, 'dist')
+        },
+        mode: 'none',
+        devtool: (debug?'cheap-module-eval-source-map':'source-map'),
+        plugins: [
+            new webpack.DefinePlugin({
+                DEBUG: JSON.stringify(debug),
+            }),
+            new webpack.BannerPlugin({
+                raw: true,
+                banner: userscriptHeader.replace(/__VERSION__/g, version),
+                entryOnly: true
+            })
+        ],
+        externals: {
+            'jquery': 'jQuery',
+            'lodash': '_',
+            'gm_config': 'GM_configStruct',
+            'fuse.js': 'Fuse',
+            'lz-string': 'LZString',
+            'featherlight': 'jQuery.featherlight',
+        }
+    };
 };

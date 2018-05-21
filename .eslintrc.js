@@ -1,7 +1,11 @@
 module.exports = {
     "env": {
         "browser": true,
-        "es6": true
+        "es6": true,
+        "node": true,
+    },
+    "globals": {
+        "DEBUG": false,
     },
     "extends": "eslint:recommended",
     "parserOptions": {

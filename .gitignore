@@ -1,3 +1,6 @@
+# Development builds of scripts.
+*.dev.user.js
+
 # Logs
 logs
 *.log
