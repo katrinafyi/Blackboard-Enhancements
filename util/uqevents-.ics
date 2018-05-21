@@ -1,0 +1,3207 @@
+BEGIN:VCALENDAR
+PRODID:-//UQEVENTS-4.0
+VERSION:2.0
+METHOD:PUBLISH
+X-WR-TIMEZONE:AUSTRALIA/Brisbane
+BEGIN:VEVENT
+UID:20180520T062321Z-3034094-18738@www.uq.edu.au
+SUMMARY:Summer Semester 2019/2020 finalisation of grades (provisional)
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Summer Semester 2019/2020 finalisation of grades (provisional)
+URL;VALUE=URI:
+CLASS:PRIVATE
+DTSTART:20200220T000000
+DTEND:20200220T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-2631596-18738@www.uq.edu.au
+SUMMARY:Summer Semester 2019/2020 examinations end and Summer Semester 2019/2020 ends (provisional)
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Summer Semester 2019/2020 examinations end and Summer Semester 2019/2020 ends (provisional)
+URL;VALUE=URI:https://my.uq.edu.au/information-and-services/manage-my-program/summer-semester
+CLASS:PRIVATE
+DTSTART:20200208T000000
+DTEND:20200208T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-6302159-18738@www.uq.edu.au
+SUMMARY:Summer Semester 2019/2020 examination period 1 - 8 February 2020 (provisional)
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Summer Semester 2019/2020 examination period 1 - 8 February 2020 (provisional)
+URL;VALUE=URI:https://my.uq.edu.au/information-and-services/manage-my-program/exams-and-assessment
+CLASS:PRIVATE
+DTSTART:20200201T000000
+DTEND:20200201T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-6270952-18738@www.uq.edu.au
+SUMMARY:Summer Semester 2019/2020 revision period 27 - 31 January 2020 (provisional)
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Summer Semester 2019/2020 revision period 27 - 31 January 2020 (provisional)
+URL;VALUE=URI:https://my.uq.edu.au/information-and-services/manage-my-program/summer-semester
+CLASS:PRIVATE
+DTSTART:20200127T000000
+DTEND:20200127T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-2951005-18738@www.uq.edu.au
+SUMMARY:Australia Day public holiday (provisional)
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Australia Day public holiday (provisional)
+URL;VALUE=URI:https://www.qld.gov.au/recreation/travel/holidays/public
+CLASS:PRIVATE
+DTSTART:20200127T000000
+DTEND:20200127T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-8948186-18738@www.uq.edu.au
+SUMMARY:Summer Semester 2019/2020 classes end (provisional)
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Summer Semester 2019/2020 classes end (provisional)
+URL;VALUE=URI:https://my.uq.edu.au/information-and-services/manage-my-program/summer-semester
+CLASS:PRIVATE
+DTSTART:20200125T000000
+DTEND:20200125T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-7743749-18738@www.uq.edu.au
+SUMMARY:Summer Semester 2019/2020 - last date to drop courses or cancel enrolment without academic penalty (provisional)
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Summer Semester 2019/2020 - last date to drop courses or cancel enrolment without academic penalty (provisional)
+URL;VALUE=URI:https://my.uq.edu.au/information-and-services/manage-my-program/summer-semester
+CLASS:PRIVATE
+DTSTART:20200102T000000
+DTEND:20200102T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-3922991-18738@www.uq.edu.au
+SUMMARY:Summer Semester 2019/2020 classes recommence after mid-semester break (provisional)
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Summer Semester 2019/2020 classes recommence after mid-semester break (provisional)
+URL;VALUE=URI:https://my.uq.edu.au/information-and-services/manage-my-program/summer-semester
+CLASS:PRIVATE
+DTSTART:20200102T000000
+DTEND:20200102T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-8931490-18738@www.uq.edu.au
+SUMMARY:New Year`s Day public holiday (provisional)
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:New Year`s Day public holiday (provisional)
+URL;VALUE=URI:https://www.qld.gov.au/recreation/travel/holidays/public
+CLASS:PRIVATE
+DTSTART:20200101T000000
+DTEND:20200101T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-7336004-18738@www.uq.edu.au
+SUMMARY:Research Quarter 4 ends
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Research Quarter 4 ends
+URL;VALUE=URI:https://graduate-school.uq.edu.au/research-quarters
+CLASS:PRIVATE
+DTSTART:20191231T000000
+DTEND:20191231T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-7575151-18738@www.uq.edu.au
+SUMMARY:Boxing Day public holiday
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Boxing Day public holiday
+URL;VALUE=URI:https://www.qld.gov.au/recreation/travel/holidays/public
+CLASS:PRIVATE
+DTSTART:20191226T000000
+DTEND:20191226T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-4791553-18738@www.uq.edu.au
+SUMMARY:Summer Semester 2019/2020 mid-semester break commences (provisional)
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Summer Semester 2019/2020 mid-semester break commences (provisional)
+URL;VALUE=URI:https://my.uq.edu.au/information-and-services/manage-my-program/summer-semester
+CLASS:PRIVATE
+DTSTART:20191225T000000
+DTEND:20191225T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-3928555-18738@www.uq.edu.au
+SUMMARY:Christmas Day public holiday
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Christmas Day public holiday
+URL;VALUE=URI:https://www.qld.gov.au/recreation/travel/holidays/public
+CLASS:PRIVATE
+DTSTART:20191225T000000
+DTEND:20191225T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-1456068-18738@www.uq.edu.au
+SUMMARY:Summer Semester 2019/2020 classes end before mid-semester break (provisional)
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Summer Semester 2019/2020 classes end before mid-semester break (provisional)
+URL;VALUE=URI:https://my.uq.edu.au/information-and-services/manage-my-program/summer-semester
+CLASS:PRIVATE
+DTSTART:20191224T000000
+DTEND:20191224T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-8755720-18738@www.uq.edu.au
+SUMMARY:Summer Semester 2019/2020 - census date/last date to drop courses or cancel enrolment without financial liability (provisional)
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Summer Semester 2019/2020 - census date/last date to drop courses or cancel enrolment without financial liability (provisional)
+URL;VALUE=URI:https://my.uq.edu.au/information-and-services/manage-my-program/summer-semester
+CLASS:PRIVATE
+DTSTART:20191218T000000
+DTEND:20191218T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-1693330-18738@www.uq.edu.au
+SUMMARY:UQ College - Trimester 3 finalisation of grades
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:UQ College - Trimester 3 finalisation of grades
+URL;VALUE=URI:http://www.uqcollege.edu.au/
+CLASS:PRIVATE
+DTSTART:20191213T000000
+DTEND:20191213T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-4661254-18738@www.uq.edu.au
+SUMMARY:Semester 2 deferred and supplementary examination period 11 - 13 December 2019
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Semester 2 deferred and supplementary examination period 11 - 13 December 2019
+URL;VALUE=URI:https://my.uq.edu.au/information-and-services/manage-my-program/exams-and-assessment
+CLASS:PRIVATE
+DTSTART:20191211T000000
+DTEND:20191211T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-3640055-18738@www.uq.edu.au
+SUMMARY:UQ College - Trimester 3 ends
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:UQ College - Trimester 3 ends
+URL;VALUE=URI:http://www.uqcollege.edu.au/
+CLASS:PRIVATE
+DTSTART:20191206T000000
+DTEND:20191206T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-1528225-18738@www.uq.edu.au
+SUMMARY:UQ College - Trimester 3 - examination period 2 - 6 December 2019
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:UQ College - Trimester 3 - examination period 2 - 6 December 2019
+URL;VALUE=URI:http://www.uqcollege.edu.au/
+CLASS:PRIVATE
+DTSTART:20191202T000000
+DTEND:20191202T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-8637484-18738@www.uq.edu.au
+SUMMARY:Graduations period 2 - 20 December 2019
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Graduations period 2 - 20 December 2019
+URL;VALUE=URI:http://www.uq.edu.au/graduations/
+CLASS:PRIVATE
+DTSTART:20191202T000000
+DTEND:20191202T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-1350693-18738@www.uq.edu.au
+SUMMARY:UQ College - Trimester 1 - show cause responses due for students who were asked to show cause in an earlier trimester and have interrupted their studies, who wish to return in Trimester 1 2020
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:UQ College - Trimester 1 - show cause responses due for students who were asked to show cause in an earlier trimester and have interrupted their studies, who wish to return in Trimester 1 2020
+URL;VALUE=URI:https://my.uq.edu.au/information-and-services/manage-my-program/academic-progress-and-final-results/academic-warnings-and-showing-cause/show-cause-process
+CLASS:PRIVATE
+DTSTART:20191201T000000
+DTEND:20191201T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-2845786-18738@www.uq.edu.au
+SUMMARY:UQ College - Trimester 3 - Last date to withdraw from course via mySI-net, incurring academic penalty and financial liability
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:UQ College - Trimester 3 - last date to withdraw from course via mySI-net, incurring academic penalty (ADB/TPP) and financial liability (ADB only)
+URL;VALUE=URI:http://www.uqcollege.edu.au/
+CLASS:PRIVATE
+DTSTART:20191129T000000
+DTEND:20191129T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-5602249-18738@www.uq.edu.au
+SUMMARY:Semester 2 finalisation of grades
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Semester 2 finalisation of grades
+URL;VALUE=URI:https://my.uq.edu.au/information-and-services/manage-my-program/exams-and-assessment
+CLASS:PRIVATE
+DTSTART:20191127T000000
+DTEND:20191127T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-5209908-18738@www.uq.edu.au
+SUMMARY:UQ College - Trimester 3 revision period 25 - 29 November 2019
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:UQ College - Trimester 3 revision period 25 - 29 November 2019
+URL;VALUE=URI:http://www.uqcollege.edu.au/
+CLASS:PRIVATE
+DTSTART:20191125T000000
+DTEND:20191125T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-3025445-18738@www.uq.edu.au
+SUMMARY:Summer Semester 2019/2020 classes commence (provisional)
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Summer Semester 2019/2020 classes commence (provisional)
+URL;VALUE=URI:https://my.uq.edu.au/information-and-services/manage-my-program/summer-semester
+CLASS:PRIVATE
+DTSTART:20191125T000000
+DTEND:20191125T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-3959451-18738@www.uq.edu.au
+SUMMARY:Semester 1 and 2 2020 enrolments open for continuing students
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Semester 1 and 2 2020 enrolments open for continuing students
+URL;VALUE=URI:
+CLASS:PRIVATE
+DTSTART:20191118T000000
+DTEND:20191118T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-4485505-18738@www.uq.edu.au
+SUMMARY:Semester 2 examination period ends/Semester 2 ends
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Semester 2 examination period ends/Semester 2 ends
+URL;VALUE=URI:
+CLASS:PRIVATE
+DTSTART:20191116T000000
+DTEND:20191116T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-1230819-18738@www.uq.edu.au
+SUMMARY:Summer Semester 2019/2020 - due date for enrolment* (provisional)
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Summer Semester 2019/2020 - due date for enrolment* (provisional)=0D=0A=0D=0A* Some variations are approved annually on a program-by-program basis.=0D=0A=0D=0ADue date for domestic and international students.=0D=0A=0D=0AAdministrative charges apply for late enrolment.
+URL;VALUE=URI:https://my.uq.edu.au/information-and-services/manage-my-program/summer-semester
+CLASS:PRIVATE
+DTSTART:20191108T000000
+DTEND:20191108T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-3197035-18738@www.uq.edu.au
+SUMMARY:Semester 2 examination period 2 - 16 November 2019
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Semester 2 examination period 2 - 16 November 2019
+URL;VALUE=URI:https://my.uq.edu.au/information-and-services/manage-my-program/exams-and-assessment
+CLASS:PRIVATE
+DTSTART:20191102T000000
+DTEND:20191102T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-3320331-18738@www.uq.edu.au
+SUMMARY:Research Quarter 4 - census date/final date to cancel without financial penalty
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Research Quarter 4 - census date/final date to cancel without financial penalty
+URL;VALUE=URI:https://graduate-school.uq.edu.au/research-quarters
+CLASS:PRIVATE
+DTSTART:20191101T000000
+DTEND:20191101T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-1153961-18738@www.uq.edu.au
+SUMMARY:Semester 2 - last date to withdraw from a course in mySI-net incurring financial liability and academic penalty
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Semester 2 - last date to withdraw from a course in mySI-net incurring financial liability and academic penalty
+URL;VALUE=URI:https://my.uq.edu.au/information-and-services/manage-my-program/classes-timetables-and-coursework/withdrawing-course-or-program
+CLASS:PRIVATE
+DTSTART:20191101T000000
+DTEND:20191101T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-5802097-18738@www.uq.edu.au
+SUMMARY:Semester 2 revision period 28 October - 1 November 2019
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Semester 2 revision period 28 October - 1 November 2019
+URL;VALUE=URI:
+CLASS:PRIVATE
+DTSTART:20191028T000000
+DTEND:20191028T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-3071235-18738@www.uq.edu.au
+SUMMARY:Semester 2 classes end*
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Semester 2 classes end*=0D=0A=0D=0A* Some variations to the Academic Calendar are approved annually on a program-by-program basis.
+URL;VALUE=URI:https://my.uq.edu.au/
+CLASS:PRIVATE
+DTSTART:20191026T000000
+DTEND:20191026T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-4296802-18738@www.uq.edu.au
+SUMMARY:UQ College - Trimester 3 - last date to withdraw without academic penalty, financial liability remains
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:UQ College - Trimester 3 - last date to withdraw without academic penalty (ADB/TPP), financial liability remains (ADB only)
+URL;VALUE=URI:http://www.uqcollege.edu.au/
+CLASS:PRIVATE
+DTSTART:20191025T000000
+DTEND:20191025T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-5210598-18738@www.uq.edu.au
+SUMMARY:Semester 2 classes recommence after mid-semester break*
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Semester 2 classes recommence after mid-semester break*=0D=0A=0D=0A* Some variations to the Academic Calendar are approved annually on a program-by-program basis.
+URL;VALUE=URI:
+CLASS:PRIVATE
+DTSTART:20191008T000000
+DTEND:20191008T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-6351626-18738@www.uq.edu.au
+SUMMARY:Queen’s Birthday public holiday
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Queen’s Birthday public holiday
+URL;VALUE=URI:https://www.qld.gov.au/recreation/travel/holidays/public
+CLASS:PRIVATE
+DTSTART:20191007T000000
+DTEND:20191007T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-7256667-18738@www.uq.edu.au
+SUMMARY:Research Quarter 4 commences
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Research Quarter 4 commences
+URL;VALUE=URI:https://graduate-school.uq.edu.au/research-quarters
+CLASS:PRIVATE
+DTSTART:20191001T000000
+DTEND:20191001T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-6468285-18738@www.uq.edu.au
+SUMMARY:Semester 2 - last date to drop courses or cancel enrolment without academic penalty
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Semester 2 - last date to drop courses or cancel enrolment without academic penalty
+URL;VALUE=URI:https://my.uq.edu.au/information-and-services/manage-my-program/classes-timetables-and-coursework/withdrawing-course-or-program
+CLASS:PRIVATE
+DTSTART:20190930T000000
+DTEND:20190930T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-4962893-18738@www.uq.edu.au
+SUMMARY:Universities Australia Common Vacation Week
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Universities Australia Common Vacation Week
+URL;VALUE=URI:https://www.universitiesaustralia.edu.au/australias-universities/teaching-calendar#.Wt7HZ5q-miN
+CLASS:PRIVATE
+DTSTART:20190930T000000
+DTEND:20190930T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-3409328-18738@www.uq.edu.au
+SUMMARY:Semester 2 mid-semester break commences*
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Semester 2 mid-semester break commences*=0D=0A=0D=0A* Some variations to the Academic Calendar are approved annually on a program-by-program basis.
+URL;VALUE=URI:
+CLASS:PRIVATE
+DTSTART:20190930T000000
+DTEND:20190930T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-4749400-18738@www.uq.edu.au
+SUMMARY:Research Quarter 3 ends
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Research Quarter 3 ends
+URL;VALUE=URI:https://graduate-school.uq.edu.au/research-quarters
+CLASS:PRIVATE
+DTSTART:20190930T000000
+DTEND:20190930T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-9094005-18738@www.uq.edu.au
+SUMMARY:Semester 2 classes end before mid-semester break
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Semester 2 classes end before mid-semester break
+URL;VALUE=URI:
+CLASS:PRIVATE
+DTSTART:20190928T000000
+DTEND:20190928T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-2917794-18738@www.uq.edu.au
+SUMMARY:UQ College - Trimester 3 - census date/last date to drop courses or cancel enrolment without financial liability
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:UQ College - Trimester 3 - census date/last date to drop courses or cancel enrolment without financial liability
+URL;VALUE=URI:http://www.uqcollege.edu.au/
+CLASS:PRIVATE
+DTSTART:20190927T000000
+DTEND:20190927T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-1347123-18738@www.uq.edu.au
+SUMMARY:UQ College - Trimester 3 - due date for payment of fees and charges
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:UQ College - Trimester 3 - due date for payment of fees and charges
+URL;VALUE=URI:http://www.uqcollege.edu.au/
+CLASS:PRIVATE
+DTSTART:20190913T000000
+DTEND:20190913T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-3300822-18738@www.uq.edu.au
+SUMMARY:UQ College - Trimester 3 - last date to add/change enrolment
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:UQ College - Trimester 3 - last date to add/change enrolment
+URL;VALUE=URI:http://www.uqcollege.edu.au/
+CLASS:PRIVATE
+DTSTART:20190913T000000
+DTEND:20190913T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-6124243-18738@www.uq.edu.au
+SUMMARY:Summer Semester 2019/2020 class timetable available to students (provisional)
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Summer Semester 2019/2020 class timetable available to students (provisional)
+URL;VALUE=URI:https://my.uq.edu.au/information-and-services/manage-my-program/summer-semester
+CLASS:PRIVATE
+DTSTART:20190910T000000
+DTEND:20190910T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-4247324-18738@www.uq.edu.au
+SUMMARY:UQ College - Trimester 3 classes commence
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:UQ College - Trimester 3 classes commence
+URL;VALUE=URI:http://www.uqcollege.edu.au/
+CLASS:PRIVATE
+DTSTART:20190902T000000
+DTEND:20190902T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-1276510-18738@www.uq.edu.au
+SUMMARY:Semester 2 - census date/last date to drop courses or cancel enrolment without financial liability
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Semester 2 - census date/last date to drop courses or cancel enrolment without financial liability
+URL;VALUE=URI:https://dictionary.uq.edu.au/terminology/census-date
+CLASS:PRIVATE
+DTSTART:20190831T000000
+DTEND:20190831T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-2933124-18738@www.uq.edu.au
+SUMMARY:UQ College - Trimester 3 - due date to enrol
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:UQ College - Trimester 3 - due date to enrol
+URL;VALUE=URI:http://www.uqcollege.edu.au/
+CLASS:PRIVATE
+DTSTART:20190830T000000
+DTEND:20190830T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-3791747-18738@www.uq.edu.au
+SUMMARY:UQ College - Trimester 3 Associate Degree in Business Orientation
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:UQ College - Trimester 3 Associate Degree in Business Orientation
+URL;VALUE=URI:http://www.uqcollege.edu.au/
+CLASS:PRIVATE
+DTSTART:20190829T000000
+DTEND:20190829T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-2781089-18738@www.uq.edu.au
+SUMMARY:UQ College - Trimester 3 Tertiary Preparation Program Orientation
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:UQ College - Trimester 3 Tertiary Preparation Program Orientation
+URL;VALUE=URI:http://www.uqcollege.edu.au/
+CLASS:PRIVATE
+DTSTART:20190827T000000
+DTEND:20190827T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-4842065-18738@www.uq.edu.au
+SUMMARY:UQ College - Trimester 2 finalisation of grades
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:UQ College - Trimester 2 finalisation of grades
+URL;VALUE=URI:http://www.uqcollege.edu.au/
+CLASS:PRIVATE
+DTSTART:20190823T000000
+DTEND:20190823T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-6096492-18738@www.uq.edu.au
+SUMMARY:UQ College - Trimester 2 ends
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:UQ College - Trimester 2 ends
+URL;VALUE=URI:http://www.uqcollege.edu.au/
+CLASS:PRIVATE
+DTSTART:20190817T000000
+DTEND:20190817T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-3819256-18738@www.uq.edu.au
+SUMMARY:Royal Queensland Show public holiday (Brisbane Area only - St Lucia and Herston Campus closed)
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Royal Queensland Show public holiday (Brisbane Area only - St Lucia and Herston Campus closed)
+URL;VALUE=URI:https://www.qld.gov.au/recreation/travel/holidays/public
+CLASS:PRIVATE
+DTSTART:20190814T000000
+DTEND:20190814T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-2010086-18738@www.uq.edu.au
+SUMMARY:UQ College - Trimester 2 examination period 12 - 17 August 2019
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:UQ College - Trimester 2 examination period 12 - 17 August 2019
+URL;VALUE=URI:http://www.uqcollege.edu.au/
+CLASS:PRIVATE
+DTSTART:20190812T000000
+DTEND:20190812T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-1122583-18738@www.uq.edu.au
+SUMMARY:Royal Queensland Show public holiday (Gatton area only - Gatton campus closed) (provisional)
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Royal Queensland Show public holiday (Gatton area only - Gatton campus closed) (provisional)
+URL;VALUE=URI:https://www.qld.gov.au/recreation/travel/holidays/public
+CLASS:PRIVATE
+DTSTART:20190812T000000
+DTEND:20190812T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-3208530-18738@www.uq.edu.au
+SUMMARY:UQ College - Trimester 2 - last date to withdraw from course via mySI-net, incurring academic penalty and financial liability
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:UQ College - Trimester 2 - last date to withdraw from course via mySI-net, incurring academic penalty (ADB/TPP) and financial liability (ADB only)
+URL;VALUE=URI:http://www.uqcollege.edu.au/
+CLASS:PRIVATE
+DTSTART:20190809T000000
+DTEND:20190809T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-5144732-18738@www.uq.edu.au
+SUMMARY:UQ College - Trimester 3 course add function opens
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:UQ College - Trimester 3 course add function opens
+URL;VALUE=URI:http://www.uqcollege.edu.au/
+CLASS:PRIVATE
+DTSTART:20190805T000000
+DTEND:20190805T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-4783010-18738@www.uq.edu.au
+SUMMARY:UQ College - Trimester 2 revision period 5 - 9 August 2019
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:UQ College - Trimester 2 revision period 5 - 9 August 2019
+URL;VALUE=URI:http://www.uqcollege.edu.au/
+CLASS:PRIVATE
+DTSTART:20190805T000000
+DTEND:20190805T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-9361142-18738@www.uq.edu.au
+SUMMARY:Semester 2 - due date for payment of tuition fees
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Semester 2 - due date for payment of tuition fees
+URL;VALUE=URI:https://my.uq.edu.au/information-and-services/manage-my-program/fees-payments-and-refunds
+CLASS:PRIVATE
+DTSTART:20190802T000000
+DTEND:20190802T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-6271415-18738@www.uq.edu.au
+SUMMARY:Semester 2 - final date for addition of courses or alteration of enrolment
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Semester 2 - final date for addition of courses or alteration of enrolment
+URL;VALUE=URI:https://my.uq.edu.au/node/212/1#1
+CLASS:PRIVATE
+DTSTART:20190802T000000
+DTEND:20190802T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-8196676-18738@www.uq.edu.au
+SUMMARY:Research Quarter 3 - census date/final date to cancel without financial penalty
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Research Quarter 3 - census date/final date to cancel without financial penalty
+URL;VALUE=URI:https://graduate-school.uq.edu.au/research-quarters
+CLASS:PRIVATE
+DTSTART:20190801T000000
+DTEND:20190801T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-2522564-18738@www.uq.edu.au
+SUMMARY:Semester 2 classes commence*
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Semester 2 classes commence*=0D=0A=0D=0A* Some variations to the Academic Calendar are approved annually on a program-by-program basis.
+URL;VALUE=URI:
+CLASS:PRIVATE
+DTSTART:20190722T000000
+DTEND:20190722T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-3297079-18738@www.uq.edu.au
+SUMMARY:Due date to enrol* for international students in Semester 2
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:* Some variations are approved annually on a program-by-program basis.
+URL;VALUE=URI:https://my.uq.edu.au/information-and-services/manage-my-program/classes-timetables-and-coursework/enrolment-and-class-sign
+CLASS:PRIVATE
+DTSTART:20190719T000000
+DTEND:20190719T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-1851180-18738@www.uq.edu.au
+SUMMARY:Semester 1 deferred and supplementary examination period 17 - 19 July 2019
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Semester 1 deferred and supplementary examination period 17 - 19 July 2019
+URL;VALUE=URI:https://my.uq.edu.au/information-and-services/manage-my-program/exams-and-assessment
+CLASS:PRIVATE
+DTSTART:20190717T000000
+DTEND:20190717T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-2059885-18738@www.uq.edu.au
+SUMMARY:UQ College - Trimester 3 - show cause responses due for students who were asked to show cause in an earlier trimester and have interrupted their studies, who wish to return in Trimester 3 2019
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:UQ College - Trimester 3 - show cause responses due for students who were asked to show cause in an earlier trimester and have interrupted their studies, who wish to return in Trimester 3 2019
+URL;VALUE=URI:https://my.uq.edu.au/information-and-services/manage-my-program/academic-progress-and-final-results/academic-warnings-and-showing-cause/show-cause-process
+CLASS:PRIVATE
+DTSTART:20190715T000000
+DTEND:20190715T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-4632863-18738@www.uq.edu.au
+SUMMARY:Graduations period 15 - 19 July 2019
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Graduations period 15 - 19 July 2019
+URL;VALUE=URI:http://www.uq.edu.au/graduations/
+CLASS:PRIVATE
+DTSTART:20190715T000000
+DTEND:20190715T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-1283423-18738@www.uq.edu.au
+SUMMARY:Mid-year Orientation Week 15 - 19 July 2019
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Mid-year Orientation Week 15 - 19 July 2019
+URL;VALUE=URI:https://orientation.uq.edu.au/
+CLASS:PRIVATE
+DTSTART:20190715T000000
+DTEND:20190715T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-4296316-18738@www.uq.edu.au
+SUMMARY:Semester 2 - last date to request a program change through mySI-net
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Semester 2 - last date to request a program change through mySI-net
+URL;VALUE=URI:https://my.uq.edu.au/node/316/0
+CLASS:PRIVATE
+DTSTART:20190712T000000
+DTEND:20190712T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-3521823-18738@www.uq.edu.au
+SUMMARY:Semester 2 - due date to enrol* for domestic students
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Semester 2 - due date to enrol* for domestic students=0D=0A=0D=0A* Some variations are approved annually on a program-by-program basis.
+URL;VALUE=URI:https://my.uq.edu.au/information-and-services/manage-my-program/classes-timetables-and-coursework/enrolment-and-class-sign
+CLASS:PRIVATE
+DTSTART:20190712T000000
+DTEND:20190712T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-7733832-18738@www.uq.edu.au
+SUMMARY:Universities Australia Common Vacation Week
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Universities Australia Common Vacation Week
+URL;VALUE=URI:https://www.universitiesaustralia.edu.au/australias-universities/teaching-calendar#.Wt6dG5q-miM
+CLASS:PRIVATE
+DTSTART:20190708T000000
+DTEND:20190708T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-2101120-18738@www.uq.edu.au
+SUMMARY:UQ College - Trimester 2 - last date to withdraw without academic penalty, financial liability remains
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:UQ College - Trimester 2 - last date to withdraw without academic penalty (ADB/TPP), financial liability remains (ADB only).
+URL;VALUE=URI:http://www.uqcollege.edu.au/
+CLASS:PRIVATE
+DTSTART:20190705T000000
+DTEND:20190705T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-7913708-18738@www.uq.edu.au
+SUMMARY:Semester 2 - first date to request a program change through mySI-net (provisional)
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Semester 2 - first date to request a program change through mySI-net (provisional)
+URL;VALUE=URI:https://my.uq.edu.au/node/316/0
+CLASS:PRIVATE
+DTSTART:20190703T000000
+DTEND:20190703T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-1119114-18738@www.uq.edu.au
+SUMMARY:Semester 1 finalisation of grades
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Semester 1 finalisation of grades
+URL;VALUE=URI:
+CLASS:PRIVATE
+DTSTART:20190703T000000
+DTEND:20190703T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-8319080-18738@www.uq.edu.au
+SUMMARY:Research Quarter 3 commences
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Research Quarter 3 commences
+URL;VALUE=URI:https://graduate-school.uq.edu.au/research-quarters
+CLASS:PRIVATE
+DTSTART:20190701T000000
+DTEND:20190701T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-8953041-18738@www.uq.edu.au
+SUMMARY:Show Cause response due for students who were asked to Show Cause in an earlier semester and have interrupted their studies, who wish to return in Semester 2 2019
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Show Cause response due for students who were asked to Show Cause in an earlier semester and have interrupted their studies, who wish to return in Semester 2 2019
+URL;VALUE=URI:
+CLASS:PRIVATE
+DTSTART:20190630T000000
+DTEND:20190630T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-1048268-18738@www.uq.edu.au
+SUMMARY:Research Quarter 2 ends
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Research Quarter 2 ends
+URL;VALUE=URI:https://graduate-school.uq.edu.au/research-quarters
+CLASS:PRIVATE
+DTSTART:20190630T000000
+DTEND:20190630T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-9393523-18738@www.uq.edu.au
+SUMMARY:Semester 1 examination period ends/Semester 1 ends
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Semester 1 examination period ends/Semester 1 ends
+URL;VALUE=URI:
+CLASS:PRIVATE
+DTSTART:20190622T000000
+DTEND:20190622T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-8076008-18738@www.uq.edu.au
+SUMMARY:Semester 1 examination period 8 - 22 June 2019
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Semester 1 examination period 8 - 22 June 2019
+URL;VALUE=URI:https://my.uq.edu.au/information-and-services/manage-my-program/exams-and-assessment
+CLASS:PRIVATE
+DTSTART:20190608T000000
+DTEND:20190608T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-3834119-18738@www.uq.edu.au
+SUMMARY:Semester 1 - last date to withdraw from a course in mySI-net incurring financial liability and academic penalty
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Semester 1 - last date to withdraw from a course in mySI-net incurring financial liability and academic penalty
+URL;VALUE=URI:https://my.uq.edu.au/information-and-services/manage-my-program/classes-timetables-and-coursework/withdrawing-course-or-program
+CLASS:PRIVATE
+DTSTART:20190607T000000
+DTEND:20190607T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-8218264-18738@www.uq.edu.au
+SUMMARY:UQ College - Trimester 2 - census date/last date to drop courses or cancel enrolment without financial liability
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:UQ College - Trimester 2 - census date/last date to drop courses or cancel enrolment without financial liability
+URL;VALUE=URI:http://www.uqcollege.edu.au/
+CLASS:PRIVATE
+DTSTART:20190607T000000
+DTEND:20190607T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-2020754-18738@www.uq.edu.au
+SUMMARY:Semester 1 revision period 3 - 7 June 2019
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Semester 1 revision period 3 - 7 June 2019
+URL;VALUE=URI:
+CLASS:PRIVATE
+DTSTART:20190603T000000
+DTEND:20190603T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-2653315-18738@www.uq.edu.au
+SUMMARY:Summer Semester 2019/2020 enrolments open (provisional)
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Summer Semester 2019/2020 enrolments open (provisional)
+URL;VALUE=URI:https://my.uq.edu.au/information-and-services/manage-my-program/summer-semester
+CLASS:PRIVATE
+DTSTART:20190603T000000
+DTEND:20190603T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-6092642-18738@www.uq.edu.au
+SUMMARY:Semester 1 classes end*
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Semester 1 classes end*=0D=0A=0D=0A* Some variations to the Academic Calendar are approved annually on a program-by-program basis.
+URL;VALUE=URI:https://my.uq.edu.au/
+CLASS:PRIVATE
+DTSTART:20190601T000000
+DTEND:20190601T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-3690365-18738@www.uq.edu.au
+SUMMARY:UQ College - Trimester 2 - last date to add/change enrolment
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:UQ College - Trimester 2 - last date to add/change enrolment
+URL;VALUE=URI:http://www.uqcollege.edu.au/
+CLASS:PRIVATE
+DTSTART:20190524T000000
+DTEND:20190524T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-6511536-18738@www.uq.edu.au
+SUMMARY:UQ College - Trimester 2 - due date for payment of fees and charges
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:UQ College - Trimester 2 - due date for payment of fees and charges
+URL;VALUE=URI:http://www.uqcollege.edu.au/
+CLASS:PRIVATE
+DTSTART:20190524T000000
+DTEND:20190524T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-6127136-18738@www.uq.edu.au
+SUMMARY:UQ College - Trimester 2 classes commence
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:UQ College - Trimester 2 classes commence
+URL;VALUE=URI:http://www.uqcollege.edu.au/
+CLASS:PRIVATE
+DTSTART:20190513T000000
+DTEND:20190513T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-6917009-18738@www.uq.edu.au
+SUMMARY:UQ College - Trimester 2 - due date to enrol
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:UQ College - Trimester 2 - due date to enrol
+URL;VALUE=URI:http://www.uqcollege.edu.au/
+CLASS:PRIVATE
+DTSTART:20190510T000000
+DTEND:20190510T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-2734688-18738@www.uq.edu.au
+SUMMARY:UQ College - Trimester 2 Tertiary Preparation Program Orientation
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:UQ College - Trimester 2 Tertiary Preparation Program Orientation
+URL;VALUE=URI:http://www.uqcollege.edu.au/
+CLASS:PRIVATE
+DTSTART:20190507T000000
+DTEND:20190507T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-1045948-18738@www.uq.edu.au
+SUMMARY:Labour Day public holiday
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Labour Day public holiday
+URL;VALUE=URI:https://www.qld.gov.au/recreation/travel/holidays/public
+CLASS:PRIVATE
+DTSTART:20190506T000000
+DTEND:20190506T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-8797695-18738@www.uq.edu.au
+SUMMARY:UQ College - Trimester 1 finalisation of grades
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:UQ College - Trimester 1 finalisation of grades
+URL;VALUE=URI:http://www.uqcollege.edu.au/
+CLASS:PRIVATE
+DTSTART:20190503T000000
+DTEND:20190503T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-2346328-18738@www.uq.edu.au
+SUMMARY:Research Quarter 2 - census date/final date to cancel without financial penalty
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Research Quarter 2 - census date/final date to cancel without financial penalty
+URL;VALUE=URI:https://graduate-school.uq.edu.au/research-quarters
+CLASS:PRIVATE
+DTSTART:20190501T000000
+DTEND:20190501T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-4933667-18738@www.uq.edu.au
+SUMMARY:Semester 1 - last date to drop courses or cancel enrolment without academic penalty
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Semester 1 - last date to drop courses or cancel enrolment without academic penalty
+URL;VALUE=URI:https://my.uq.edu.au/information-and-services/manage-my-program/classes-timetables-and-coursework/withdrawing-course-or-program
+CLASS:PRIVATE
+DTSTART:20190430T000000
+DTEND:20190430T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-9428378-18738@www.uq.edu.au
+SUMMARY:Semester 1 classes recommence after mid-semester break*
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Semester 1 classes recommence after mid-semester break*=0D=0A=0D=0A* Some variations to the Academic Calendar are approved annually on a program-by-program basis.
+URL;VALUE=URI:
+CLASS:PRIVATE
+DTSTART:20190429T000000
+DTEND:20190429T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-5264494-18738@www.uq.edu.au
+SUMMARY:UQ College - Trimester 1 ends
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:UQ College - Trimester 1 ends
+URL;VALUE=URI:http://www.uqcollege.edu.au/
+CLASS:PRIVATE
+DTSTART:20190427T000000
+DTEND:20190427T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-2337821-18738@www.uq.edu.au
+SUMMARY:ANZAC Day public holiday
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:ANZAC Day public holiday
+URL;VALUE=URI:https://www.qld.gov.au/recreation/travel/holidays/public
+CLASS:PRIVATE
+DTSTART:20190425T000000
+DTEND:20190425T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-5940514-18738@www.uq.edu.au
+SUMMARY:UQ College - Trimester 1 examination period 23 - 27 April 2019
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:UQ College - Trimester 1 examination period 23 - 27 April 2019
+URL;VALUE=URI:http://www.uqcollege.edu.au/
+CLASS:PRIVATE
+DTSTART:20190423T000000
+DTEND:20190423T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-2117725-18738@www.uq.edu.au
+SUMMARY:Easter Monday public holiday
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Easter Monday public holiday
+URL;VALUE=URI:https://www.qld.gov.au/recreation/travel/holidays/public
+CLASS:PRIVATE
+DTSTART:20190422T000000
+DTEND:20190422T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-8433296-18738@www.uq.edu.au
+SUMMARY:Semester 1 mid-semester break commences*
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Semester 1 mid-semester break commences*=0D=0A=0D=0A* Some variations to the Academic Calendar are approved annually on a program-by-program basis.
+URL;VALUE=URI:
+CLASS:PRIVATE
+DTSTART:20190422T000000
+DTEND:20190422T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-5739513-18738@www.uq.edu.au
+SUMMARY:Universities Australia Common Vacation Week
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Universities Australia Common Vacation Week
+URL;VALUE=URI:https://www.universitiesaustralia.edu.au/australias-universities/teaching-calendar#.Wt6dG5q-miM
+CLASS:PRIVATE
+DTSTART:20190422T000000
+DTEND:20190422T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-3032997-18738@www.uq.edu.au
+SUMMARY:Easter Sunday public holiday
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Easter Sunday public holiday
+URL;VALUE=URI:https://www.qld.gov.au/recreation/travel/holidays/public
+CLASS:PRIVATE
+DTSTART:20190421T000000
+DTEND:20190421T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-8668736-18738@www.uq.edu.au
+SUMMARY:Easter Saturday public holiday
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Easter Saturday public holiday
+URL;VALUE=URI:https://www.qld.gov.au/recreation/travel/holidays/public
+CLASS:PRIVATE
+DTSTART:20190420T000000
+DTEND:20190420T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-4543915-18738@www.uq.edu.au
+SUMMARY:UQ College - Trimester 1 - last date to withdraw from a course via mySI-net, incurring academic penalty and financial liability
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:UQ College - Trimester 1 - last date to withdraw from a course via mySI-net, incurring academic penalty and financial liability
+URL;VALUE=URI:http://www.uqcollege.edu.au/
+CLASS:PRIVATE
+DTSTART:20190419T000000
+DTEND:20190419T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-7430849-18738@www.uq.edu.au
+SUMMARY:Good Friday public holiday
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Good Friday public holiday
+URL;VALUE=URI:https://www.qld.gov.au/recreation/travel/holidays/public
+CLASS:PRIVATE
+DTSTART:20190419T000000
+DTEND:20190419T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-1134724-18738@www.uq.edu.au
+SUMMARY:Semester 1 classes end before mid-semester break
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Semester 1 classes end before mid-semester break
+URL;VALUE=URI:
+CLASS:PRIVATE
+DTSTART:20190418T000000
+DTEND:20190418T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-6637761-18738@www.uq.edu.au
+SUMMARY:UQ College - Trimester 2 course add function opens
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:UQ College - Trimester 2 course add function opens
+URL;VALUE=URI:http://www.uqcollege.edu.au/
+CLASS:PRIVATE
+DTSTART:20190415T000000
+DTEND:20190415T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-5602810-18738@www.uq.edu.au
+SUMMARY:UQ College - Trimester 1 revision period 15 - 19 April 2019
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:UQ College - Trimester 1 revision period 15 - 19 April 2019
+URL;VALUE=URI:http://www.uqcollege.edu.au/
+CLASS:PRIVATE
+DTSTART:20190415T000000
+DTEND:20190415T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-9791030-18738@www.uq.edu.au
+SUMMARY:UQ College - Trimester 2 - show cause responses due for students who were asked to show cause in an earlier trimester and have interrupted their studies, who wish to return in Trimester 2 2019
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:UQ College - Trimester 2 - show cause responses due for students who were asked to show cause in an earlier trimester and have interrupted their studies, who wish to return in Trimester 2 2019
+URL;VALUE=URI:https://my.uq.edu.au/information-and-services/manage-my-program/academic-progress-and-final-results/academic-warnings-and-showing-cause/show-cause-process
+CLASS:PRIVATE
+DTSTART:20190401T000000
+DTEND:20190401T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-4163410-18738@www.uq.edu.au
+SUMMARY:Research Quarter 2 commences
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Research Quarter 2 commences
+URL;VALUE=URI:https://graduate-school.uq.edu.au/research-quarters
+CLASS:PRIVATE
+DTSTART:20190401T000000
+DTEND:20190401T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-5818936-18738@www.uq.edu.au
+SUMMARY:Research Quarter 1 ends
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Research Quarter 1 ends
+URL;VALUE=URI:https://graduate-school.uq.edu.au/research-quarters
+CLASS:PRIVATE
+DTSTART:20190331T000000
+DTEND:20190331T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-7301750-18738@www.uq.edu.au
+SUMMARY:Semester 1 - census date/last date to drop courses or cancel enrolment without financial liability
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Semester 1 - census date/last date to drop courses or cancel enrolment without financial liability
+URL;VALUE=URI:https://dictionary.uq.edu.au/terminology/census-date
+CLASS:PRIVATE
+DTSTART:20190331T000000
+DTEND:20190331T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-5832227-18738@www.uq.edu.au
+SUMMARY:UQ College - Trimester 1 - last date to withdraw without academic penalty, financial liability remains
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:UQ College - Trimester 1 - last date to withdraw without academic penalty (ADB/TPP), financial liability remains (ADB only).
+URL;VALUE=URI:http://www.uqcollege.edu.au/
+CLASS:PRIVATE
+DTSTART:20190315T000000
+DTEND:20190315T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-3133909-18738@www.uq.edu.au
+SUMMARY:Summer Semester 2018/2019 deferred and supplementary examinations
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Summer Semester 2018/2019 deferred and supplementary examinations
+URL;VALUE=URI:https://my.uq.edu.au/information-and-services/manage-my-program/exams-and-assessment
+CLASS:PRIVATE
+DTSTART:20190309T000000
+DTEND:20190309T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-7399609-18738@www.uq.edu.au
+SUMMARY:Semester 1 - due date for payment of tuition fees
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Semester 1 - due date for payment of tuition fees
+URL;VALUE=URI:https://my.uq.edu.au/information-and-services/manage-my-program/fees-payments-and-refunds
+CLASS:PRIVATE
+DTSTART:20190308T000000
+DTEND:20190308T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-1871306-18738@www.uq.edu.au
+SUMMARY:Semester 1 - final date for addition of courses or alteration of enrolment
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Semester 1 - final date for addition of courses or alteration of enrolment
+URL;VALUE=URI:https://my.uq.edu.au/node/212/1#1
+CLASS:PRIVATE
+DTSTART:20190308T000000
+DTEND:20190308T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-5365770-18738@www.uq.edu.au
+SUMMARY:Semester 1 classes commence*
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Semester 1 classes commence*=0D=0A=0D=0A* Some variations to the Academic Calendar are approved annually on a program-by-program basis.
+URL;VALUE=URI:
+CLASS:PRIVATE
+DTSTART:20190225T000000
+DTEND:20190225T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-7064417-18738@www.uq.edu.au
+SUMMARY:Semester 1 - due date to enrol* for international students
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Semester 1 - due date to enrol* for international students=0D=0A=0D=0A* Some variations are approved annually on a program-by-program basis.
+URL;VALUE=URI:https://my.uq.edu.au/information-and-services/manage-my-program/classes-timetables-and-coursework/enrolment-and-class-sign
+CLASS:PRIVATE
+DTSTART:20190222T000000
+DTEND:20190222T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-5160448-18738@www.uq.edu.au
+SUMMARY:Summer Semester 2018/2019 finalisation of grades
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Summer Semester 2018/2019 finalisation of grades
+URL;VALUE=URI:
+CLASS:PRIVATE
+DTSTART:20190221T000000
+DTEND:20190221T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-9270873-18738@www.uq.edu.au
+SUMMARY:Orientation Week 18 - 22 February 2019
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Orientation Week 18 - 22 February 2019
+URL;VALUE=URI:https://orientation.uq.edu.au/
+CLASS:PRIVATE
+DTSTART:20190218T000000
+DTEND:20190218T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-8695096-18738@www.uq.edu.au
+SUMMARY:Semester 1 - last date to request a program change through mySI-net
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Semester 1 - last date to request a program change through mySI-net
+URL;VALUE=URI:https://my.uq.edu.au/node/316/0
+CLASS:PRIVATE
+DTSTART:20190215T000000
+DTEND:20190215T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-7730310-18738@www.uq.edu.au
+SUMMARY:UQ College - Trimester 1 - census date/last date to drop courses or cancel enrolment without financial liability
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:UQ College - Trimester 1 - census date/last date to drop courses or cancel enrolment without financial liability
+URL;VALUE=URI:http://www.uqcollege.edu.au/
+CLASS:PRIVATE
+DTSTART:20190215T000000
+DTEND:20190215T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-8115897-18738@www.uq.edu.au
+SUMMARY:Summer Semester 2018/2019 examinations end and Summer Semester 2018/2019 ends
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Summer Semester 2018/2019 examinations end and Summer Semester 2018/2019 ends
+URL;VALUE=URI:https://my.uq.edu.au/information-and-services/manage-my-program/summer-semester
+CLASS:PRIVATE
+DTSTART:20190209T000000
+DTEND:20190209T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-8502144-18738@www.uq.edu.au
+SUMMARY:Summer Semester 2018/2019 examination period 2 - 9 February 2019
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Summer Semester 2018/2019 examination period 2 - 9 February 2019
+URL;VALUE=URI:https://my.uq.edu.au/information-and-services/manage-my-program/exams-and-assessment
+CLASS:PRIVATE
+DTSTART:20190202T000000
+DTEND:20190202T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-8925773-18738@www.uq.edu.au
+SUMMARY:Semester 1 - due date to enrol* for domestic students
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Semester 1 - due date to enrol* for domestic students=0D=0A=0D=0A* Some variations are approved annually on a program-by-program basis.
+URL;VALUE=URI:https://my.uq.edu.au/information-and-services/manage-my-program/classes-timetables-and-coursework/enrolment-and-class-sign
+CLASS:PRIVATE
+DTSTART:20190201T000000
+DTEND:20190201T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-2073168-18738@www.uq.edu.au
+SUMMARY:UQ College - Trimester 1 - due date for payment of fees and charges
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:UQ College - Trimester 1 - due date for payment of fees and charges
+URL;VALUE=URI:http://www.uqcollege.edu.au/
+CLASS:PRIVATE
+DTSTART:20190201T000000
+DTEND:20190201T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-1569762-18738@www.uq.edu.au
+SUMMARY:UQ College - Trimester 1 - last date to add/change enrolment
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:UQ College - Trimester 1 - last date to add/change enrolment
+URL;VALUE=URI:http://www.uqcollege.edu.au/
+CLASS:PRIVATE
+DTSTART:20190201T000000
+DTEND:20190201T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-1366542-18738@www.uq.edu.au
+SUMMARY:Summer Semester 2018/2019 - last date to withdraw from a course in mySI-net incurring financial liability and academic penalty
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Summer Semester 2018/2019 - last date to withdraw from a course in mySI-net incurring financial liability and academic penalty
+URL;VALUE=URI:https://my.uq.edu.au/information-and-services/manage-my-program/summer-semester
+CLASS:PRIVATE
+DTSTART:20190201T000000
+DTEND:20190201T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-8589010-18738@www.uq.edu.au
+SUMMARY:Research Quarter 1 - census date/final date to cancel without financial penalty
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Research Quarter 1 - census date/final date to cancel without financial penalty
+URL;VALUE=URI:https://graduate-school.uq.edu.au/research-quarters
+CLASS:PRIVATE
+DTSTART:20190201T000000
+DTEND:20190201T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-4831372-18738@www.uq.edu.au
+SUMMARY:Summer Semester 2018/2019 revision period 28 January - 1 February 2019
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Summer Semester 2018/2019 revision period 28 January - 1 February 2019
+URL;VALUE=URI:https://my.uq.edu.au/information-and-services/manage-my-program/summer-semester
+CLASS:PRIVATE
+DTSTART:20190128T000000
+DTEND:20190128T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-4249635-18738@www.uq.edu.au
+SUMMARY:Australia Day public holiday
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Australia Day public holiday
+URL;VALUE=URI:https://www.qld.gov.au/recreation/travel/holidays/public
+CLASS:PRIVATE
+DTSTART:20190128T000000
+DTEND:20190128T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-8248711-18738@www.uq.edu.au
+SUMMARY:Summer Semester 2018/2019 classes end
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Summer Semester 2018/2019 classes end
+URL;VALUE=URI:https://my.uq.edu.au/information-and-services/manage-my-program/summer-semester
+CLASS:PRIVATE
+DTSTART:20190126T000000
+DTEND:20190126T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-4605023-18738@www.uq.edu.au
+SUMMARY:UQ College - Trimester 1 classes commence
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:UQ College - Trimester 1 classes commence
+URL;VALUE=URI:http://www.uqcollege.edu.au/
+CLASS:PRIVATE
+DTSTART:20190121T000000
+DTEND:20190121T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-4104129-18738@www.uq.edu.au
+SUMMARY:UQ College - Trimester 1 - due date to enrol
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:UQ College - Trimester 1 - due date to enrol
+URL;VALUE=URI:http://www.uqcollege.edu.au/
+CLASS:PRIVATE
+DTSTART:20190118T000000
+DTEND:20190118T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-3890746-18738@www.uq.edu.au
+SUMMARY:UQ College - Trimester 1 Associate Degree in Business Orientation
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:UQ College - Trimester 1 Associate Degree in Business Orientation
+URL;VALUE=URI:http://www.uqcollege.edu.au/
+CLASS:PRIVATE
+DTSTART:20190117T000000
+DTEND:20190117T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-6938421-18738@www.uq.edu.au
+SUMMARY:UQ College - Trimester 1 Tertiary Preparation Program Orientation
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:UQ College - Trimester 1 Tertiary Preparation Program Orientation
+URL;VALUE=URI:http://www.uqcollege.edu.au/
+CLASS:PRIVATE
+DTSTART:20190115T000000
+DTEND:20190115T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-3003881-18738@www.uq.edu.au
+SUMMARY:Show Cause response due for students who were asked to Show Cause in an earlier semester and have interrupted their studies, who wish to return in Semester 1 2019
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Show Cause response due for students who were asked to Show Cause in an earlier semester and have interrupted their studies, who wish to return in Semester 1 2019
+URL;VALUE=URI:https://my.uq.edu.au/node/266/0#0
+CLASS:PRIVATE
+DTSTART:20190105T000000
+DTEND:20190105T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-4956129-18738@www.uq.edu.au
+SUMMARY:Semester 1 - first date to request a program change through mySI-net
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Semester 1 - first date to request a program change through mySI-net
+URL;VALUE=URI:https://my.uq.edu.au/node/316/0
+CLASS:PRIVATE
+DTSTART:20190102T000000
+DTEND:20190102T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-7678589-18738@www.uq.edu.au
+SUMMARY:Summer Semester 2018/2019 - last date to drop courses or cancel enrolment without academic penalty
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Summer Semester 2018/2019 - last date to drop courses or cancel enrolment without academic penalty
+URL;VALUE=URI:https://my.uq.edu.au/information-and-services/manage-my-program/summer-semester
+CLASS:PRIVATE
+DTSTART:20190102T000000
+DTEND:20190102T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-9002798-18738@www.uq.edu.au
+SUMMARY:Summer Semester 2018/2019 classes recommence after mid-semester break
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Summer Semester 2018/2019 classes recommence after mid-semester break
+URL;VALUE=URI:https://my.uq.edu.au/information-and-services/manage-my-program/summer-semester
+CLASS:PRIVATE
+DTSTART:20190102T000000
+DTEND:20190102T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-6811375-18738@www.uq.edu.au
+SUMMARY:New Year`s Day public holiday
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:New Year`s Day public holiday
+URL;VALUE=URI:https://www.qld.gov.au/recreation/travel/holidays/public
+CLASS:PRIVATE
+DTSTART:20190101T000000
+DTEND:20190101T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-5874438-18738@www.uq.edu.au
+SUMMARY:Research Quarter 1 commences
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Research Quarter 1 commences
+URL;VALUE=URI:https://graduate-school.uq.edu.au/research-quarters
+CLASS:PRIVATE
+DTSTART:20190101T000000
+DTEND:20190101T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-3289987-18738@www.uq.edu.au
+SUMMARY:Research Quarter 4 ends
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Research Quarter 4 ends
+URL;VALUE=URI:https://graduate-school.uq.edu.au/research-quarters
+CLASS:PRIVATE
+DTSTART:20181231T000000
+DTEND:20181231T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-5890278-18738@www.uq.edu.au
+SUMMARY:Boxing Day public holiday
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Boxing Day public holiday
+URL;VALUE=URI:https://www.qld.gov.au/recreation/travel/holidays/public/
+CLASS:PRIVATE
+DTSTART:20181226T000000
+DTEND:20181226T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-9812728-18738@www.uq.edu.au
+SUMMARY:Christmas Day public holiday
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Christmas Day public holiday
+URL;VALUE=URI:https://www.qld.gov.au/recreation/travel/holidays/public/
+CLASS:PRIVATE
+DTSTART:20181225T000000
+DTEND:20181225T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-1036574-18738@www.uq.edu.au
+SUMMARY:Summer Semester 2018/2019 mid-semester break commences
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Summer Semester 2018/2019 mid-semester break commences
+URL;VALUE=URI:https://my.uq.edu.au/information-and-services/manage-my-program/summer-semester
+CLASS:PRIVATE
+DTSTART:20181224T000000
+DTEND:20181224T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-3456249-18738@www.uq.edu.au
+SUMMARY:Summer Semester 2018/2019 classes end before mid-semester break
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Summer Semester 2018/2019 classes end before mid-semester break
+URL;VALUE=URI:https://my.uq.edu.au/information-and-services/manage-my-program/summer-semester
+CLASS:PRIVATE
+DTSTART:20181221T000000
+DTEND:20181221T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-5046435-18738@www.uq.edu.au
+SUMMARY:Summer Semester 2018/2019 - census date/last date to drop courses or cancel enrolment without financial liability
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Summer Semester 2018/2019 - census date/last date to drop courses or cancel enrolment without financial liability
+URL;VALUE=URI:https://my.uq.edu.au/information-and-services/manage-my-program/summer-semester
+CLASS:PRIVATE
+DTSTART:20181218T000000
+DTEND:20181218T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-9145827-18738@www.uq.edu.au
+SUMMARY:UQ College - Trimester 3 finalisation of grades
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:UQ College - Trimester 3 finalisation of grades
+URL;VALUE=URI:http://www.uqcollege.edu.au/
+CLASS:PRIVATE
+DTSTART:20181214T000000
+DTEND:20181214T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-2152144-18738@www.uq.edu.au
+SUMMARY:Semester 2 deferred and supplementary examination period 12 - 14 December 2018
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Semester 2 deferred and supplementary examination period 12 - 14 December 2018
+URL;VALUE=URI:https://my.uq.edu.au/services/exams-and-assessment
+CLASS:PRIVATE
+DTSTART:20181212T000000
+DTEND:20181212T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-8341597-18738@www.uq.edu.au
+SUMMARY:UQ College - Trimester 3 ends
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:UQ College - Trimester 3 ends
+URL;VALUE=URI:http://www.uqcollege.edu.au/
+CLASS:PRIVATE
+DTSTART:20181207T000000
+DTEND:20181207T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-4354126-18738@www.uq.edu.au
+SUMMARY:Summer Semester 2018/2019 - due date for payment of tuition fees
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Summer Semester 2018/2019 - due date for payment of tuition fees
+URL;VALUE=URI:
+CLASS:PRIVATE
+DTSTART:20181207T000000
+DTEND:20181207T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-4646371-18738@www.uq.edu.au
+SUMMARY:Summer Semester 2018/2019 - final date for addition or substitution of courses
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Summer Semester 2018/2019 - final date for addition or substitution of courses
+URL;VALUE=URI:https://my.uq.edu.au/information-and-services/manage-my-program/summer-semester
+CLASS:PRIVATE
+DTSTART:20181207T000000
+DTEND:20181207T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-2367951-18738@www.uq.edu.au
+SUMMARY:Graduations period 3 - 21 December 2018
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Graduations period 3 - 21 December 2018
+URL;VALUE=URI:http://www.uq.edu.au/graduations/
+CLASS:PRIVATE
+DTSTART:20181203T000000
+DTEND:20181203T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-6938387-18738@www.uq.edu.au
+SUMMARY:UQ College - Trimester 3 -  examination period 3 - 7 December 2018
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:UQ College - Trimester 3 -  examination period 3 - 7 December 2018
+URL;VALUE=URI:http://www.uqcollege.edu.au/
+CLASS:PRIVATE
+DTSTART:20181203T000000
+DTEND:20181203T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-8458913-18738@www.uq.edu.au
+SUMMARY:UQ College - Trimester 1 - show cause responses due for students who were asked to show cause in an earlier semester and have interrupted their studies, who wish to return in Trimester 1 2019
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:UQ College - Trimester 1 - show cause responses due for students who were asked to show cause in an earlier semester and have interrupted their studies, who wish to return in Trimester 1 2019
+URL;VALUE=URI:https://my.uq.edu.au/information-and-services/manage-my-program/academic-progress-and-final-results/academic-warnings-and-showing-cause/show-cause-process
+CLASS:PRIVATE
+DTSTART:20181201T000000
+DTEND:20181201T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-6282064-18738@www.uq.edu.au
+SUMMARY:UQ College - Trimester 3 - Last date to withdraw from course via mySI-net, incurring academic penalty and financial liability
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:UQ College - Trimester 3 - last date to withdraw from course via mySI-net, incurring academic penalty (ADB/TPP) and financial liability (ADB only) =0D=0A
+URL;VALUE=URI:http://www.uqcollege.edu.au/
+CLASS:PRIVATE
+DTSTART:20181130T000000
+DTEND:20181130T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-1155696-18738@www.uq.edu.au
+SUMMARY:Semester 2 finalisation of grades
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Semester 2 finalisation of grades
+URL;VALUE=URI:https://my.uq.edu.au/services/exams-and-assessment
+CLASS:PRIVATE
+DTSTART:20181128T000000
+DTEND:20181128T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-7628976-18738@www.uq.edu.au
+SUMMARY:Summer Semester 2018/2019 classes commence
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Summer Semester 2018/2019 classes commence
+URL;VALUE=URI:https://my.uq.edu.au/information-and-services/manage-my-program/summer-semester
+CLASS:PRIVATE
+DTSTART:20181126T000000
+DTEND:20181126T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-2371807-18738@www.uq.edu.au
+SUMMARY:UQ College - Trimester 3 revision period 26 - 31 November 2018
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:UQ College - Trimester 3 revision period 26 - 31 November 2018
+URL;VALUE=URI:http://www.uqcollege.edu.au/
+CLASS:PRIVATE
+DTSTART:20181126T000000
+DTEND:20181126T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-9531804-18738@www.uq.edu.au
+SUMMARY:Semester 1 and 2 2019 enrolments open for continuing students
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Semester 1 and 2 2019 enrolments open for continuing students
+URL;VALUE=URI:
+CLASS:PRIVATE
+DTSTART:20181119T000000
+DTEND:20181119T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-6453179-18738@www.uq.edu.au
+SUMMARY:Semester 2 examination period ends/Semester 2 ends
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Semester 2 examination period ends/Semester 2 ends
+URL;VALUE=URI:
+CLASS:PRIVATE
+DTSTART:20181117T000000
+DTEND:20181117T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-5132677-18738@www.uq.edu.au
+SUMMARY:Summer Semester 2018/2019 - due date for enrolment*
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Summer Semester 2018/2019 - due date for enrolment*=0D=0A=0D=0A* Some variations are approved annually on a program-by-program basis.=0D=0A=0D=0ADue date for domestic and international students.=0D=0A=0D=0AAdministrative charges apply for late enrolment.
+URL;VALUE=URI:https://my.uq.edu.au/information-and-services/manage-my-program/summer-semester
+CLASS:PRIVATE
+DTSTART:20181109T000000
+DTEND:20181109T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-1353684-18738@www.uq.edu.au
+SUMMARY:Semester 2 examination period 3 - 17 November 2018
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Semester 2 examination period 3 - 17 November 2018
+URL;VALUE=URI:https://my.uq.edu.au/services/exams-and-assessment
+CLASS:PRIVATE
+DTSTART:20181103T000000
+DTEND:20181103T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-7887472-18738@www.uq.edu.au
+SUMMARY:Semester 2 - last date to withdraw from a course in mySI-net incurring financial liability and academic penalty
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Semester 2 - last date to withdraw from a course in mySI-net incurring financial liability and academic penalty
+URL;VALUE=URI:https://my.uq.edu.au/information-and-services/manage-my-program/classes-timetables-and-coursework/withdrawing-course-or-program
+CLASS:PRIVATE
+DTSTART:20181102T000000
+DTEND:20181102T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-1412593-18738@www.uq.edu.au
+SUMMARY:Research Quarter 4 - census date/final date to cancel without financial penalty
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Research Quarter 4 - census date/final date to cancel without financial penalty=0D=0A
+URL;VALUE=URI:https://graduate-school.uq.edu.au/research-quarters
+CLASS:PRIVATE
+DTSTART:20181101T000000
+DTEND:20181101T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-5142523-18738@www.uq.edu.au
+SUMMARY:Summer Semester 2018/2019 applications for non-award enrolment due
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Summer Semester 2018/2019 applications for non-award enrolment due
+URL;VALUE=URI:https://future-students.uq.edu.au/apply/non-award/choose-your-non-award-course
+CLASS:PRIVATE
+DTSTART:20181031T000000
+DTEND:20181031T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-7974425-18738@www.uq.edu.au
+SUMMARY:Summer Semester 2018/2019 applications for cross-institutional enrolment due
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Summer Semester 2018/2019 applications for cross-institutional enrolment due
+URL;VALUE=URI:https://my.uq.edu.au/information-and-services/manage-my-program/classes-timetables-and-coursework/cross-institutional-enrolment
+CLASS:PRIVATE
+DTSTART:20181031T000000
+DTEND:20181031T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-4783212-18738@www.uq.edu.au
+SUMMARY:Semester 2 revision period 29 October - 2 November 2018
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Semester 2 revision period 29 October - 2 November 2018
+URL;VALUE=URI:
+CLASS:PRIVATE
+DTSTART:20181029T000000
+DTEND:20181029T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-5820735-18738@www.uq.edu.au
+SUMMARY:Semester 2 classes end*
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Semester 2 classes end*=0D=0A=0D=0A* Some variations to the Academic Calendar are approved annually on a program-by-program basis.
+URL;VALUE=URI:https://my.uq.edu.au/
+CLASS:PRIVATE
+DTSTART:20181027T000000
+DTEND:20181027T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-1300573-18738@www.uq.edu.au
+SUMMARY:UQ College - Trimester 3 - last date to withdraw without academic penalty, financial liability remains
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:UQ College - Trimester 3 - last date to withdraw without academic penalty (ADB/TPP), financial liability remains (ADB only) =0D=0A
+URL;VALUE=URI:http://www.uqcollege.edu.au/
+CLASS:PRIVATE
+DTSTART:20181026T000000
+DTEND:20181026T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-5473061-18738@www.uq.edu.au
+SUMMARY:Semester 2 classes recommence after mid-semester break*
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Semester 2 classes recommence after mid-semester break*=0D=0A=0D=0A* Some variations to the Academic Calendar are approved annually on a program-by-program basis.
+URL;VALUE=URI:
+CLASS:PRIVATE
+DTSTART:20181002T000000
+DTEND:20181002T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-9561711-18738@www.uq.edu.au
+SUMMARY:Queen’s Birthday public holiday
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Queen’s Birthday public holiday
+URL;VALUE=URI:https://www.qld.gov.au/recreation/travel/holidays/public/
+CLASS:PRIVATE
+DTSTART:20181001T000000
+DTEND:20181001T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-4473805-18738@www.uq.edu.au
+SUMMARY:Research Quarter 4 commences
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Research Quarter 4 commences
+URL;VALUE=URI:https://graduate-school.uq.edu.au/research-quarters
+CLASS:PRIVATE
+DTSTART:20181001T000000
+DTEND:20181001T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-1484946-18738@www.uq.edu.au
+SUMMARY:Research Quarter 3 ends
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Research Quarter 3 ends
+URL;VALUE=URI:https://graduate-school.uq.edu.au/research-quarters
+CLASS:PRIVATE
+DTSTART:20180930T000000
+DTEND:20180930T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-1481834-18738@www.uq.edu.au
+SUMMARY:Semester 2 - last date to drop courses or cancel enrolment without academic penalty
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Semester 2 - last date to drop courses or cancel enrolment without academic penalty=0D=0A
+URL;VALUE=URI:https://my.uq.edu.au/information-and-services/manage-my-program/withdraw-defer-or-return-study/withdrawing-course-or-program
+CLASS:PRIVATE
+DTSTART:20180930T000000
+DTEND:20180930T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-4729705-18738@www.uq.edu.au
+SUMMARY:UQ College - Trimester 3 - census date/last date to drop courses or cancel enrolment without financial liability
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:UQ College - Trimester 3 - census date/last date to drop courses or cancel enrolment without financial liability
+URL;VALUE=URI:http://www.uqcollege.edu.au/
+CLASS:PRIVATE
+DTSTART:20180928T000000
+DTEND:20180928T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-8084690-18738@www.uq.edu.au
+SUMMARY:Semester 2 mid-semester break commences*
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:*Some variations to the Academic Calendar are approved annually on a program-by-program basis.
+URL;VALUE=URI:
+CLASS:PRIVATE
+DTSTART:20180924T000000
+DTEND:20180924T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-1256206-18738@www.uq.edu.au
+SUMMARY:Universities Australia Common Vacation Week
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Universities Australia Common Vacation Week
+URL;VALUE=URI:https://www.universitiesaustralia.edu.au/australias-universities/teaching-calendar
+CLASS:PRIVATE
+DTSTART:20180924T000000
+DTEND:20180924T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-2144399-18738@www.uq.edu.au
+SUMMARY:Semester 2 classes end before mid-semester break
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Semester 2 classes end before mid-semester break
+URL;VALUE=URI:
+CLASS:PRIVATE
+DTSTART:20180922T000000
+DTEND:20180922T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-5320966-18738@www.uq.edu.au
+SUMMARY:UQ College - Trimester 3 - due date for payment of fees and charges
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:UQ College - Trimester 3 - due date for payment of fees and charges
+URL;VALUE=URI:http://www.uqcollege.edu.au/
+CLASS:PRIVATE
+DTSTART:20180914T000000
+DTEND:20180914T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-8592399-18738@www.uq.edu.au
+SUMMARY:UQ College - Trimester 3 - last date to amend enrolment
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:UQ College - Trimester 3 - last date to amend enrolment
+URL;VALUE=URI:http://www.uqcollege.edu.au/
+CLASS:PRIVATE
+DTSTART:20180914T000000
+DTEND:20180914T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-5346328-18738@www.uq.edu.au
+SUMMARY:Summer Semester 2018/2019 class timetable available to students
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Summer Semester 2018/2019 class timetable available to students
+URL;VALUE=URI:https://my.uq.edu.au/information-and-services/manage-my-program/summer-semester
+CLASS:PRIVATE
+DTSTART:20180910T000000
+DTEND:20180910T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-9831779-18738@www.uq.edu.au
+SUMMARY:UQ College - Trimester 3 classes commence
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:UQ College - Trimester 3 classes commence
+URL;VALUE=URI:http://www.uqcollege.edu.au/
+CLASS:PRIVATE
+DTSTART:20180903T000000
+DTEND:20180903T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-6668524-18738@www.uq.edu.au
+SUMMARY:UQ College - Trimester 3 - due date to enrol
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:UQ College - Trimester 3 - due date to enrol
+URL;VALUE=URI:http://www.uqcollege.edu.au/
+CLASS:PRIVATE
+DTSTART:20180831T000000
+DTEND:20180831T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-3012902-18738@www.uq.edu.au
+SUMMARY:Semester 2 - census date/last date to drop courses or cancel enrolment without financial liability
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Semester 2 - census date/last date to drop courses or cancel enrolment without financial liability=0D=0A
+URL;VALUE=URI:https://dictionary.uq.edu.au/terminology/census-date
+CLASS:PRIVATE
+DTSTART:20180831T000000
+DTEND:20180831T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-9835349-18738@www.uq.edu.au
+SUMMARY:UQ College - Trimester 3 Associate Degree in Business Orientation
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:UQ College - Trimester 3 Associate Degree in Business Orientation
+URL;VALUE=URI:http://www.uqcollege.edu.au/
+CLASS:PRIVATE
+DTSTART:20180830T000000
+DTEND:20180830T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-5366766-18738@www.uq.edu.au
+SUMMARY:UQ College - Trimester 3 Tertiary Preparation Program Orientation
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:UQ College - Trimester 3 Tertiary Preparation Program Orientation
+URL;VALUE=URI:http://www.uqcollege.edu.au/
+CLASS:PRIVATE
+DTSTART:20180828T000000
+DTEND:20180828T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-5763990-18738@www.uq.edu.au
+SUMMARY:UQ College - Trimester 2 finalisation of grades
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:UQ College - Trimester 2 finalisation of grades
+URL;VALUE=URI:http://www.uqcollege.edu.au/
+CLASS:PRIVATE
+DTSTART:20180824T000000
+DTEND:20180824T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-8055203-18738@www.uq.edu.au
+SUMMARY:UQ College - Trimester 2 ends
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:UQ College - Trimester 2 ends
+URL;VALUE=URI:http://www.uqcollege.edu.au/
+CLASS:PRIVATE
+DTSTART:20180818T000000
+DTEND:20180818T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-3222801-18738@www.uq.edu.au
+SUMMARY:Royal Queensland Show public holiday (Brisbane Area only - St Lucia and Herston Campus closed)
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Royal Queensland Show public holiday (Brisbane Area only - St Lucia and Herston Campus closed)
+URL;VALUE=URI:https://www.qld.gov.au/recreation/travel/holidays/public/
+CLASS:PRIVATE
+DTSTART:20180815T000000
+DTEND:20180815T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-9157146-18738@www.uq.edu.au
+SUMMARY:UQ College - Trimester 2 examination period 13 - 18 August 2018
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:UQ College - Trimester 2 examination period 13 - 18 August 2018
+URL;VALUE=URI:http://www.uqcollege.edu.au/
+CLASS:PRIVATE
+DTSTART:20180813T000000
+DTEND:20180813T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-1883053-18738@www.uq.edu.au
+SUMMARY:Royal Queensland Show public holiday (Gatton area only - Gatton campus closed)
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Royal Queensland Show public holiday (Gatton area only - Gatton campus closed)
+URL;VALUE=URI:https://www.qld.gov.au/recreation/travel/holidays/public/
+CLASS:PRIVATE
+DTSTART:20180813T000000
+DTEND:20180813T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-7967247-18738@www.uq.edu.au
+SUMMARY: UQ College - Trimester 2 - last date to withdraw from course via mySI-net, incurring academic penalty and financial liability
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:UQ College - Trimester 2 - last date to withdraw from course via mySI-net, incurring academic penalty (ADB/TPP) and financial liability (ADB only) 
+URL;VALUE=URI:http://www.uqcollege.edu.au/
+CLASS:PRIVATE
+DTSTART:20180810T000000
+DTEND:20180810T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-6099336-18738@www.uq.edu.au
+SUMMARY:UQ College - Trimester 2 revision period 6 - 10 August 2018
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:UQ College - Trimester 2 revision period 6 - 10 August 2018
+URL;VALUE=URI:http://www.uqcollege.edu.au/
+CLASS:PRIVATE
+DTSTART:20180806T000000
+DTEND:20180806T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-2223523-18738@www.uq.edu.au
+SUMMARY:UQ College - Trimester 3 course add function opens
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:UQ College - Trimester 3 course add function opens
+URL;VALUE=URI:http://www.uqcollege.edu.au/
+CLASS:PRIVATE
+DTSTART:20180806T000000
+DTEND:20180806T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-4298702-18738@www.uq.edu.au
+SUMMARY:Semester 2 - final date for addition of courses or alteration of enrolment
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Semester 2 - final date for addition of courses or alteration of enrolment=0D=0A=0D=0A
+URL;VALUE=URI:https://my.uq.edu.au/node/212/1#1
+CLASS:PRIVATE
+DTSTART:20180803T000000
+DTEND:20180803T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-1087787-18738@www.uq.edu.au
+SUMMARY:Semester 2 - due date for payment of tuition fees
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Semester 2 - due date for payment of tuition fees=0D=0A=0D=0A
+URL;VALUE=URI:https://my.uq.edu.au/services/financial-matters
+CLASS:PRIVATE
+DTSTART:20180803T000000
+DTEND:20180803T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-7211703-18738@www.uq.edu.au
+SUMMARY:Research Quarter 3 - census date/final date to cancel without financial penalty
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Research Quarter 3 - census date/final date to cancel without financial penalty=0D=0A
+URL;VALUE=URI:https://graduate-school.uq.edu.au/research-quarters
+CLASS:PRIVATE
+DTSTART:20180801T000000
+DTEND:20180801T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-1340158-18738@www.uq.edu.au
+SUMMARY:Semester 2 classes commence*
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Semester 2 classes commence*=0D=0A=0D=0A* Some variations to the Academic Calendar are approved annually on a program-by-program basis.=0D=0A=0D=0A
+URL;VALUE=URI:https://my.uq.edu.au/
+CLASS:PRIVATE
+DTSTART:20180723T000000
+DTEND:20180723T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-5320220-18738@www.uq.edu.au
+SUMMARY:Semester 2 - due date to enrol* for international students
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Semester 2 - due date to enrol* for international students=0D=0A=0D=0A* Some variations are approved annually on a program-by-program basis. =0D=0A
+URL;VALUE=URI:https://my.uq.edu.au/information-and-services/manage-my-program/classes-timetables-and-coursework/enrolment-and-class-sign
+CLASS:PRIVATE
+DTSTART:20180720T000000
+DTEND:20180720T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-4605229-18738@www.uq.edu.au
+SUMMARY:Semester 1 deferred and supplementary examination period 18 - 20 July 2018
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Semester 1 deferred and supplementary examination period 18 - 20 July 2018
+URL;VALUE=URI:https://my.uq.edu.au/services/exams-and-assessment
+CLASS:PRIVATE
+DTSTART:20180718T000000
+DTEND:20180718T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-5345339-18738@www.uq.edu.au
+SUMMARY:Graduations period 16 - 20 July 2018 
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Graduations period 16 - 20 July 2018 
+URL;VALUE=URI:http://www.uq.edu.au/graduations/
+CLASS:PRIVATE
+DTSTART:20180716T000000
+DTEND:20180716T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-4554528-18738@www.uq.edu.au
+SUMMARY:Mid-year Orientation Week 16 - 20 July 2018
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Mid-year Orientation Week 16 - 20 July 2018
+URL;VALUE=URI:http://www.uq.edu.au/orientation
+CLASS:PRIVATE
+DTSTART:20180716T000000
+DTEND:20180716T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-3252209-18738@www.uq.edu.au
+SUMMARY:UQ College - Trimester 3 - show cause responses due for students who were asked to show cause in an earlier semester and have interrupted their studies, who wish to return in Trimester 3 2018
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:UQ College - Trimester 3 - show cause responses due for students who were asked to show cause in an earlier semester and have interrupted their studies, who wish to return in Trimester 3 2018
+URL;VALUE=URI:https://my.uq.edu.au/information-and-services/manage-my-program/academic-progress-and-final-results/academic-warnings-and-showing-cause/show-cause-process
+CLASS:PRIVATE
+DTSTART:20180715T000000
+DTEND:20180715T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-7112562-18738@www.uq.edu.au
+SUMMARY:Semester 2 - due date to enrol* for domestic students
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Semester 2 - due date to enrol* for domestic students=0D=0A=0D=0A* Some variations are approved annually on a program-by-program basis. =0D=0A
+URL;VALUE=URI:https://my.uq.edu.au/information-and-services/manage-my-program/classes-timetables-and-coursework/enrolment-and-class-sign
+CLASS:PRIVATE
+DTSTART:20180713T000000
+DTEND:20180713T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-4531168-18738@www.uq.edu.au
+SUMMARY:Semester 2 - last date to request a program change through mySI-net
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Semester 2 - last date to request a program change through mySI-net
+URL;VALUE=URI:https://my.uq.edu.au/node/316/0
+CLASS:PRIVATE
+DTSTART:20180713T000000
+DTEND:20180713T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-3304993-18738@www.uq.edu.au
+SUMMARY:Faculty of Medicine commences roll-out for class sign-on for courses delivered in Semester 2
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Faculty of Medicine commences roll-out for class sign-on for courses delivered in Semester 2
+URL;VALUE=URI:
+CLASS:PRIVATE
+DTSTART:20180713T000000
+DTEND:20180713T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-4873238-18738@www.uq.edu.au
+SUMMARY:Faculty of Health and Behavioural Sciences commences roll-out for class sign-on for courses delivered in Semester 2
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Faculty of Health and Behavioural Sciences commences roll-out for class sign-on for courses delivered in Semester 2
+URL;VALUE=URI:
+CLASS:PRIVATE
+DTSTART:20180713T000000
+DTEND:20180713T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-4218983-18738@www.uq.edu.au
+SUMMARY:Faculty of Business, Economics and Law commences roll-out for class sign-on for courses delivered in Semester 2
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Faculty of Business, Economics and Law commences roll-out for class sign-on for courses delivered in Semester 2
+URL;VALUE=URI:
+CLASS:PRIVATE
+DTSTART:20180712T000000
+DTEND:20180712T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-5944966-18738@www.uq.edu.au
+SUMMARY:Faculty of Engineering, Architecture and Information Technology commences roll-out for class sign-on for courses delivered in Semester 2
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Faculty of Engineering, Architecture and Information Technology commences roll-out for class sign-on for courses delivered in Semester 2
+URL;VALUE=URI:
+CLASS:PRIVATE
+DTSTART:20180711T000000
+DTEND:20180711T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-9782759-18738@www.uq.edu.au
+SUMMARY:Faculty of Science commences roll-out for class sign-on for courses delivered in Semester 2
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Faculty of Science commences roll-out for class sign-on for courses delivered in Semester 2
+URL;VALUE=URI:
+CLASS:PRIVATE
+DTSTART:20180710T000000
+DTEND:20180710T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-2491946-18738@www.uq.edu.au
+SUMMARY:Faculty of Humanities and Social Sciences commences roll-out for class sign-on for courses delivered in Semester 2
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Faculty of Humanities and Social Sciences commences roll-out for class sign-on for courses delivered in Semester 2
+URL;VALUE=URI:
+CLASS:PRIVATE
+DTSTART:20180709T000000
+DTEND:20180709T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-4766657-18738@www.uq.edu.au
+SUMMARY:UQ College - Trimester 2 - last date to withdraw without academic penalty, financial liability remains
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:UQ College - Trimester 2 - last date to withdraw without academic penalty (ADB/TPP), financial liability remains (ADB only).
+URL;VALUE=URI:http://www.uqcollege.edu.au/
+CLASS:PRIVATE
+DTSTART:20180706T000000
+DTEND:20180706T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-5929505-18738@www.uq.edu.au
+SUMMARY:Semester 1 finalisation of grades
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Semester 1 finalisation of grades
+URL;VALUE=URI:https://my.uq.edu.au/services/exams-and-assessment
+CLASS:PRIVATE
+DTSTART:20180704T000000
+DTEND:20180704T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-9784973-18738@www.uq.edu.au
+SUMMARY:Semester 2 - first date to request a program change through mySI-net
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Semester 2 - first date to request a program change through mySI-net
+URL;VALUE=URI:https://my.uq.edu.au/node/316/0
+CLASS:PRIVATE
+DTSTART:20180704T000000
+DTEND:20180704T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-7668334-18738@www.uq.edu.au
+SUMMARY:Universities Australia Common Vacation Week
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Universities Australia Common Vacation Week
+URL;VALUE=URI:https://www.universitiesaustralia.edu.au/australias-universities/teaching-calendar
+CLASS:PRIVATE
+DTSTART:20180702T000000
+DTEND:20180702T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-5048461-18738@www.uq.edu.au
+SUMMARY:Research Quarter 3 commences
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Research Quarter 3 commences
+URL;VALUE=URI:https://graduate-school.uq.edu.au/research-quarters
+CLASS:PRIVATE
+DTSTART:20180701T000000
+DTEND:20180701T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-4971427-18738@www.uq.edu.au
+SUMMARY:Research Quarter 2 ends
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Research Quarter 2 ends
+URL;VALUE=URI:https://graduate-school.uq.edu.au/research-quarters
+CLASS:PRIVATE
+DTSTART:20180630T000000
+DTEND:20180630T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-9140641-18738@www.uq.edu.au
+SUMMARY:Show cause response due for students who were asked to show cause in an earlier semester and have interrupted their studies, who wish to return in Semester 2 2018
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Show cause response due for students who were asked to show cause in an earlier semester and have interrupted their studies, who wish to return in Semester 2 2018=0D=0A
+URL;VALUE=URI:https://my.uq.edu.au/information-and-services/manage-my-program/academic-progress-and-final-results/academic-warnings-and-showing-cause/show-cause-process
+CLASS:PRIVATE
+DTSTART:20180630T000000
+DTEND:20180630T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-4678054-18738@www.uq.edu.au
+SUMMARY:Semester 1 examination period ends/Semester 1 ends
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Semester 1 examination period ends/Semester 1 ends
+URL;VALUE=URI:
+CLASS:PRIVATE
+DTSTART:20180623T000000
+DTEND:20180623T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-6290860-18738@www.uq.edu.au
+SUMMARY:Semester 1 examination period 9 - 23 June 2018
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Semester 1 examination period 9 - 23 June 2018
+URL;VALUE=URI:https://my.uq.edu.au/services/exams-and-assessment
+CLASS:PRIVATE
+DTSTART:20180609T000000
+DTEND:20180609T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-9105948-18738@www.uq.edu.au
+SUMMARY:UQ College - Trimester 2 - census date/last date to drop courses or cancel enrolment without financial liability
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:UQ College - Trimester 2 - census date/last date to drop courses or cancel enrolment without financial liability
+URL;VALUE=URI:http://www.uqcollege.edu.au/
+CLASS:PRIVATE
+DTSTART:20180608T000000
+DTEND:20180608T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-2547924-18738@www.uq.edu.au
+SUMMARY:Semester 1 - last date to withdraw from a course in mySI-net incurring financial liability and academic penalty
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Semester 1 - last date to withdraw from a course in mySI-net incurring financial liability and academic penalty
+URL;VALUE=URI:https://my.uq.edu.au/information-and-services/manage-my-program/withdraw-defer-or-return-study/withdrawing-course-or-program
+CLASS:PRIVATE
+DTSTART:20180608T000000
+DTEND:20180608T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-3519654-18738@www.uq.edu.au
+SUMMARY:Semester 1 revision period 4 - 8 June 2018
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Semester 1 revision period 4 - 8 June 2018
+URL;VALUE=URI:
+CLASS:PRIVATE
+DTSTART:20180604T000000
+DTEND:20180604T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-9814019-18738@www.uq.edu.au
+SUMMARY:Summer Semester 2018/2019 enrolments open
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Summer Semester 2018/2019 enrolments open
+URL;VALUE=URI:https://my.uq.edu.au/information-and-services/manage-my-program/summer-semester
+CLASS:PRIVATE
+DTSTART:20180604T000000
+DTEND:20180604T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-1631578-18738@www.uq.edu.au
+SUMMARY:Semester 1 classes end*
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Semester 1 classes end*=0D=0A=0D=0A* Some variations to the Academic Calendar are approved annually on a program-by-program basis.
+URL;VALUE=URI:
+CLASS:PRIVATE
+DTSTART:20180602T000000
+DTEND:20180602T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-7863782-18738@www.uq.edu.au
+SUMMARY:UQ College - Trimester 2 - last date to amend enrolment
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:UQ College - Trimester 2 - last date to amend enrolment
+URL;VALUE=URI:http://www.uqcollege.edu.au/
+CLASS:PRIVATE
+DTSTART:20180525T000000
+DTEND:20180525T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-1875825-18738@www.uq.edu.au
+SUMMARY:UQ College - Trimester 2 - due date for payment of fees and charges
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:UQ College - Trimester 2 - due date for payment of fees and charges
+URL;VALUE=URI:http://www.uqcollege.edu.au/
+CLASS:PRIVATE
+DTSTART:20180525T000000
+DTEND:20180525T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-9902699-18738@www.uq.edu.au
+SUMMARY:UQ College - Trimester 2 classes commence
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:UQ College - Trimester 2 classes commence
+URL;VALUE=URI:http://www.uqcollege.edu.au/
+CLASS:PRIVATE
+DTSTART:20180514T000000
+DTEND:20180514T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-8051333-18738@www.uq.edu.au
+SUMMARY:UQ College - Trimester 2 - due date to enrol
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:UQ College - Trimester 2 - due date to enrol
+URL;VALUE=URI:http://www.uqcollege.edu.au/
+CLASS:PRIVATE
+DTSTART:20180511T000000
+DTEND:20180511T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-5625912-18738@www.uq.edu.au
+SUMMARY:UQ College - Trimester 2 Tertiary Preparation Program Orientation
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:UQ College - Trimester 2 Tertiary Preparation Program Orientation
+URL;VALUE=URI:http://www.uqcollege.edu.au/
+CLASS:PRIVATE
+DTSTART:20180508T000000
+DTEND:20180508T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-3445721-18738@www.uq.edu.au
+SUMMARY:Labour Day public holiday
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Labour Day public holiday
+URL;VALUE=URI:https://www.qld.gov.au/recreation/travel/holidays/public/
+CLASS:PRIVATE
+DTSTART:20180507T000000
+DTEND:20180507T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-1892903-18738@www.uq.edu.au
+SUMMARY:UQ College - Trimester 1 finalisation of grades
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:UQ College - Trimester 1 finalisation of grades
+URL;VALUE=URI:http://www.uqcollege.edu.au/
+CLASS:PRIVATE
+DTSTART:20180504T000000
+DTEND:20180504T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-9420861-18738@www.uq.edu.au
+SUMMARY:Research Quarter 2 - census date/final date to cancel without financial penalty
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Research Quarter 2 - census date/final date to cancel without financial penalty=0D=0A
+URL;VALUE=URI:https://graduate-school.uq.edu.au/research-quarters
+CLASS:PRIVATE
+DTSTART:20180501T000000
+DTEND:20180501T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-7216950-18738@www.uq.edu.au
+SUMMARY:Semester 1 - last date to drop courses or cancel enrolment without academic penalty
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Semester 1 - last date to drop courses or cancel enrolment without academic penalty=0D=0A
+URL;VALUE=URI:https://my.uq.edu.au/information-and-services/manage-my-program/withdraw-defer-or-return-study/withdrawing-course-or-program
+CLASS:PRIVATE
+DTSTART:20180430T000000
+DTEND:20180430T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-4082804-18738@www.uq.edu.au
+SUMMARY:UQ College - Trimester 1 ends
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:UQ College - Trimester 1 ends
+URL;VALUE=URI:http://www.uqcollege.edu.au/
+CLASS:PRIVATE
+DTSTART:20180428T000000
+DTEND:20180428T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-5049860-18738@www.uq.edu.au
+SUMMARY:ANZAC Day public holiday
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:ANZAC Day public holiday
+URL;VALUE=URI:https://www.qld.gov.au/recreation/travel/holidays/public/
+CLASS:PRIVATE
+DTSTART:20180425T000000
+DTEND:20180425T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-9883588-18738@www.uq.edu.au
+SUMMARY:UQ College - Trimester 1 examination period 23 - 28 April 2018
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:UQ College - Trimester 1 examination period 23 - 28 April 2018
+URL;VALUE=URI:http://www.uqcollege.edu.au/
+CLASS:PRIVATE
+DTSTART:20180423T000000
+DTEND:20180423T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-8984770-18738@www.uq.edu.au
+SUMMARY:UQ College - Trimester 1 - last date to withdraw from course via mySI-net, incurring academic penalty and financial liability
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:UQ College - Trimester 1 - last date to withdraw from course via mySI-net, incurring academic penalty (ADB/TPP) and financial liability (ADB only)
+URL;VALUE=URI:http://www.uqcollege.edu.au/
+CLASS:PRIVATE
+DTSTART:20180420T000000
+DTEND:20180420T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-2775345-18738@www.uq.edu.au
+SUMMARY:UQ College - Trimester 2 course add function opens
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:UQ College - Trimester 2 course add function opens
+URL;VALUE=URI:http://www.uqcollege.edu.au/
+CLASS:PRIVATE
+DTSTART:20180416T000000
+DTEND:20180416T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-7917249-18738@www.uq.edu.au
+SUMMARY:UQ College - Trimester 1 revision period 16 - 20 April 2018
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:UQ College - Trimester 1 revision period 16 - 20 April 2018
+URL;VALUE=URI:http://www.uqcollege.edu.au/
+CLASS:PRIVATE
+DTSTART:20180416T000000
+DTEND:20180416T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-8366155-18738@www.uq.edu.au
+SUMMARY:Semester 1 classes recommence after mid-semester break*
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:*Some variations to the Academic Calendar are approved annually on a program-by-program basis.
+URL;VALUE=URI:
+CLASS:PRIVATE
+DTSTART:20180416T000000
+DTEND:20180416T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-8623411-18738@www.uq.edu.au
+SUMMARY:Extra Vacation Week aligning with Gold Coast Commonwealth Games
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Extra Vacation Week aligning with Gold Coast Commonwealth Games
+URL;VALUE=URI:
+CLASS:PRIVATE
+DTSTART:20180409T000000
+DTEND:20180409T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-7028076-18738@www.uq.edu.au
+SUMMARY:Gold Coast 2018 Commonwealth Games 4 - 15 April 
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Gold Coast 2018 Commonwealth Games 4 - 15 April 2018
+URL;VALUE=URI:
+CLASS:PRIVATE
+DTSTART:20180404T000000
+DTEND:20180404T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-6739615-18738@www.uq.edu.au
+SUMMARY:Semester 1 mid-semester break commences*
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:*Some variations to the Academic Calendar are approved annually on a program-by-program basis.
+URL;VALUE=URI:
+CLASS:PRIVATE
+DTSTART:20180402T000000
+DTEND:20180402T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-5497226-18738@www.uq.edu.au
+SUMMARY:Universities Australia Common Vacation Week
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Universities Australia Common Vacation Week
+URL;VALUE=URI:https://www.universitiesaustralia.edu.au/australias-universities/teaching-calendar
+CLASS:PRIVATE
+DTSTART:20180402T000000
+DTEND:20180402T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-3781631-18738@www.uq.edu.au
+SUMMARY:Easter Monday public holiday
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Easter Monday public holiday
+URL;VALUE=URI:https://www.qld.gov.au/recreation/travel/holidays/public/
+CLASS:PRIVATE
+DTSTART:20180402T000000
+DTEND:20180402T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-2748303-18738@www.uq.edu.au
+SUMMARY:Easter Sunday public holiday
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Easter Sunday public holiday
+URL;VALUE=URI:https://www.qld.gov.au/recreation/travel/holidays/public/
+CLASS:PRIVATE
+DTSTART:20180401T000000
+DTEND:20180401T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-1642935-18738@www.uq.edu.au
+SUMMARY:Research Quarter 2 commences
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Research Quarter 2 commences
+URL;VALUE=URI:https://graduate-school.uq.edu.au/research-quarters
+CLASS:PRIVATE
+DTSTART:20180401T000000
+DTEND:20180401T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-6128917-18738@www.uq.edu.au
+SUMMARY:UQ College - Trimester 2 - show cause responses due for students who were asked to show cause in an earlier semester and have interrupted their studies, who wish to return in Trimester 2 2018
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:UQ College - Trimester 2 - show cause responses due for students who were asked to show cause in an earlier semester and have interrupted their studies, who wish to return in Trimester 2 2018
+URL;VALUE=URI:https://my.uq.edu.au/information-and-services/manage-my-program/academic-progress-and-final-results/academic-warnings-and-showing-cause/show-cause-process
+CLASS:PRIVATE
+DTSTART:20180401T000000
+DTEND:20180401T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-2762983-18738@www.uq.edu.au
+SUMMARY:Semester 1 - census date/last date to drop courses or cancel enrolment without financial liability
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Semester 1 - census date/last date to drop courses or cancel enrolment without financial liability=0D=0A  
+URL;VALUE=URI:https://dictionary.uq.edu.au/terminology/census-date
+CLASS:PRIVATE
+DTSTART:20180331T000000
+DTEND:20180331T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-4376910-18738@www.uq.edu.au
+SUMMARY:Research Quarter 1 ends
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Research Quarter 1 ends
+URL;VALUE=URI:https://graduate-school.uq.edu.au/research-quarters
+CLASS:PRIVATE
+DTSTART:20180331T000000
+DTEND:20180331T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-9797351-18738@www.uq.edu.au
+SUMMARY:Easter Saturday public holiday
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Easter Saturday public holiday=0D=0A
+URL;VALUE=URI:https://www.qld.gov.au/recreation/travel/holidays/public/
+CLASS:PRIVATE
+DTSTART:20180331T000000
+DTEND:20180331T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-9241519-18738@www.uq.edu.au
+SUMMARY:Good Friday public holiday
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Good Friday public holiday
+URL;VALUE=URI:https://www.qld.gov.au/recreation/travel/holidays/public/
+CLASS:PRIVATE
+DTSTART:20180330T000000
+DTEND:20180330T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-7678779-18738@www.uq.edu.au
+SUMMARY:Semester 1 classes end before mid-semester break
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Semester 1 classes end before mid-semester break
+URL;VALUE=URI:
+CLASS:PRIVATE
+DTSTART:20180329T000000
+DTEND:20180329T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-7948957-18738@www.uq.edu.au
+SUMMARY:UQ College - Trimester 1 - last date to withdraw without academic penalty, financial liability remains
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:UQ College - Trimester 1 - last date to withdraw without academic penalty (ADB/TPP), financial liability remains (ADB only). 
+URL;VALUE=URI:http://www.uqcollege.edu.au/
+CLASS:PRIVATE
+DTSTART:20180316T000000
+DTEND:20180316T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-7522490-18738@www.uq.edu.au
+SUMMARY:Summer Semester 2017/2018 deferred and supplementary examinations 10 March 2018
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Summer Semester 2017/2018 deferred and supplementary examinations 10 March 2018
+URL;VALUE=URI:https://my.uq.edu.au/services/exams-and-assessment
+CLASS:PRIVATE
+DTSTART:20180310T000000
+DTEND:20180310T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-7349079-18738@www.uq.edu.au
+SUMMARY:Semester 1 - final date for addition of courses or alteration of enrolment
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Semester 1 - final date for addition of courses or alteration of enrolment
+URL;VALUE=URI:https://my.uq.edu.au/node/212/1#1
+CLASS:PRIVATE
+DTSTART:20180302T000000
+DTEND:20180302T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-2144005-18738@www.uq.edu.au
+SUMMARY:Semester 1 - due date for payment of tuition fees 
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Semester 1 - due date for payment of tuition fees 
+URL;VALUE=URI:https://my.uq.edu.au/services/financial-matters
+CLASS:PRIVATE
+DTSTART:20180302T000000
+DTEND:20180302T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-6814750-18738@www.uq.edu.au
+SUMMARY:Summer Semester 2017/2018 finalisation of grades
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Summer Semester 2017/2018 finalisation of grades
+URL;VALUE=URI:
+CLASS:PRIVATE
+DTSTART:20180222T000000
+DTEND:20180222T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-5173151-18738@www.uq.edu.au
+SUMMARY:Semester 1 Classes Commence*
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:* Some variations to the Academic Calendar are approved annually on a program-by-program basis.=0D=0A=0D=0A
+URL;VALUE=URI:https://my.uq.edu.au/
+CLASS:PRIVATE
+DTSTART:20180219T000000
+DTEND:20180219T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-1955362-18738@www.uq.edu.au
+SUMMARY:UQ College - Trimester 1 - census date/last date to drop courses or cancel enrolment without financial liability
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:UQ College - Trimester 1 - census date/last date to drop courses or cancel enrolment without financial liability
+URL;VALUE=URI:http://www.uqcollege.edu.au/
+CLASS:PRIVATE
+DTSTART:20180216T000000
+DTEND:20180216T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-4031507-18738@www.uq.edu.au
+SUMMARY:Due date to enrol* for international students in Semester 1
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:* Some variations are approved annually on a program-by-program basis. =0D=0A
+URL;VALUE=URI:https://my.uq.edu.au/information-and-services/manage-my-program/classes-timetables-and-coursework/enrolment-and-class-sign?page=2913
+CLASS:PRIVATE
+DTSTART:20180216T000000
+DTEND:20180216T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-8289407-18738@www.uq.edu.au
+SUMMARY:Orientation Week 12 - 16 February 2018
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Orientation Week 12 - 16 February 2018
+URL;VALUE=URI:http://www.uq.edu.au/orientation/
+CLASS:PRIVATE
+DTSTART:20180212T000000
+DTEND:20180212T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-2131008-18738@www.uq.edu.au
+SUMMARY:Summer Semester 2017/2018 examinations end and Summer Semester 2017/2018 ends
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Summer Semester 2017/2018 examinations end and Summer Semester 2017/2018 ends
+URL;VALUE=URI:https://my.uq.edu.au/information-and-services/manage-my-program/summer-semester
+CLASS:PRIVATE
+DTSTART:20180210T000000
+DTEND:20180210T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-2413139-18738@www.uq.edu.au
+SUMMARY:Last date to request a program change through mySI-net for Semester 1
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Last date to request a program change through mySI-net for Semester 1
+URL;VALUE=URI:https://my.uq.edu.au/node/316/0
+CLASS:PRIVATE
+DTSTART:20180209T000000
+DTEND:20180209T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-3027612-18738@www.uq.edu.au
+SUMMARY:Summer Semester 2017/2018 examination period 3 - 10 February 2018
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Summer Semester 2017/2018 examination period 3 - 10 February 2018
+URL;VALUE=URI:https://my.uq.edu.au/services/exams-and-assessment
+CLASS:PRIVATE
+DTSTART:20180203T000000
+DTEND:20180203T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-3939463-18738@www.uq.edu.au
+SUMMARY:UQ College - Trimester 1 - due date for payment of fees and charges
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:UQ College - Trimester 1 - due date for payment of fees and charges
+URL;VALUE=URI:http://www.uqcollege.edu.au/
+CLASS:PRIVATE
+DTSTART:20180202T000000
+DTEND:20180202T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-2318087-18738@www.uq.edu.au
+SUMMARY:UQ College - Trimester 1 - last date to amend enrolment
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:UQ College - Trimester 1 - last date to amend enrolment
+URL;VALUE=URI:http://www.uqcollege.edu.au/
+CLASS:PRIVATE
+DTSTART:20180202T000000
+DTEND:20180202T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-1589539-18738@www.uq.edu.au
+SUMMARY:Summer Semester 2017/2018 - last date to withdraw from a course in mySI-net incurring financial liability and academic penalty
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Summer Semester 2017/2018 - last date to withdraw from a course in mySI-net incurring financial liability and academic penalty
+URL;VALUE=URI:https://my.uq.edu.au/information-and-services/manage-my-program/summer-semester
+CLASS:PRIVATE
+DTSTART:20180202T000000
+DTEND:20180202T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-9988455-18738@www.uq.edu.au
+SUMMARY:Research Quarter 1 - census date/final date to cancel without financial penalty
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Research Quarter 1 - census date/final date to cancel without financial penalty
+URL;VALUE=URI:https://graduate-school.uq.edu.au/research-quarters
+CLASS:PRIVATE
+DTSTART:20180201T000000
+DTEND:20180201T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-2775870-18738@www.uq.edu.au
+SUMMARY:Faculty of Health and Behavioural Sciences commences roll-out for class sign-on for courses delivered in Semester 1
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Faculty of Health and Behavioural Sciences commences roll-out for class sign-on for courses delivered in Semester 1
+URL;VALUE=URI:
+CLASS:PRIVATE
+DTSTART:20180129T000000
+DTEND:20180129T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-6082412-18738@www.uq.edu.au
+SUMMARY:Summer Semester 2017/2018 revision period 29 January - 2 February 2018
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Summer Semester 2017/2018 revision period 29 January - 2 February 2018
+URL;VALUE=URI:https://my.uq.edu.au/information-and-services/manage-my-program/summer-semester
+CLASS:PRIVATE
+DTSTART:20180129T000000
+DTEND:20180129T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-2384030-18738@www.uq.edu.au
+SUMMARY:Faculty of Medicine commences roll-out for class sign-on for courses delivered in Semester 1
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Faculty of Medicine commences roll-out for class sign-on for courses delivered in Semester 1
+URL;VALUE=URI:
+CLASS:PRIVATE
+DTSTART:20180129T000000
+DTEND:20180129T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-7517723-18738@www.uq.edu.au
+SUMMARY:Summer Semester 2017/2018 classes end
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Summer Semester 2017/2018 classes end
+URL;VALUE=URI:https://my.uq.edu.au/information-and-services/manage-my-program/summer-semester
+CLASS:PRIVATE
+DTSTART:20180127T000000
+DTEND:20180127T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-5563184-18738@www.uq.edu.au
+SUMMARY:Due date to enrol* for domestic students in Semester 1
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:* Some variations are approved annually on a program-by-program basis.=0D=0A=0D=0A=0D=0A
+URL;VALUE=URI:https://my.uq.edu.au/information-and-services/manage-my-program/classes-timetables-and-coursework/enrolment-and-class-sign?page=2913
+CLASS:PRIVATE
+DTSTART:20180126T000000
+DTEND:20180126T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-3543606-18738@www.uq.edu.au
+SUMMARY:Australia Day public holiday
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Australia Day public holiday
+URL;VALUE=URI:https://www.qld.gov.au/recreation/travel/holidays/public/
+CLASS:PRIVATE
+DTSTART:20180126T000000
+DTEND:20180126T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-1752509-18738@www.uq.edu.au
+SUMMARY:Faculty of Business, Economics and Law commences roll-out for class sign-on for courses delivered in Semester 1
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Faculty of Business, Economics and Law commences roll-out for class sign-on for courses delivered in Semester 1
+URL;VALUE=URI:
+CLASS:PRIVATE
+DTSTART:20180125T000000
+DTEND:20180125T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-4928681-18738@www.uq.edu.au
+SUMMARY:Faculty of Engineering, Architecture and Information Technology commences roll-out for class sign-on for courses delivered in Semester 1
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Faculty of Engineering, Architecture and Information Technology commences roll-out for class sign-on for courses delivered in Semester 1
+URL;VALUE=URI:
+CLASS:PRIVATE
+DTSTART:20180124T000000
+DTEND:20180124T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-7422859-18738@www.uq.edu.au
+SUMMARY:Faculty of Science commences roll-out for class sign-on for courses delivered in Semester 1
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Faculty of Science commences roll-out for class sign-on for courses delivered in Semester 1
+URL;VALUE=URI:
+CLASS:PRIVATE
+DTSTART:20180123T000000
+DTEND:20180123T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-8039892-18738@www.uq.edu.au
+SUMMARY:Faculty of Humanities and Social Sciences commences roll-out for class sign-on for courses delivered in Semester 1
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Faculty of Humanities and Social Sciences commences roll-out for class sign-on for courses delivered in Semester 1
+URL;VALUE=URI:
+CLASS:PRIVATE
+DTSTART:20180122T000000
+DTEND:20180122T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-8285006-18738@www.uq.edu.au
+SUMMARY:UQ College - Trimester 1 classes commence
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:UQ College - Trimester 1 classes commence
+URL;VALUE=URI:http://www.uqcollege.edu.au/
+CLASS:PRIVATE
+DTSTART:20180122T000000
+DTEND:20180122T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-7701129-18738@www.uq.edu.au
+SUMMARY:UQ College - Trimester 1 - due date to enrol
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:UQ College - Trimester 1 - due date to enrol
+URL;VALUE=URI:http://www.uqcollege.edu.au/
+CLASS:PRIVATE
+DTSTART:20180119T000000
+DTEND:20180119T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-6614444-18738@www.uq.edu.au
+SUMMARY:UQ College - Trimester 1 Associate Degree Business Orientation
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:UQ College - Trimester 1 Associate Degree Business Orientation
+URL;VALUE=URI:http://www.uqcollege.edu.au/
+CLASS:PRIVATE
+DTSTART:20180118T000000
+DTEND:20180118T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-1784960-18738@www.uq.edu.au
+SUMMARY:UQ College - Trimester 1 Tertiary Preparation Program Orientation
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:UQ College - Trimester 1 Tertiary Preparation Program Orientation
+URL;VALUE=URI:http://www.uqcollege.edu.au/
+CLASS:PRIVATE
+DTSTART:20180116T000000
+DTEND:20180116T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-5192360-18738@www.uq.edu.au
+SUMMARY:Show cause response due for students who were asked to show cause in an earlier semester and have interrupted their studies, who wish to return in Semester 1 2018
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Show cause response due for students who were asked to show cause in an earlier semester and have interrupted their studies, who wish to return in Semester 1 2018
+URL;VALUE=URI:https://my.uq.edu.au/information-and-services/manage-my-program/academic-progress-and-final-results/academic-warnings-and-showing-cause/show-cause-process
+CLASS:PRIVATE
+DTSTART:20180105T000000
+DTEND:20180105T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-3684209-18738@www.uq.edu.au
+SUMMARY:Summer Semester 2017/2018 classes recommence after mid-semester break
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Summer Semester 2017/2018 classes recommence after mid-semester break
+URL;VALUE=URI:https://my.uq.edu.au/information-and-services/manage-my-program/summer-semester
+CLASS:PRIVATE
+DTSTART:20180102T000000
+DTEND:20180102T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-4636226-18738@www.uq.edu.au
+SUMMARY:First date to request a program change through mySI-net for Semester 1 
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:First date to request a program change through mySI-net for Semester 1 
+URL;VALUE=URI:https://my.uq.edu.au/node/316/0
+CLASS:PRIVATE
+DTSTART:20180102T000000
+DTEND:20180102T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-2513388-18738@www.uq.edu.au
+SUMMARY:Summer Semester 2017/2018 - last date to drop courses or cancel enrolment without academic penalty
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Summer Semester 2017/2018 - last date to drop courses or cancel enrolment without academic penalty
+URL;VALUE=URI:https://my.uq.edu.au/information-and-services/manage-my-program/summer-semester
+CLASS:PRIVATE
+DTSTART:20180102T000000
+DTEND:20180102T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-8975442-18738@www.uq.edu.au
+SUMMARY:New Year`s Day public holiday
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:New Year`s Day public holiday
+URL;VALUE=URI:https://www.qld.gov.au/recreation/travel/holidays/public/
+CLASS:PRIVATE
+DTSTART:20180101T000000
+DTEND:20180101T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+BEGIN:VEVENT
+UID:20180520T062321Z-8773752-18738@www.uq.edu.au
+SUMMARY:Research Quarter 1 commences
+LOCATION:  
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Research Quarter 1 commences
+URL;VALUE=URI:https://graduate-school.uq.edu.au/research-quarters
+CLASS:PRIVATE
+DTSTART:20180101T000000
+DTEND:20180101T235900
+DTSTAMP:20180520T162321Z
+END:VEVENT
+END:VCALENDAR
