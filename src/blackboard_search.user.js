@@ -3,7 +3,8 @@
 // @author      Kenton Lam
 // @description Searches blackboard
 // @match       https://learn.uq.edu.au/*
-// @version     __VERSION__
+// @match       https://ilearn.bond.edu.au/*
+// @version     VERSION
 // @grant       GM_getValue
 // @grant       GM_setValue
 // @grant       GM_deleteValue
@@ -33,12 +34,17 @@ function Queue(){var a=[],b=0;this.getLength=function(){return a.length-b};this.
 function BlackboardSearch() {
     if (window.location.href.indexOf('/courseMenu.jsp') !== -1) return;
 
-    // 2^53 - 1
-    let MAX_INT = Number.MAX_SAFE_INTEGER || 9007199254740991;
     let $ = jQuery.noConflict(true);
+
+    // todo debug check before console log.
 
     class UniHelper {
         constructor(pageUrl) {
+            this.uni = {};
+            this.detectUni(pageUrl);
+        }
+
+        detectUni(pageUrl) {
             for (let i = 0; i < UniHelper.uniDefinitions.length; i++) {
                 const uni = UniHelper.uniDefinitions[i];
                 if (_.startsWith(pageUrl, uni.baseUrl)) {
@@ -54,21 +60,16 @@ function BlackboardSearch() {
         }
 
         parseCourse(courseString) {
-            let match = this.uni.courseRegex.exec(courseString);
-            if (!match) return null;
-            if (this.uni.courseRegexParser) {
-                return this.uni.courseRegexParser(match);
+            if (this.uni.parseCourse) {
+                return this.uni.parseCourse(courseString);
             } else {
-                return {
-                    courseCodeArray: [match[1]],
-                    courseName: match[2]
-                };
+                return UniHelper.uniDefinitions[0].parseCourse(courseString);
             }
         }
 
-        getCourseId(url) {
-            if (this.urlParser) {
-                return this.urlParser(url);
+        parseUrl(url) {
+            if (this.uni.parseUrl) {
+                return this.uni.parseUrl(url);
             } else {
                 let match = /[&?]course_id=([^&?]+)/.exec(url);
                 if (!match) return null;
@@ -77,8 +78,8 @@ function BlackboardSearch() {
         }
 
         getIFrameUrl(courseId) {
-            if (this.uni.iframeUrl) {
-                return this.uni.iframeUrl(courseId);
+            if (this.uni.getIFrameUrl) {
+                return this.uni.getIFrameUrl(courseId);
             } else {
                 return this.uni.baseUrl + 'webapps/blackboard/content/courseMenu.jsp?course_id=' + 
                     courseId +'&newWindow=true';
@@ -88,8 +89,10 @@ function BlackboardSearch() {
     UniHelper.uniDefinitions = [
         {
             baseUrl: 'https://learn.uq.edu.au/',
-            courseRegex: /^\[([A-Za-z0-9/]+)\] (.*)$/,
-            courseRegexParser: function (match) {
+            parseCourse: function (courseTitle) {
+                let match = /^\[([A-Za-z0-9/]+)\] (.*)$/.exec(courseTitle);
+                if (!match) return null;
+                
                 let letters = match[1].slice(0, 4);
                 let courseCodeArray = match[1].split('/');
                 for (let c = 0; c < courseCodeArray.length; c++) {
@@ -105,13 +108,20 @@ function BlackboardSearch() {
         },
         {
             baseUrl: 'https://ilearn.bond.edu.au/',
-            courseRegex: /^([^_]+)_[^ ]+ \((.*)\)$/,
+            parseCourse: function (courseTitle) {
+                let m = /^([^_]+)_[^ ]+ \((.*)\)$/.exec(courseTitle);
+                return {
+                    courseName: m[2],
+                    courseCodeArray: [m[1]],
+                };
+            }
         }
     ];
 
 
     class BlackboardTreeParser {
         constructor(uniHelper) {
+            /** @type {UniHelper} */
             this.uniHelper = uniHelper;
 
             this.callback = function() {};
@@ -153,14 +163,15 @@ function BlackboardSearch() {
 
         startTreeParse(rootDiv) {
             this.treeData = {
-                'time': Date.now(),
+                'lastUpdated': Date.now(),
                 'courseId': this.courseId,
                 'courseName': this.courseName,
-                'courseCodes': this.courseCode,
+                'courseCodeArray': this.courseCodeArray,
+                'iframeSrc': this.iframeSrc,
                 'items': [],
             };
             for (let i = 0; i < rootDiv.children.length; i++) {
-                this.parseOneUL(rootDiv.children[i], [this.courseCode.join('\u200A/\u200A')]);
+                this.parseOneUL(rootDiv.children[i], [this.courseCodeArray.join('\u200A/\u200A')]);
             }
             return this.treeData;
         }
@@ -194,28 +205,12 @@ function BlackboardSearch() {
             }
         }
 
-        parseCourseTitle(courseTitle) {
-            let codeMatch = /^\[([A-Z0-9/]+)\]/i.exec(courseTitle);
-            if (!codeMatch) throw new Error('No matched course code: ' + courseTitle);
-            let letters = codeMatch[1].slice(0, 4);
-            let courseCode = codeMatch[1].split('/');
-            for (let c = 0; c < courseCode.length; c++) {
-                if (courseCode[c].length < 8) {
-                    courseCode[c] = letters + courseCode[c];
-                }
-            }
-            return {
-                name: courseTitle.replace(codeMatch[0], '').trim(),
-                codes: courseCode
-            };
-        }
-
         iframeOnLoad() {
-            let parsed = this.parseCourseTitle(
+            let parsed = this.uniHelper.parseCourse(
                 this.iframe.contentDocument.getElementById('courseMenu_link').textContent);
 
-            this.courseName = parsed.name;
-            this.courseCode = parsed.codes;
+            this.courseName = parsed.courseName;
+            this.courseCodeArray = parsed.courseCodeArray;
 
             if (this.iframe.contentDocument.getElementById('courseMapButton'))
                 this.callback(null);
@@ -230,7 +225,9 @@ function BlackboardSearch() {
             }
             this.iframe = document.createElement('iframe');
             this.iframe.id = 'userscript-search-iframe';
+            // bug this will break if someone uses multiple unis.
             this.iframe.src = this.uniHelper.getIFrameUrl(this.courseId);
+            this.iframeSrc = this.iframe.src;
             this.iframe.onload = this.iframeOnLoad.bind(this);
             this.iframe.style.width = '210px';
             this.iframe.style.display = 'none';
@@ -258,7 +255,7 @@ function BlackboardSearch() {
             this.coursesToUpdate = [];
 
             this.uniHelper = new UniHelper(pageUrl);
-            this.pageCourseId = this.uniHelper.getCourseId(pageUrl);
+            this.pageCourseId = this.uniHelper.parseUrl(pageUrl);
 
             this.parser = new BlackboardTreeParser(this.uniHelper);
 
@@ -278,16 +275,14 @@ function BlackboardSearch() {
                 return;
             if (this.courseDataObject.hasOwnProperty(this.pageCourseId))
                 return;
-            let parsedCourse = this.parser.parseCourseTitle(
+            let parsedCourse = this.uniHelper.parseCourse(
                 document.getElementById('courseMenu_link').textContent);
-            let codes = parsedCourse.codes;
+            let codes = parsedCourse.courseCodeArray;
 
-            for (let i = 0; i < codes.length; i++) {
-                if (this.selectedCourses.indexOf(codes[i]) !== -1) {
-                    console.log('adding current page');
-                    this.queueUpdateCourse(this.pageCourseId);
-                    return true;
-                }
+            if (this.inSelectedCourses(codes)) {
+                console.log('adding current page');
+                this.queueUpdateCourse(this.pageCourseId);
+                return true;
             }
             console.log('not adding current page');
             return false;
@@ -305,6 +300,7 @@ function BlackboardSearch() {
             if (!query) {
                 for (let i = 0; i < this.linkItems.length; i++) {
                     const item = this.linkItems[i];
+                    // todo label to path
                     if (item.label[1] === 'Announcements') {
                         this.searchResults.appendChild(item.element);
                         $(item.element).fadeIn(200);
@@ -533,9 +529,11 @@ function BlackboardSearch() {
         }
 
         updateAllCourses() {
-            _.forEach(_.keys(this.courseDataObject), function (id) {
-                this.queueUpdateCourse(id);
-            }.bind(this));
+            for (const courseId in this.courseDataObject) {
+                if (this.courseDataObject.hasOwnProperty(courseId)) {
+                    this.queueUpdateCourse(courseId);
+                }
+            }
         }
 
         queueUpdateCourse(courseId) {
@@ -559,14 +557,18 @@ function BlackboardSearch() {
             else
                 updateInterval = this.config.get('OtherCourseUpdateInterval');
 
-            if (Date.now() - courseObject.time > updateInterval*60000) {
+            if (Date.now() - courseObject.lastUpdated > updateInterval*60000) {
                 console.log('Updating '+courseId);
                 this.queueUpdateCourse(courseObject.courseId);
             }
         }
 
         maybeUpdateAllCourses() {
-            _.forEach(this.courseDataObject, this.maybeUpdateCourse.bind(this));
+            for (const id in this.courseDataObject) {
+                if (this.courseDataObject.hasOwnProperty(id)) {
+                    this.maybeUpdateCourse(this.courseDataObject[id]);
+                }
+            }
         }
 
         parseTreeCallback(treeData) {
@@ -595,20 +597,24 @@ function BlackboardSearch() {
         }
 
         updateLinks() {
-            _.remove(this.linkItems, function() {return true;});
-            _.forEach(_.values(this.courseDataObject), function(o) {
-                this.linkItems.push(...o.items);
-            }.bind(this));
-            _.forEach(this.linkItems, function(item) {
+            _.remove(this.linkItems, _.stubTrue);
+            for (const id in this.courseDataObject) {
+                if (this.courseDataObject.hasOwnProperty(id)) {
+                    this.linkItems.push(...this.courseDataObject[id].items);
+                }
+            }
+            for (let i = 0; i < this.linkItems.length; i++) {
+                const item = this.linkItems[i];
                 let li = document.createElement('li');
                 let a = document.createElement('a');
                 a.href = item.link;
-                a.textContent = this.formatLinkText(item.label);
+                // todo label to path.
+                a.textContent = this.formatLinkText(item.label, true);
                 li.appendChild(a);
                 item.element = li;
                 item.text = this.formatLinkText(item.label);
                 item.courseCode = item.label[0];
-            }.bind(this));
+            }
             return this.linkItems;
         }
 
@@ -616,24 +622,26 @@ function BlackboardSearch() {
             for (const id in this.courseDataObject) {
                 if (this.courseDataObject.hasOwnProperty(id)) {
                     const courseData = this.courseDataObject[id];
-                    if (courseData.courseCodes.indexOf(courseCode) !== -1)
+                    if (courseData.courseCodeArray.indexOf(courseCode) !== -1)
                         return true;
                 }
             }
             return false;
         }
 
-        inSelectedCourses(courseCodes) {
-            for (let i = 0; i < courseCodes.length; i++) {
-                if (this.selectedCourses.indexOf(courseCodes[i]) !== -1)
+        inSelectedCourses(courseCodeArray) {
+            if (!courseCodeArray) return false;
+            for (let i = 0; i < courseCodeArray.length; i++) {
+                if (this.selectedCourses.indexOf(courseCodeArray[i]) !== -1)
                     return true;                
             }
             return false;
         }
 
+        // todo refactor this and config related window into another class.
         updateSettings() {
             // Parse week definitions text box into dates.
-            _.remove(this.weekDefinitions);
+            _.remove(this.weekDefinitions, _.stubTrue);
             let weekLines = this.config.get('WeekDefinitions').split('\n');
 
             let weekRegex = /^(\d{4})-(\d{1,2})-(\d{1,2})\s+(\d{4})-(\d{1,2})-(\d{1,2})\s+(\d+)?\s+(.+)$/;
@@ -695,14 +703,14 @@ function BlackboardSearch() {
             // Delete courses no longer in list.
             for (const courseId in this.courseDataObject) {
                 if (this.courseDataObject.hasOwnProperty(courseId)) {
-                    if (!this.inSelectedCourses(this.courseDataObject[courseId].courseCodes)) {
+                    if (!this.inSelectedCourses(
+                        this.courseDataObject[courseId].courseCodeArray)) {
+                        
                         console.log('deleting: ' + courseId);
                         this.deleteCourse(courseId);
                     }
                 }
             }
-
-            
         }
 
         deleteCourse(idToDelete) {
