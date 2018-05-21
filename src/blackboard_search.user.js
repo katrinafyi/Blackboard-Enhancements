@@ -15,12 +15,12 @@
 // @require     https://cdnjs.cloudflare.com/ajax/libs/lz-string/1.4.4/lz-string.js
 // ==/UserScript==
 
+// These imports are so VSCode recognises the libraries. 
+// They are removed by webpack and loaded via TamperMonkey's @require.
 import jQuery from 'jquery';
 import 'featherlight';
-
 import Fuse from 'fuse.js';
 import _ from 'lodash';
-
 import GM_configStruct from 'gm_config';
 import LZString from 'lz-string';
 
