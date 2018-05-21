@@ -28,6 +28,13 @@ module.exports = {
         "semi": [
             "error",
             "always"
+        ],
+        'no-warning-comments': [
+            'error',
+            {
+                terms: ['todo', 'fixme', 'bug'],
+                location: 'start'
+            }
         ]
     }
 };
