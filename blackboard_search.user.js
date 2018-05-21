@@ -22,8 +22,10 @@ import 'lz-string';
 import 'fuse.js';
 
 /* Queue.js */
+/* eslint-disable */
 //code.iamkate.com
 function Queue(){var a=[],b=0;this.getLength=function(){return a.length-b};this.isEmpty=function(){return 0==a.length};this.enqueue=function(b){a.push(b)};this.dequeue=function(){if(0!=a.length){var c=a[b];2*++b>=a.length&&(a=a.slice(b),b=0);return c}};this.peek=function(){return 0<a.length?a[b]:void 0}};
+/* eslint-enable */
 
 function BlackboardSearch() {
     if (window.location.href.indexOf('/courseMenu.jsp') !== -1) return;
@@ -282,32 +284,32 @@ function BlackboardSearch() {
 
         searchKeyHandler(event) {
             switch (event.which) {
-                case 38: // up
-                    if (!this.selectedRow)
-                            this.selectRow(this.searchResults.firstElementChild);
-                        else 
-                            this.selectPreviousRow();
+            case 38: // up
+                if (!this.selectedRow)
+                    this.selectRow(this.searchResults.firstElementChild);
+                else 
+                    this.selectPreviousRow();
                 break;
-        
-                case 40: // right
-                    if (!this.selectedRow)
-                        this.selectRow(this.searchResults.firstElementChild);
-                    else 
-                        this.selectNextRow();
+    
+            case 40: // right
+                if (!this.selectedRow)
+                    this.selectRow(this.searchResults.firstElementChild);
+                else 
+                    this.selectNextRow();
                 break;
 
-                case 13:
-                    if (this.selectedRow)
-                        window.open(this.selectedRow.firstElementChild.href, '_self');
+            case 13:
+                if (this.selectedRow)
+                    window.open(this.selectedRow.firstElementChild.href, '_self');
                 break;
-                default: return; // exit this handler for other keys
+            default: return; // exit this handler for other keys
             }
             event.preventDefault();
         }
 
         tickTime() {
             this.timeSpan.textContent = new Date().toLocaleTimeString(  
-                    undefined, {hour: '2-digit', minute: '2-digit'});
+                undefined, {hour: '2-digit', minute: '2-digit'});
 
             if ($.featherlight.current()) {
                 setTimeout(this.tickTime.bind(this), 60000-Date.now()%60000);
@@ -316,12 +318,12 @@ function BlackboardSearch() {
 
         tickDateAndCalendar() {
             this.dateSpan.textContent = new Date().toLocaleDateString(undefined,
-            {
-                weekday: 'long',
-                day: 'numeric',
-                month: 'long',
-                year: 'numeric'
-            });
+                {
+                    weekday: 'long',
+                    day: 'numeric',
+                    month: 'long',
+                    year: 'numeric'
+                });
 
             this.semesterSpan.textContent = '';
             this.weekSpan.textContent = '';
@@ -357,7 +359,7 @@ function BlackboardSearch() {
             return el;
         }
 
-        createWindow(rootNode) {
+        createWindow() {
             this.searchWindow = document.createElement('div');
             this.searchWindow.id = 'userscript-search-window';
 

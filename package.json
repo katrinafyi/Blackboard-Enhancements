@@ -1,0 +1,17 @@
+{
+  "name": "blackboard-userscripts",
+  "version": "0.1.0",
+  "description": "Searches Blackboard courses.",
+  "main": "blackboard_search.user.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/KentonLam/Blackboard-Enhancements.git"
+  },
+  "author": "Kenton Lam",
+  "devDependencies": {
+    "eslint": "^4.19.1"
+  }
+}
