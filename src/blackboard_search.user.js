@@ -3,7 +3,7 @@
 // @author      Kenton Lam
 // @description Searches blackboard
 // @match       https://learn.uq.edu.au/*
-// @version     0.1
+// @version     __VERSION__
 // @grant       GM_getValue
 // @grant       GM_setValue
 // @grant       GM_deleteValue
@@ -37,8 +37,83 @@ function BlackboardSearch() {
     let MAX_INT = Number.MAX_SAFE_INTEGER || 9007199254740991;
     let $ = jQuery.noConflict(true);
 
+    class UniHelper {
+        constructor(pageUrl) {
+            for (let i = 0; i < UniHelper.uniDefinitions.length; i++) {
+                const uni = UniHelper.uniDefinitions[i];
+                if (_.startsWith(pageUrl, uni.baseUrl)) {
+                    this.uni = uni;
+                    DEBUG && console.log('Matched: ' + uni.baseUrl);
+                }
+            }
+
+            if (!this.uni) {
+                console.log('Unknown university: ' + pageUrl);
+                this.uni = UniHelper.uniDefinitions[0];
+            }
+        }
+
+        parseCourse(courseString) {
+            let match = this.uni.courseRegex.exec(courseString);
+            if (!match) return null;
+            if (this.uni.courseRegexParser) {
+                return this.uni.courseRegexParser(match);
+            } else {
+                return {
+                    courseCodeArray: [match[1]],
+                    courseName: match[2]
+                };
+            }
+        }
+
+        getCourseId(url) {
+            if (this.urlParser) {
+                return this.urlParser(url);
+            } else {
+                let match = /[&?]course_id=([^&?]+)/.exec(url);
+                if (!match) return null;
+                return match[1];
+            }
+        }
+
+        getIFrameUrl(courseId) {
+            if (this.uni.iframeUrl) {
+                return this.uni.iframeUrl(courseId);
+            } else {
+                return this.uni.baseUrl + 'webapps/blackboard/content/courseMenu.jsp?course_id=' + 
+                    courseId +'&newWindow=true';
+            }
+        }
+    }
+    UniHelper.uniDefinitions = [
+        {
+            baseUrl: 'https://learn.uq.edu.au/',
+            courseRegex: /^\[([A-Za-z0-9/]+)\] (.*)$/,
+            courseRegexParser: function (match) {
+                let letters = match[1].slice(0, 4);
+                let courseCodeArray = match[1].split('/');
+                for (let c = 0; c < courseCodeArray.length; c++) {
+                    if (courseCodeArray[c].length < 8) {
+                        courseCodeArray[c] = letters + courseCodeArray[c];
+                    }
+                }
+                return {
+                    courseName: match[0].replace('['+match[1]+'] ', '').trim(),
+                    courseCodeArray: courseCodeArray
+                };
+            }
+        },
+        {
+            baseUrl: 'https://ilearn.bond.edu.au/',
+            courseRegexParser: /^([^_]+)_[^ ]+ \((.*)\)$/,
+        }
+    ];
+
+
     class BlackboardTreeParser {
-        constructor() {
+        constructor(uniHelper) {
+            this.uniHelper = uniHelper;
+
             this.callback = function() {};
             this.courseId = '';
             this.retryCount = 0;
@@ -155,8 +230,7 @@ function BlackboardSearch() {
             }
             this.iframe = document.createElement('iframe');
             this.iframe.id = 'userscript-search-iframe';
-            this.iframe.src = 'https://learn.uq.edu.au/webapps/blackboard/content/courseMenu.jsp?course_id=' + 
-                this.courseId +'&newWindow=true'; // &openInParentWindow=true
+            this.iframe.src = this.uniHelper.getIFrameUrl(this.courseId);
             this.iframe.onload = this.iframeOnLoad.bind(this);
             this.iframe.style.width = '210px';
             this.iframe.style.display = 'none';
@@ -166,7 +240,7 @@ function BlackboardSearch() {
     }
 
     class BlackboardSearchManager {
-        constructor(pageCourseId) {
+        constructor(pageUrl) {
             this.courseDataObject = {};
             this.linkItems = [];
             this.fuse = new Fuse(this.linkItems, {
@@ -182,9 +256,11 @@ function BlackboardSearch() {
             });
             this.selectedRow = null;
             this.coursesToUpdate = [];
-            this.pageCourseId = pageCourseId;
 
-            this.parser = new BlackboardTreeParser();
+            this.uniHelper = new UniHelper(pageUrl);
+            this.pageCourseId = this.uniHelper.getCourseId(pageUrl);
+
+            this.parser = new BlackboardTreeParser(this.uniHelper);
 
             this.config = new GM_configStruct();
             /**
@@ -714,11 +790,7 @@ function BlackboardSearch() {
     console.log('Blackboard search starting.');
     
 
-    let courseIDRegex = /[?&]course_id=([^&?]+)/i;
-    let match = courseIDRegex.exec(window.location.href);
-    if (!match) return;
-
-    let searchManager = new BlackboardSearchManager(match[1]);
+    let searchManager = new BlackboardSearchManager(window.location.href);
     searchManager.maybeUpdateAllCourses();
     let searchWindow = searchManager.createWindow();
     
