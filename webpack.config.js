@@ -31,10 +31,11 @@ module.exports = function (env) {
         plugins: [
             new webpack.DefinePlugin({
                 DEBUG: JSON.stringify(debug),
+                VERSION: JSON.stringify(version),
             }),
             new webpack.BannerPlugin({
                 raw: true,
-                banner: userscriptHeader.replace(/__VERSION__/g, version),
+                banner: userscriptHeader.replace(/VERSION/g, version),
                 entryOnly: true
             })
         ],
