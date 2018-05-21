@@ -1,5 +1,5 @@
 # Blackboard Enhancements
-Various enhancements to make using Blackboard easier and faster.
+Various enhancements to make Blackboard somewhat bearable.
 
 ## Blackboard Search Userscript
 Press Ctrl+Space to open a search window for easy navigation across courses.
