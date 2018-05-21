@@ -12,6 +12,8 @@
   },
   "author": "Kenton Lam",
   "devDependencies": {
-    "eslint": "^4.19.1"
+    "eslint": "^4.19.1",
+    "webpack": "^4.8.3",
+    "webpack-cli": "^2.1.3"
   }
 }

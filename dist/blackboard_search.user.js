@@ -1,6 +1,113 @@
 // ==UserScript==
 // @name        Blackboard Search Enhancements
-// @description Searches blackboard.
+// @author      Kenton Lam
+// @description Searches blackboard
+// @match       https://learn.uq.edu.au/*
+// @version     0.1
+// @grant       GM_getValue
+// @grant       GM_setValue
+// @grant       GM_deleteValue
+// @require     https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js
+// @require     https://cdnjs.cloudflare.com/ajax/libs/featherlight/1.7.13/featherlight.min.js
+// @require     https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.0/fuse.min.js
+// @require     https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.10/lodash.min.js
+// @require     https://openuserjs.org/src/libs/sizzle/GM_config.js
+// @require     https://cdnjs.cloudflare.com/ajax/libs/lz-string/1.4.4/lz-string.js
+// ==/UserScript==
+
+/******/ (function(modules) { // webpackBootstrap
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+/******/
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId]) {
+/******/ 			return installedModules[moduleId].exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			i: moduleId,
+/******/ 			l: false,
+/******/ 			exports: {}
+/******/ 		};
+/******/
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/
+/******/ 		// Flag the module as loaded
+/******/ 		module.l = true;
+/******/
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/
+/******/
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
+/******/
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
+/******/
+/******/ 	// define getter function for harmony exports
+/******/ 	__webpack_require__.d = function(exports, name, getter) {
+/******/ 		if(!__webpack_require__.o(exports, name)) {
+/******/ 			Object.defineProperty(exports, name, {
+/******/ 				configurable: false,
+/******/ 				enumerable: true,
+/******/ 				get: getter
+/******/ 			});
+/******/ 		}
+/******/ 	};
+/******/
+/******/ 	// define __esModule on exports
+/******/ 	__webpack_require__.r = function(exports) {
+/******/ 		Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 	};
+/******/
+/******/ 	// getDefaultExport function for compatibility with non-harmony modules
+/******/ 	__webpack_require__.n = function(module) {
+/******/ 		var getter = module && module.__esModule ?
+/******/ 			function getDefault() { return module['default']; } :
+/******/ 			function getModuleExports() { return module; };
+/******/ 		__webpack_require__.d(getter, 'a', getter);
+/******/ 		return getter;
+/******/ 	};
+/******/
+/******/ 	// Object.prototype.hasOwnProperty.call
+/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
+/******/
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = "";
+/******/
+/******/
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(__webpack_require__.s = 0);
+/******/ })
+/************************************************************************/
+/******/ ([
+/* 0 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var featherlight__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(2);
+/* harmony import */ var featherlight__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(featherlight__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var fuse_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(3);
+/* harmony import */ var fuse_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(fuse_js__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(4);
+/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var gm_config__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(5);
+/* harmony import */ var gm_config__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(gm_config__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var lz_string__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(6);
+/* harmony import */ var lz_string__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(lz_string__WEBPACK_IMPORTED_MODULE_5__);
+// ==UserScript==
+// @name        Blackboard Search Enhancements
+// @author      Kenton Lam
+// @description Searches blackboard
 // @match       https://learn.uq.edu.au/*
 // @version     0.1
 // @grant       GM_getValue
@@ -15,17 +122,26 @@
 // ==/UserScript==
 
 
-if (window.location.href.indexOf('/courseMenu.jsp') !== -1) return;
+
+
+
+
+
+
+
 
 /* Queue.js */
+/* eslint-disable */
 //code.iamkate.com
 function Queue(){var a=[],b=0;this.getLength=function(){return a.length-b};this.isEmpty=function(){return 0==a.length};this.enqueue=function(b){a.push(b)};this.dequeue=function(){if(0!=a.length){var c=a[b];2*++b>=a.length&&(a=a.slice(b),b=0);return c}};this.peek=function(){return 0<a.length?a[b]:void 0}};
+/* eslint-enable */
 
 function BlackboardSearch() {
+    if (window.location.href.indexOf('/courseMenu.jsp') !== -1) return;
 
     // 2^53 - 1
     let MAX_INT = Number.MAX_SAFE_INTEGER || 9007199254740991;
-    let $ = jQuery.noConflict(true);
+    let $ = jquery__WEBPACK_IMPORTED_MODULE_0___default.a.noConflict(true);
 
     class BlackboardTreeParser {
         constructor() {
@@ -53,7 +169,7 @@ function BlackboardSearch() {
                 if (listNode.children[j].tagName.toUpperCase() === 'LI') {
                     let li = listNode.children[j];
                     let text = li.children[2].textContent.trim();
-                    let thisName = _.concat(rootName, text);
+                    let thisName = lodash__WEBPACK_IMPORTED_MODULE_3___default.a.concat(rootName, text);
                     this.treeData.items.push({
                         'courseId': this.courseId,
                         'link': li.children[2].href,
@@ -159,7 +275,7 @@ function BlackboardSearch() {
         constructor(pageCourseId) {
             this.courseDataObject = {};
             this.linkItems = [];
-            this.fuse = new Fuse(this.linkItems, {
+            this.fuse = new fuse_js__WEBPACK_IMPORTED_MODULE_2___default.a(this.linkItems, {
                 shouldSort: true,
                 tokenize: true,
                 matchAllTokens: true,
@@ -176,7 +292,7 @@ function BlackboardSearch() {
 
             this.parser = new BlackboardTreeParser();
 
-            this.config = new GM_configStruct();
+            this.config = new gm_config__WEBPACK_IMPORTED_MODULE_4___default.a();
             /**
              * @type {Object<string, Date>[]}
              */
@@ -277,32 +393,32 @@ function BlackboardSearch() {
 
         searchKeyHandler(event) {
             switch (event.which) {
-                case 38: // up
-                    if (!this.selectedRow)
-                            this.selectRow(this.searchResults.firstElementChild);
-                        else 
-                            this.selectPreviousRow();
+            case 38: // up
+                if (!this.selectedRow)
+                    this.selectRow(this.searchResults.firstElementChild);
+                else 
+                    this.selectPreviousRow();
                 break;
-        
-                case 40: // right
-                    if (!this.selectedRow)
-                        this.selectRow(this.searchResults.firstElementChild);
-                    else 
-                        this.selectNextRow();
+    
+            case 40: // right
+                if (!this.selectedRow)
+                    this.selectRow(this.searchResults.firstElementChild);
+                else 
+                    this.selectNextRow();
                 break;
 
-                case 13:
-                    if (this.selectedRow)
-                        window.open(this.selectedRow.firstElementChild.href, '_self');
+            case 13:
+                if (this.selectedRow)
+                    window.open(this.selectedRow.firstElementChild.href, '_self');
                 break;
-                default: return; // exit this handler for other keys
+            default: return; // exit this handler for other keys
             }
             event.preventDefault();
         }
 
         tickTime() {
             this.timeSpan.textContent = new Date().toLocaleTimeString(  
-                    undefined, {hour: '2-digit', minute: '2-digit'});
+                undefined, {hour: '2-digit', minute: '2-digit'});
 
             if ($.featherlight.current()) {
                 setTimeout(this.tickTime.bind(this), 60000-Date.now()%60000);
@@ -311,12 +427,12 @@ function BlackboardSearch() {
 
         tickDateAndCalendar() {
             this.dateSpan.textContent = new Date().toLocaleDateString(undefined,
-            {
-                weekday: 'long',
-                day: 'numeric',
-                month: 'long',
-                year: 'numeric'
-            });
+                {
+                    weekday: 'long',
+                    day: 'numeric',
+                    month: 'long',
+                    year: 'numeric'
+                });
 
             this.semesterSpan.textContent = '';
             this.weekSpan.textContent = '';
@@ -348,11 +464,11 @@ function BlackboardSearch() {
         createElement(element, options) {
             var el = document.createElement(element);
             if (options)
-                _.assign(el, options);
+                lodash__WEBPACK_IMPORTED_MODULE_3___default.a.assign(el, options);
             return el;
         }
 
-        createWindow(rootNode) {
+        createWindow() {
             this.searchWindow = document.createElement('div');
             this.searchWindow.id = 'userscript-search-window';
 
@@ -401,7 +517,7 @@ function BlackboardSearch() {
             this.searchBox.setAttribute('autocomplete', 'off');
             this.searchBox.tabIndex = 0;
             this.searchBox.addEventListener('input',
-                _.debounce(this.doSearch.bind(this), 200));
+                lodash__WEBPACK_IMPORTED_MODULE_3___default.a.debounce(this.doSearch.bind(this), 200));
             $(this.searchBox).keydown(
                 this.searchKeyHandler.bind(this));
         
@@ -410,7 +526,7 @@ function BlackboardSearch() {
             this.searchButton = document.createElement('input');
             this.searchButton.type = 'submit';
             this.searchButton.style.display = 'none';
-            this.searchButton.onclick = _.noop;
+            this.searchButton.onclick = lodash__WEBPACK_IMPORTED_MODULE_3___default.a.noop;
             this.searchForm.appendChild(this.searchButton);
         
             this.searchWindow.appendChild(this.searchForm);
@@ -447,7 +563,7 @@ function BlackboardSearch() {
         }
 
         updateAllCourses() {
-            _.forEach(_.keys(this.courseDataObject), function (id) {
+            lodash__WEBPACK_IMPORTED_MODULE_3___default.a.forEach(lodash__WEBPACK_IMPORTED_MODULE_3___default.a.keys(this.courseDataObject), function (id) {
                 this.updateCourse(id);
             }.bind(this));
         }
@@ -480,7 +596,7 @@ function BlackboardSearch() {
         }
 
         maybeUpdateAllCourses() {
-            _.forEach(this.courseDataObject, this.maybeUpdateCourse.bind(this));
+            lodash__WEBPACK_IMPORTED_MODULE_3___default.a.forEach(this.courseDataObject, this.maybeUpdateCourse.bind(this));
         }
 
         parseTreeCallback(treeData) {
@@ -500,7 +616,7 @@ function BlackboardSearch() {
 
         storeCourseData() {
             this.config.set('CourseDataLZ', 
-                LZString.compressToUTF16(JSON.stringify(this.courseDataObject)));
+                lz_string__WEBPACK_IMPORTED_MODULE_5___default.a.compressToUTF16(JSON.stringify(this.courseDataObject)));
             this.config.save();
         }
 
@@ -509,11 +625,11 @@ function BlackboardSearch() {
         }
 
         updateLinks() {
-            _.remove(this.linkItems, function() {return true;});
-            _.forEach(_.values(this.courseDataObject), function(o) {
+            lodash__WEBPACK_IMPORTED_MODULE_3___default.a.remove(this.linkItems, function() {return true;});
+            lodash__WEBPACK_IMPORTED_MODULE_3___default.a.forEach(lodash__WEBPACK_IMPORTED_MODULE_3___default.a.values(this.courseDataObject), function(o) {
                 this.linkItems.push(...o.items);
             }.bind(this));
-            _.forEach(this.linkItems, function(item) {
+            lodash__WEBPACK_IMPORTED_MODULE_3___default.a.forEach(this.linkItems, function(item) {
                 let li = document.createElement('li');
                 let a = document.createElement('a');
                 a.href = item.link;
@@ -547,7 +663,7 @@ function BlackboardSearch() {
 
         updateSettings() {
             // Parse week definitions text box into dates.
-            _.remove(this.weekDefinitions);
+            lodash__WEBPACK_IMPORTED_MODULE_3___default.a.remove(this.weekDefinitions);
             let weekLines = this.config.get('WeekDefinitions').split('\n');
 
             let weekRegex = /^(\d{4})-(\d{1,2})-(\d{1,2})\s+(\d{4})-(\d{1,2})-(\d{1,2})\s+(\d+)?\s+(.+)$/;
@@ -596,7 +712,7 @@ function BlackboardSearch() {
             }
 
             // Parse enabled courses into list.
-            _.remove(this.selectedCourses);
+            lodash__WEBPACK_IMPORTED_MODULE_3___default.a.remove(this.selectedCourses);
             let splitCourses = this.config.get('SelectedCourses').split('\n');
             for (let i = 0; i < splitCourses.length; i++) {
                 const code = splitCourses[i];
@@ -620,7 +736,7 @@ function BlackboardSearch() {
         }
 
         deleteCourse(idToDelete) {
-            let deletedItems = _.remove(this.linkItems, function (item) {
+            let deletedItems = lodash__WEBPACK_IMPORTED_MODULE_3___default.a.remove(this.linkItems, function (item) {
                 return item.courseId === idToDelete;
             });
             for (let i = 0; i < deletedItems.length; i++) {
@@ -639,7 +755,7 @@ function BlackboardSearch() {
                 fields: {
                     'CourseDataLZ': {
                         type: 'hidden',
-                        default: LZString.compressToUTF16("{}")
+                        default: lz_string__WEBPACK_IMPORTED_MODULE_5___default.a.compressToUTF16('{}')
                     },
                     'CurrentCourseUpdateInterval': {
                         label: 'Active update interval (minutes)',
@@ -688,9 +804,9 @@ function BlackboardSearch() {
                 css: configCss,
             });
             
-            let courseData = JSON.parse(LZString.decompressFromUTF16(this.config.get('CourseDataLZ')));
+            let courseData = JSON.parse(lz_string__WEBPACK_IMPORTED_MODULE_5___default.a.decompressFromUTF16(this.config.get('CourseDataLZ')));
 
-            _.assign(this.courseDataObject, courseData);
+            lodash__WEBPACK_IMPORTED_MODULE_3___default.a.assign(this.courseDataObject, courseData);
             this.updateLinks();
             this.updateSettings();
         }
@@ -709,7 +825,7 @@ function BlackboardSearch() {
     if (!match) return;
 
     let searchManager = new BlackboardSearchManager(match[1]);
-    searchManager.maybeUpdateAllCourses()
+    searchManager.maybeUpdateAllCourses();
     let searchWindow = searchManager.createWindow();
     
     const SPACE = ' '.charCodeAt(0);
@@ -946,3 +1062,43 @@ link.media = 'all';
 link.onload = BlackboardSearch;
 
 document.head.appendChild(link);
+
+/***/ }),
+/* 1 */
+/***/ (function(module, exports) {
+
+module.exports = jQuery;
+
+/***/ }),
+/* 2 */
+/***/ (function(module, exports) {
+
+module.exports = jQuery.featherlight;
+
+/***/ }),
+/* 3 */
+/***/ (function(module, exports) {
+
+module.exports = Fuse;
+
+/***/ }),
+/* 4 */
+/***/ (function(module, exports) {
+
+module.exports = _;
+
+/***/ }),
+/* 5 */
+/***/ (function(module, exports) {
+
+module.exports = GM_configStruct;
+
+/***/ }),
+/* 6 */
+/***/ (function(module, exports) {
+
+module.exports = LZString;
+
+/***/ })
+/******/ ]);
+//# sourceMappingURL=blackboard_search.user.js.map
