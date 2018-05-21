@@ -15,11 +15,14 @@
 // @require     https://cdnjs.cloudflare.com/ajax/libs/lz-string/1.4.4/lz-string.js
 // ==/UserScript==
 
-import 'lodash';
-import 'jquery';
+import jQuery from 'jquery';
 import 'featherlight';
-import 'lz-string';
-import 'fuse.js';
+
+import Fuse from 'fuse.js';
+import _ from 'lodash';
+
+import GM_configStruct from 'gm_config';
+import LZString from 'lz-string';
 
 /* Queue.js */
 /* eslint-disable */
@@ -646,7 +649,7 @@ function BlackboardSearch() {
                 fields: {
                     'CourseDataLZ': {
                         type: 'hidden',
-                        default: LZString.compressToUTF16("{}")
+                        default: LZString.compressToUTF16('{}')
                     },
                     'CurrentCourseUpdateInterval': {
                         label: 'Active update interval (minutes)',
@@ -716,7 +719,7 @@ function BlackboardSearch() {
     if (!match) return;
 
     let searchManager = new BlackboardSearchManager(match[1]);
-    searchManager.maybeUpdateAllCourses()
+    searchManager.maybeUpdateAllCourses();
     let searchWindow = searchManager.createWindow();
     
     const SPACE = ' '.charCodeAt(0);
