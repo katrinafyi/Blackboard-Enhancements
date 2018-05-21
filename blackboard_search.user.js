@@ -1,6 +1,7 @@
 // ==UserScript==
 // @name        Blackboard Search Enhancements
-// @description Searches blackboard.
+// @author      Kenton Lam
+// @description Searches blackboard
 // @match       https://learn.uq.edu.au/*
 // @version     0.1
 // @grant       GM_getValue
@@ -20,13 +21,12 @@ import 'featherlight';
 import 'lz-string';
 import 'fuse.js';
 
-if (window.location.href.indexOf('/courseMenu.jsp') !== -1) return;
-
 /* Queue.js */
 //code.iamkate.com
 function Queue(){var a=[],b=0;this.getLength=function(){return a.length-b};this.isEmpty=function(){return 0==a.length};this.enqueue=function(b){a.push(b)};this.dequeue=function(){if(0!=a.length){var c=a[b];2*++b>=a.length&&(a=a.slice(b),b=0);return c}};this.peek=function(){return 0<a.length?a[b]:void 0}};
 
 function BlackboardSearch() {
+    if (window.location.href.indexOf('/courseMenu.jsp') !== -1) return;
 
     // 2^53 - 1
     let MAX_INT = Number.MAX_SAFE_INTEGER || 9007199254740991;
