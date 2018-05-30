@@ -9,7 +9,7 @@
 (function() {
     
     let oldImg = document.querySelector('.brandingImgWrap .bannerImage');
-    
+    if (!oldImg) return;
     oldImg.style.opacity = '1';
     oldImg.style.transitionProperty = 'opacity';
     oldImg.style.transitionDuration = '500ms';
