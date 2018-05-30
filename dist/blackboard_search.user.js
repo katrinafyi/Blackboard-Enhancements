@@ -4,7 +4,7 @@
 // @description Searches blackboard
 // @match       https://learn.uq.edu.au/*
 // @match       https://ilearn.bond.edu.au/*
-// @version     0.1.1
+// @version     0.1.2
 // @grant       GM_getValue
 // @grant       GM_setValue
 // @grant       GM_deleteValue
@@ -105,6 +105,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var gm_config__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(gm_config__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var lz_string__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(6);
 /* harmony import */ var lz_string__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(lz_string__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _blackboard_search_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(7);
+/* harmony import */ var _blackboard_search_css__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_blackboard_search_css__WEBPACK_IMPORTED_MODULE_6__);
 // ==UserScript==
 // @name        Blackboard Search Enhancements
 // @author      Kenton Lam
@@ -130,6 +132,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
+
+// Load CSS into a string which we can use.
 
 
 /* Queue.js */
@@ -373,6 +378,7 @@ function BlackboardSearch() {
              */
             this.weekDefinitions = [];
             this.selectedCourses = [];
+            this.customLinks = [];
             this.initialiseSettings();
 
             this.checkCurrentCourse();
@@ -386,7 +392,6 @@ function BlackboardSearch() {
             let parsedCourse = this.uniHelper.parseCourse(
                 document.getElementById('courseMenu_link').textContent);
             let codes = parsedCourse.courseCodeArray;
-
             if (this.inSelectedCourses(codes)) {
                 console.log('adding current page');
                 this.queueUpdateCourse(this.pageCourseId);
@@ -406,14 +411,21 @@ function BlackboardSearch() {
 
             let selectedRowInResults = false;
             if (!query) {
-                for (let i = 0; i < this.linkItems.length; i++) {
-                    const item = this.linkItems[i];
-                    // todo label to path
-                    if (item.label[1] === 'Announcements') {
-                        this.searchResults.appendChild(item.element);
-                        $(item.element).fadeIn(200);
-                        if (item.element === this.selectedRow)
-                            selectedRowInResults = true;
+                if (this.customLinks.length) {
+                    for (const link of this.customLinks) {
+                        this.searchResults.appendChild(link.element);
+                        $(link.element).fadeIn(200);                        
+                    }
+                } else {
+                    for (let i = 0; i < this.linkItems.length; i++) {
+                        const item = this.linkItems[i];
+                        // todo label to path
+                        if (item.label[1] === 'Announcements') {
+                            this.searchResults.appendChild(item.element);
+                            $(item.element).fadeIn(200);
+                            if (item.element === this.selectedRow)
+                                selectedRowInResults = true;
+                        }
                     }
                 }
                 if (!selectedRowInResults && this.searchResults.firstElementChild) {
@@ -483,7 +495,7 @@ function BlackboardSearch() {
 
             case 13:
                 if (this.selectedRow)
-                    window.open(this.selectedRow.firstElementChild.href, '_self');
+                    this.selectedRow.firstElementChild.click();
                 break;
             default: return; // exit this handler for other keys
             }
@@ -613,7 +625,7 @@ function BlackboardSearch() {
             this.footerDiv = document.createElement('div');
             this.footerDiv.id = 'userscript-search-footer';
             
-            this.updateButton = document.createElement('span');
+            this.updateButton = document.createElement('a');
             this.updateButton.id = 'userscript-update-button';
             this.updateButton.textContent = 'Refresh';
             this.updateButton.onclick = this.updateAllCourses.bind(this);
@@ -621,7 +633,7 @@ function BlackboardSearch() {
 
             this.footerDiv.appendChild(document.createTextNode(' | '));
 
-            this.settingsButton = document.createElement('span');
+            this.settingsButton = document.createElement('a');
             this.settingsButton.id = 'userscript-options-button';
             this.settingsButton.textContent = 'Options';
             this.settingsButton.onclick = this.showConfig.bind(this);
@@ -699,8 +711,9 @@ function BlackboardSearch() {
                 lz_string__WEBPACK_IMPORTED_MODULE_5___default.a.compressToUTF16(JSON.stringify(this.courseDataObject)));
             this.config.save();
         }
-
-        formatLinkText(textArray, shorten=false) {
+    
+        // eslint-disable-next-line no-unused-vars
+        formatLinkText(textArray, shorten=false) { 
             return textArray.join(' > ');
         }
 
@@ -711,16 +724,24 @@ function BlackboardSearch() {
                     this.linkItems.push(...this.courseDataObject[id].items);
                 }
             }
+            const contentIdRegex = /(#[^&?]+)/;
             for (let i = 0; i < this.linkItems.length; i++) {
                 const item = this.linkItems[i];
                 let li = document.createElement('li');
                 let a = document.createElement('a');
-                a.href = item.link;
+                let match = contentIdRegex.exec(item.link);
+                if (match) {
+                    let index = item.link.indexOf(match[1]);
+                    a.href = item.link.slice(0, index+match[1].length);
+                } else {
+                    a.href = item.link;
+                }
                 // todo label to path.
                 a.textContent = this.formatLinkText(item.label, true);
                 li.appendChild(a);
                 item.element = li;
-                item.text = this.formatLinkText(item.label);
+                item.text = this.formatLinkText(
+                    lodash__WEBPACK_IMPORTED_MODULE_3___default.a.concat(item.label[0], lodash__WEBPACK_IMPORTED_MODULE_3___default.a.reverse(item.label.slice(1))));
                 item.courseCode = item.label[0];
             }
             return this.linkItems;
@@ -819,6 +840,26 @@ function BlackboardSearch() {
                     }
                 }
             }
+
+            lodash__WEBPACK_IMPORTED_MODULE_3___default.a.remove(this.customLinks, lodash__WEBPACK_IMPORTED_MODULE_3___default.a.stubTrue);
+            let linkLines = this.config.get('CustomLinks').split('\n');
+            const linkLineRegex = /^\s*(.+)\s+([^\s]+)\s*$/;
+            for (let line of linkLines) {
+                let match = linkLineRegex.exec(line);
+                if (!match) continue;
+                let li = document.createElement('li');
+                let element = document.createElement('a');
+                element.href = match[2];
+                element.textContent = match[1];
+                li.appendChild(element);
+                this.customLinks.push({
+                    courseId: match[1].split('>')[0].trim(),
+                    link: match[2],
+                    label: match[1],
+                    element: li,
+                });                
+            }
+
         }
 
         deleteCourse(idToDelete) {
@@ -856,6 +897,11 @@ function BlackboardSearch() {
                     },
                     'SelectedCourses': {
                         label: 'Enabled courses',
+                        type: 'textarea',
+                        default: '',
+                    },
+                    'CustomLinks': {
+                        label: 'Custom links',
                         type: 'textarea',
                         default: '',
                     },
@@ -1013,13 +1059,15 @@ button:focus {
     margin-right: 0px;
 }
 
-#BlackboardSearchConfig #BlackboardSearchConfig_WeekDefinitions_field_label {
+#BlackboardSearchConfig #BlackboardSearchConfig_WeekDefinitions_field_label, 
+#BlackboardSearchConfig #BlackboardSearchConfig_CustomLinks_field_label {
     vertical-align: top;
     padding-top: 3px;
     width: 30%;
 }
 
-#BlackboardSearchConfig #BlackboardSearchConfig_field_WeekDefinitions {
+#BlackboardSearchConfig #BlackboardSearchConfig_field_WeekDefinitions,
+#BlackboardSearchConfig #BlackboardSearchConfig_field_CustomLinks {
     height: 9em;
     font-family: monospace;
     white-space: nowrap;
@@ -1037,12 +1085,10 @@ button:focus {
 }
 `;
 
-let mainCss = __webpack_require__(7).toString();
-
 let style = document.createElement('style');
 style.type = 'text/css';
 style.id = 'userscript-search-style';
-style.appendChild(document.createTextNode(mainCss));
+style.appendChild(document.createTextNode(_blackboard_search_css__WEBPACK_IMPORTED_MODULE_6___default.a.toString()));
 document.head.appendChild(style);
 
 let cssId = 'userscript-featherlight-css';  
@@ -1101,7 +1147,7 @@ exports = module.exports = __webpack_require__(8)(false);
 
 
 // module
-exports.push([module.i, ".featherlight-content {\r\n    border-bottom: 5px !important;\r\n    padding-bottom: 15px !important;\r\n    width: 50% !important;\r\n}\r\n\r\n#userscript-search-input {\r\n    padding-top: 3px;\r\n    padding-bottom: 3px;\r\n    padding-left: 3px;\r\n    margin-bottom: 1px;\r\n}\r\n\r\nul#userscript-search-results {\r\n    list-style-type: none;\r\n    margin-top: 10px;\r\n    margin-bottom: 10px;\r\n    height: 19em;\r\n    margin: 0;\r\n    overflow-x: auto;\r\n    overflow-y: auto;    \r\n}\r\n\r\nul#userscript-search-results > li {\r\n    padding: 5px;\r\n    display:block;\r\n    text-overflow: ellipsis;\r\n    transition-property: background-color;\r\n    transition-duration: 100ms;\r\n    \r\n}\r\n\r\nul#userscript-search-results > li> a:hover {\r\n    text-decoration: underline;\r\n}\r\n\r\nli.search-selected {    \r\n    background-color: #e7e7e7;\r\n}\r\n\r\nul#userscript-search-results > li > a {\r\n    text-decoration: none;\r\n}\r\n\r\n#userscript-search-window {\r\n    font-size: 13pt;\r\n    font-weight: normal;\r\n    font-family: 'Segoe UI', 'Helvetica';\r\n}\r\n\r\n#userscript-search-input {\r\n    width: 100%;\r\n}\r\n\r\n#userscript-search-footer {\r\n    text-align: right;\r\n    color: grey;\r\n    font-size: 12pt;\r\n}\r\n\r\n#userscript-search-footer > span {\r\n    text-decoration: underline;\r\n    cursor: pointer;\r\n}\r\n\r\niframe#BlackboardSearchConfig { \r\n    width: 35% !important; \r\n    min-width: 400px !important;\r\n}\r\n\r\n#userscript-header {\r\n    display: table;\r\n    text-align: left;\r\n    width: 100%;\r\n    margin-bottom: 8px;\r\n}\r\n\r\n#userscript-header > span {\r\n    display:table-cell;\r\n}\r\n\r\n#userscript-time, #userscript-week {\r\n    font-size: 20pt;\r\n}\r\n\r\n#userscript-calendar {\r\n    text-align: right;\r\n}", ""]);
+exports.push([module.i, ".featherlight-content {\r\n    border-bottom: 5px !important;\r\n    padding-bottom: 15px !important;\r\n    width: 50% !important;\r\n}\r\n\r\n#userscript-search-input {\r\n    padding-top: 3px;\r\n    padding-bottom: 3px;\r\n    padding-left: 3px;\r\n    margin-bottom: 1px;\r\n}\r\n\r\n#userscript-search-results {\r\n    list-style-type: none;\r\n    margin-top: 10px;\r\n    margin-bottom: 10px;\r\n    height: 19em;\r\n    margin: 0;\r\n    overflow-x: auto;\r\n    overflow-y: auto;    \r\n}\r\n\r\nul#userscript-search-results > li {\r\n    padding: 5px;\r\n    display:block;\r\n    text-overflow: ellipsis;\r\n    transition-property: background-color;\r\n    transition-duration: 100ms;\r\n    \r\n}\r\n\r\nul#userscript-search-results > li> a:hover {\r\n    text-decoration: underline;\r\n}\r\n\r\nli.search-selected {    \r\n    background-color: #e7e7e7;\r\n}\r\n\r\nul#userscript-search-results > li > a {\r\n    text-decoration: none;\r\n}\r\n\r\n#userscript-search-window {\r\n    font-size: 13pt;\r\n    font-weight: normal;\r\n    font-family: 'Segoe UI', 'Helvetica';\r\n}\r\n\r\n#userscript-search-input {\r\n    width: 100%;\r\n}\r\n\r\n#userscript-search-footer {\r\n    text-align: right;\r\n    color: grey;\r\n    font-size: 12pt;\r\n}\r\n\r\n#userscript-search-footer > span {\r\n    text-decoration: underline;\r\n    cursor: pointer;\r\n}\r\n\r\niframe#BlackboardSearchConfig { \r\n    width: 35% !important; \r\n    min-width: 400px !important;\r\n}\r\n\r\n#userscript-header {\r\n    display: table;\r\n    text-align: left;\r\n    width: 100%;\r\n    margin-bottom: 8px;\r\n}\r\n\r\n#userscript-header > span {\r\n    display:table-cell;\r\n}\r\n\r\n#userscript-time, #userscript-week {\r\n    font-size: 20pt;\r\n}\r\n\r\n#userscript-calendar {\r\n    text-align: right;\r\n}", ""]);
 
 // exports
 
