@@ -46,6 +46,17 @@ module.exports = function (env) {
             'fuse.js': 'Fuse',
             'lz-string': 'LZString',
             'featherlight': 'jQuery.featherlight',
+        },
+        module: {
+            rules: [
+                {
+                    test: /\.css$/,
+                    use: ['css-loader']
+                }
+            ]
+        },
+        watchOptions: {
+            ignored: /node_modules/
         }
     };
 };

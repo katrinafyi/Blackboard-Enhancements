@@ -25,6 +25,9 @@ import _ from 'lodash';
 import GM_configStruct from 'gm_config';
 import LZString from 'lz-string';
 
+// Load CSS into a string which we can use.
+import blackboardCss from './blackboard_search.css';
+
 /* Queue.js */
 /* eslint-disable */
 //code.iamkate.com
@@ -88,6 +91,7 @@ function BlackboardSearch() {
     }
     UniHelper.uniDefinitions = [
         {
+            // TODO we need uni-specific calendars here too.
             baseUrl: 'https://learn.uq.edu.au/',
             parseCourse: function (courseTitle) {
                 let match = /^\[([A-Za-z0-9/]+)\] (.*)$/.exec(courseTitle);
@@ -265,6 +269,7 @@ function BlackboardSearch() {
              */
             this.weekDefinitions = [];
             this.selectedCourses = [];
+            this.customLinks = [];
             this.initialiseSettings();
 
             this.checkCurrentCourse();
@@ -278,7 +283,6 @@ function BlackboardSearch() {
             let parsedCourse = this.uniHelper.parseCourse(
                 document.getElementById('courseMenu_link').textContent);
             let codes = parsedCourse.courseCodeArray;
-
             if (this.inSelectedCourses(codes)) {
                 console.log('adding current page');
                 this.queueUpdateCourse(this.pageCourseId);
@@ -298,14 +302,21 @@ function BlackboardSearch() {
 
             let selectedRowInResults = false;
             if (!query) {
-                for (let i = 0; i < this.linkItems.length; i++) {
-                    const item = this.linkItems[i];
-                    // todo label to path
-                    if (item.label[1] === 'Announcements') {
-                        this.searchResults.appendChild(item.element);
-                        $(item.element).fadeIn(200);
-                        if (item.element === this.selectedRow)
-                            selectedRowInResults = true;
+                if (this.customLinks.length) {
+                    for (const link of this.customLinks) {
+                        this.searchResults.appendChild(link.element);
+                        $(link.element).fadeIn(200);                        
+                    }
+                } else {
+                    for (let i = 0; i < this.linkItems.length; i++) {
+                        const item = this.linkItems[i];
+                        // todo label to path
+                        if (item.label[1] === 'Announcements') {
+                            this.searchResults.appendChild(item.element);
+                            $(item.element).fadeIn(200);
+                            if (item.element === this.selectedRow)
+                                selectedRowInResults = true;
+                        }
                     }
                 }
                 if (!selectedRowInResults && this.searchResults.firstElementChild) {
@@ -375,7 +386,7 @@ function BlackboardSearch() {
 
             case 13:
                 if (this.selectedRow)
-                    window.open(this.selectedRow.firstElementChild.href, '_self');
+                    this.selectedRow.firstElementChild.click();
                 break;
             default: return; // exit this handler for other keys
             }
@@ -505,7 +516,7 @@ function BlackboardSearch() {
             this.footerDiv = document.createElement('div');
             this.footerDiv.id = 'userscript-search-footer';
             
-            this.updateButton = document.createElement('span');
+            this.updateButton = document.createElement('a');
             this.updateButton.id = 'userscript-update-button';
             this.updateButton.textContent = 'Refresh';
             this.updateButton.onclick = this.updateAllCourses.bind(this);
@@ -513,7 +524,7 @@ function BlackboardSearch() {
 
             this.footerDiv.appendChild(document.createTextNode(' | '));
 
-            this.settingsButton = document.createElement('span');
+            this.settingsButton = document.createElement('a');
             this.settingsButton.id = 'userscript-options-button';
             this.settingsButton.textContent = 'Options';
             this.settingsButton.onclick = this.showConfig.bind(this);
@@ -591,8 +602,9 @@ function BlackboardSearch() {
                 LZString.compressToUTF16(JSON.stringify(this.courseDataObject)));
             this.config.save();
         }
-
-        formatLinkText(textArray, shorten=false) {
+    
+        // eslint-disable-next-line no-unused-vars
+        formatLinkText(textArray, shorten=false) { 
             return textArray.join(' > ');
         }
 
@@ -603,16 +615,24 @@ function BlackboardSearch() {
                     this.linkItems.push(...this.courseDataObject[id].items);
                 }
             }
+            const contentIdRegex = /(#[^&?]+)/;
             for (let i = 0; i < this.linkItems.length; i++) {
                 const item = this.linkItems[i];
                 let li = document.createElement('li');
                 let a = document.createElement('a');
-                a.href = item.link;
+                let match = contentIdRegex.exec(item.link);
+                if (match) {
+                    let index = item.link.indexOf(match[1]);
+                    a.href = item.link.slice(0, index+match[1].length);
+                } else {
+                    a.href = item.link;
+                }
                 // todo label to path.
                 a.textContent = this.formatLinkText(item.label, true);
                 li.appendChild(a);
                 item.element = li;
-                item.text = this.formatLinkText(item.label);
+                item.text = this.formatLinkText(
+                    _.concat(item.label[0], _.reverse(item.label.slice(1))));
                 item.courseCode = item.label[0];
             }
             return this.linkItems;
@@ -711,6 +731,26 @@ function BlackboardSearch() {
                     }
                 }
             }
+
+            _.remove(this.customLinks, _.stubTrue);
+            let linkLines = this.config.get('CustomLinks').split('\n');
+            const linkLineRegex = /^\s*(.+)\s+([^\s]+)\s*$/;
+            for (let line of linkLines) {
+                let match = linkLineRegex.exec(line);
+                if (!match) continue;
+                let li = document.createElement('li');
+                let element = document.createElement('a');
+                element.href = match[2];
+                element.textContent = match[1];
+                li.appendChild(element);
+                this.customLinks.push({
+                    courseId: match[1].split('>')[0].trim(),
+                    link: match[2],
+                    label: match[1],
+                    element: li,
+                });                
+            }
+
         }
 
         deleteCourse(idToDelete) {
@@ -748,6 +788,11 @@ function BlackboardSearch() {
                     },
                     'SelectedCourses': {
                         label: 'Enabled courses',
+                        type: 'textarea',
+                        default: '',
+                    },
+                    'CustomLinks': {
+                        label: 'Custom links',
                         type: 'textarea',
                         default: '',
                     },
@@ -811,6 +856,7 @@ function BlackboardSearch() {
                 openSpeed: 50,
                 closeSpeed: 200,
                 persist: true,
+                // TODO move these functions into BlackboardSearchManager
                 beforeOpen: function() {
                     searchManager.refreshTimeElements();
                     searchManager.doSearch(undefined, true);
@@ -904,13 +950,15 @@ button:focus {
     margin-right: 0px;
 }
 
-#BlackboardSearchConfig #BlackboardSearchConfig_WeekDefinitions_field_label {
+#BlackboardSearchConfig #BlackboardSearchConfig_WeekDefinitions_field_label, 
+#BlackboardSearchConfig #BlackboardSearchConfig_CustomLinks_field_label {
     vertical-align: top;
     padding-top: 3px;
     width: 30%;
 }
 
-#BlackboardSearchConfig #BlackboardSearchConfig_field_WeekDefinitions {
+#BlackboardSearchConfig #BlackboardSearchConfig_field_WeekDefinitions,
+#BlackboardSearchConfig #BlackboardSearchConfig_field_CustomLinks {
     height: 9em;
     font-family: monospace;
     white-space: nowrap;
@@ -928,102 +976,10 @@ button:focus {
 }
 `;
 
-let mainCss = `
-.featherlight-content {
-    border-bottom: 5px !important;
-    padding-bottom: 15px !important;
-    width: 50% !important;
-}
-
-#userscript-search-input {
-    padding-top: 3px;
-    padding-bottom: 3px;
-    padding-left: 3px;
-    margin-bottom: 1px;
-}
-
-ul#userscript-search-results {
-    list-style-type: none;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    height: 19em;
-    margin: 0;
-    overflow-x: auto;
-    overflow-y: auto;    
-}
-
-ul#userscript-search-results > li {
-    padding: 5px;
-    display:block;
-    text-overflow: ellipsis;
-    transition-property: background-color;
-    transition-duration: 100ms;
-    
-}
-
-ul#userscript-search-results > li> a:hover {
-    text-decoration: underline;
-}
-
-li.search-selected {    
-    background-color: #e7e7e7;
-}
-
-ul#userscript-search-results > li > a {
-    text-decoration: none;
-}
-
-#userscript-search-window {
-    font-size: 13pt;
-    font-weight: normal;
-    font-family: 'Segoe UI', 'Helvetica';
-}
-
-#userscript-search-input {
-    width: 100%;
-}
-
-#userscript-search-footer {
-    text-align: right;
-    color: grey;
-    font-size: 12pt;
-}
-
-#userscript-search-footer > span {
-    text-decoration: underline;
-    cursor: pointer;
-}
-
-iframe#BlackboardSearchConfig { 
-    width: 35% !important; 
-    min-width: 400px !important;
-}
-
-#userscript-header {
-    display: table;
-    text-align: left;
-    width: 100%;
-    margin-bottom: 8px;
-}
-
-#userscript-header > span {
-    display:table-cell;
-}
-
-#userscript-time, #userscript-week {
-    font-size: 20pt;
-}
-
-#userscript-calendar {
-    text-align: right;
-}
-`;
-
-
 let style = document.createElement('style');
 style.type = 'text/css';
 style.id = 'userscript-search-style';
-style.appendChild(document.createTextNode(mainCss));
+style.appendChild(document.createTextNode(blackboardCss.toString()));
 document.head.appendChild(style);
 
 let cssId = 'userscript-featherlight-css';  

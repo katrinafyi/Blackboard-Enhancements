@@ -1,12 +1,12 @@
 {
   "name": "blackboard-userscripts",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Searches Blackboard courses.",
   "main": "blackboard_search.user.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "webpack-production": "./node_modules/.bin/webpack --config ./webpack.config.js --env.production",
-    "webpack-watch": "./node_modules/.bin/webpack --watch --config ./webpack.config.js --env.production=false"
+    "webpack-watch": "./node_modules/.bin/webpack --watch --progress --config ./webpack.config.js --env.production=false"
   },
   "repository": {
     "type": "git",
@@ -14,6 +14,7 @@
   },
   "author": "Kenton Lam",
   "devDependencies": {
+    "css-loader": "^0.28.11",
     "eslint": "^4.19.1",
     "webpack": "^4.8.3",
     "webpack-cli": "^2.1.3"

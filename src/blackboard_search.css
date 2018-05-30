@@ -1,0 +1,88 @@
+.featherlight-content {
+    border-bottom: 5px !important;
+    padding-bottom: 15px !important;
+    width: 50% !important;
+}
+
+#userscript-search-input {
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 3px;
+    margin-bottom: 1px;
+}
+
+#userscript-search-results {
+    list-style-type: none;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 19em;
+    margin: 0;
+    overflow-x: auto;
+    overflow-y: auto;    
+}
+
+ul#userscript-search-results > li {
+    padding: 5px;
+    display:block;
+    text-overflow: ellipsis;
+    transition-property: background-color;
+    transition-duration: 100ms;
+    
+}
+
+ul#userscript-search-results > li> a:hover {
+    text-decoration: underline;
+}
+
+li.search-selected {    
+    background-color: #e7e7e7;
+}
+
+ul#userscript-search-results > li > a {
+    text-decoration: none;
+}
+
+#userscript-search-window {
+    font-size: 13pt;
+    font-weight: normal;
+    font-family: 'Segoe UI', 'Helvetica';
+}
+
+#userscript-search-input {
+    width: 100%;
+}
+
+#userscript-search-footer {
+    text-align: right;
+    color: grey;
+    font-size: 12pt;
+}
+
+#userscript-search-footer > span {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+iframe#BlackboardSearchConfig { 
+    width: 35% !important; 
+    min-width: 400px !important;
+}
+
+#userscript-header {
+    display: table;
+    text-align: left;
+    width: 100%;
+    margin-bottom: 8px;
+}
+
+#userscript-header > span {
+    display:table-cell;
+}
+
+#userscript-time, #userscript-week {
+    font-size: 20pt;
+}
+
+#userscript-calendar {
+    text-align: right;
+}

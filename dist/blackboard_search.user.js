@@ -195,6 +195,7 @@ function BlackboardSearch() {
     }
     UniHelper.uniDefinitions = [
         {
+            // TODO we need uni-specific calendars here too.
             baseUrl: 'https://learn.uq.edu.au/',
             parseCourse: function (courseTitle) {
                 let match = /^\[([A-Za-z0-9/]+)\] (.*)$/.exec(courseTitle);
@@ -918,6 +919,7 @@ function BlackboardSearch() {
                 openSpeed: 50,
                 closeSpeed: 200,
                 persist: true,
+                // TODO move these functions into BlackboardSearchManager
                 beforeOpen: function() {
                     searchManager.refreshTimeElements();
                     searchManager.doSearch(undefined, true);
@@ -1035,97 +1037,7 @@ button:focus {
 }
 `;
 
-let mainCss = `
-.featherlight-content {
-    border-bottom: 5px !important;
-    padding-bottom: 15px !important;
-    width: 50% !important;
-}
-
-#userscript-search-input {
-    padding-top: 3px;
-    padding-bottom: 3px;
-    padding-left: 3px;
-    margin-bottom: 1px;
-}
-
-ul#userscript-search-results {
-    list-style-type: none;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    height: 19em;
-    margin: 0;
-    overflow-x: auto;
-    overflow-y: auto;    
-}
-
-ul#userscript-search-results > li {
-    padding: 5px;
-    display:block;
-    text-overflow: ellipsis;
-    transition-property: background-color;
-    transition-duration: 100ms;
-    
-}
-
-ul#userscript-search-results > li> a:hover {
-    text-decoration: underline;
-}
-
-li.search-selected {    
-    background-color: #e7e7e7;
-}
-
-ul#userscript-search-results > li > a {
-    text-decoration: none;
-}
-
-#userscript-search-window {
-    font-size: 13pt;
-    font-weight: normal;
-    font-family: 'Segoe UI', 'Helvetica';
-}
-
-#userscript-search-input {
-    width: 100%;
-}
-
-#userscript-search-footer {
-    text-align: right;
-    color: grey;
-    font-size: 12pt;
-}
-
-#userscript-search-footer > span {
-    text-decoration: underline;
-    cursor: pointer;
-}
-
-iframe#BlackboardSearchConfig { 
-    width: 35% !important; 
-    min-width: 400px !important;
-}
-
-#userscript-header {
-    display: table;
-    text-align: left;
-    width: 100%;
-    margin-bottom: 8px;
-}
-
-#userscript-header > span {
-    display:table-cell;
-}
-
-#userscript-time, #userscript-week {
-    font-size: 20pt;
-}
-
-#userscript-calendar {
-    text-align: right;
-}
-`;
-
+let mainCss = __webpack_require__(7).toString();
 
 let style = document.createElement('style');
 style.type = 'text/css';
@@ -1179,6 +1091,102 @@ module.exports = GM_configStruct;
 /***/ (function(module, exports) {
 
 module.exports = LZString;
+
+/***/ }),
+/* 7 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(8)(false);
+// imports
+
+
+// module
+exports.push([module.i, ".featherlight-content {\r\n    border-bottom: 5px !important;\r\n    padding-bottom: 15px !important;\r\n    width: 50% !important;\r\n}\r\n\r\n#userscript-search-input {\r\n    padding-top: 3px;\r\n    padding-bottom: 3px;\r\n    padding-left: 3px;\r\n    margin-bottom: 1px;\r\n}\r\n\r\nul#userscript-search-results {\r\n    list-style-type: none;\r\n    margin-top: 10px;\r\n    margin-bottom: 10px;\r\n    height: 19em;\r\n    margin: 0;\r\n    overflow-x: auto;\r\n    overflow-y: auto;    \r\n}\r\n\r\nul#userscript-search-results > li {\r\n    padding: 5px;\r\n    display:block;\r\n    text-overflow: ellipsis;\r\n    transition-property: background-color;\r\n    transition-duration: 100ms;\r\n    \r\n}\r\n\r\nul#userscript-search-results > li> a:hover {\r\n    text-decoration: underline;\r\n}\r\n\r\nli.search-selected {    \r\n    background-color: #e7e7e7;\r\n}\r\n\r\nul#userscript-search-results > li > a {\r\n    text-decoration: none;\r\n}\r\n\r\n#userscript-search-window {\r\n    font-size: 13pt;\r\n    font-weight: normal;\r\n    font-family: 'Segoe UI', 'Helvetica';\r\n}\r\n\r\n#userscript-search-input {\r\n    width: 100%;\r\n}\r\n\r\n#userscript-search-footer {\r\n    text-align: right;\r\n    color: grey;\r\n    font-size: 12pt;\r\n}\r\n\r\n#userscript-search-footer > span {\r\n    text-decoration: underline;\r\n    cursor: pointer;\r\n}\r\n\r\niframe#BlackboardSearchConfig { \r\n    width: 35% !important; \r\n    min-width: 400px !important;\r\n}\r\n\r\n#userscript-header {\r\n    display: table;\r\n    text-align: left;\r\n    width: 100%;\r\n    margin-bottom: 8px;\r\n}\r\n\r\n#userscript-header > span {\r\n    display:table-cell;\r\n}\r\n\r\n#userscript-time, #userscript-week {\r\n    font-size: 20pt;\r\n}\r\n\r\n#userscript-calendar {\r\n    text-align: right;\r\n}", ""]);
+
+// exports
+
+
+/***/ }),
+/* 8 */
+/***/ (function(module, exports) {
+
+/*
+	MIT License http://www.opensource.org/licenses/mit-license.php
+	Author Tobias Koppers @sokra
+*/
+// css base code, injected by the css-loader
+module.exports = function(useSourceMap) {
+	var list = [];
+
+	// return the list of modules as css string
+	list.toString = function toString() {
+		return this.map(function (item) {
+			var content = cssWithMappingToString(item, useSourceMap);
+			if(item[2]) {
+				return "@media " + item[2] + "{" + content + "}";
+			} else {
+				return content;
+			}
+		}).join("");
+	};
+
+	// import a list of modules into the list
+	list.i = function(modules, mediaQuery) {
+		if(typeof modules === "string")
+			modules = [[null, modules, ""]];
+		var alreadyImportedModules = {};
+		for(var i = 0; i < this.length; i++) {
+			var id = this[i][0];
+			if(typeof id === "number")
+				alreadyImportedModules[id] = true;
+		}
+		for(i = 0; i < modules.length; i++) {
+			var item = modules[i];
+			// skip already imported module
+			// this implementation is not 100% perfect for weird media query combinations
+			//  when a module is imported multiple times with different media queries.
+			//  I hope this will never occur (Hey this way we have smaller bundles)
+			if(typeof item[0] !== "number" || !alreadyImportedModules[item[0]]) {
+				if(mediaQuery && !item[2]) {
+					item[2] = mediaQuery;
+				} else if(mediaQuery) {
+					item[2] = "(" + item[2] + ") and (" + mediaQuery + ")";
+				}
+				list.push(item);
+			}
+		}
+	};
+	return list;
+};
+
+function cssWithMappingToString(item, useSourceMap) {
+	var content = item[1] || '';
+	var cssMapping = item[3];
+	if (!cssMapping) {
+		return content;
+	}
+
+	if (useSourceMap && typeof btoa === 'function') {
+		var sourceMapping = toComment(cssMapping);
+		var sourceURLs = cssMapping.sources.map(function (source) {
+			return '/*# sourceURL=' + cssMapping.sourceRoot + source + ' */'
+		});
+
+		return [content].concat(sourceURLs).concat([sourceMapping]).join('\n');
+	}
+
+	return [content].join('\n');
+}
+
+// Adapted from convert-source-map (MIT)
+function toComment(sourceMap) {
+	// eslint-disable-next-line no-undef
+	var base64 = btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap))));
+	var data = 'sourceMappingURL=data:application/json;charset=utf-8;base64,' + base64;
+
+	return '/*# ' + data + ' */';
+}
+
 
 /***/ })
 /******/ ]);
