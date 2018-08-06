@@ -1,7 +1,20 @@
+
 .featherlight-content {
     border-bottom: 5px !important;
     padding-bottom: 15px !important;
     width: 50% !important;
+}
+
+@media only screen and (min-width: 700px) {
+    .featherlight-content {
+        min-width: 50em;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .featherlight-content {
+        width: 91.4285714% !important;
+    }
 }
 
 #userscript-search-input {

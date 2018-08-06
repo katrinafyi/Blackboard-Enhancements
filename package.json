@@ -1,6 +1,6 @@
 {
   "name": "blackboard-userscripts",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Searches Blackboard courses.",
   "main": "blackboard_search.user.js",
   "scripts": {

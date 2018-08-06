@@ -345,7 +345,7 @@ function BlackboardSearch() {
             this.iframe.style.width = '210px';
             this.iframe.style.display = 'none';
             
-            document.getElementById('navigationPane').appendChild(this.iframe);
+            (document.getElementById('navigationPane') || document.body).appendChild(this.iframe);
         }
     }
 
@@ -843,7 +843,7 @@ function BlackboardSearch() {
 
             lodash__WEBPACK_IMPORTED_MODULE_3___default.a.remove(this.customLinks, lodash__WEBPACK_IMPORTED_MODULE_3___default.a.stubTrue);
             let linkLines = this.config.get('CustomLinks').split('\n');
-            const linkLineRegex = /^\s*(.+)\s+([^\s]+)\s*$/;
+            const linkLineRegex = /^(.+)\s+([^\s]+)\s*$/;
             for (let line of linkLines) {
                 let match = linkLineRegex.exec(line);
                 if (!match) continue;
