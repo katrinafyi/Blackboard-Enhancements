@@ -1,4 +1,5 @@
 # Blackboard Enhancements
+
 Various enhancements to make Blackboard somewhat bearable.
 
 ## Blackboard Search Userscript
