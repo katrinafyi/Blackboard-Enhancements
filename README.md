@@ -5,6 +5,8 @@ Various enhancements to make Blackboard somewhat bearable.
 ## Blackboard Search Userscript
 Press Ctrl+Space to open a search window for easy navigation across courses.
 
+![](https://i.imgur.com/FYmdiet.png)
+
 ### Install
 1. Get TamperMonkey 
 ([Chrome](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo) 
