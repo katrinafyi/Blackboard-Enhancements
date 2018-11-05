@@ -26,7 +26,7 @@ def date_str(datetime):
     return datetime.strftime('%Y-%m-%d')
 
 def main():
-    os.chdir(os.path.dirname(__file__))
+    os.chdir(os.path.dirname(__file__) or '.')
 
     events = []
 
@@ -44,7 +44,7 @@ def main():
     for date_string, summary in sorted(events):
         l_summary = summary.lower().rstrip('*')
         date = parse_date(date_string)
-        if l_summary.startswith('semester ') and l_summary.endswith(' classes commence'):
+        if ' semester ' in (' '+l_summary) and l_summary.endswith(' classes commence'):
             sem['name'] = summary.rstrip('*')[:-len(' classes commence')]
             sem['lname'] = sem['name'].lower()
             sem['term 1 start'] = date
