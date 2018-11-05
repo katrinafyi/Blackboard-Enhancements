@@ -93,15 +93,16 @@ def main():
                 week_defs.append(
                     date_str(sem['revision start'])
                     + ' ' + date_str(sem['revision end'])
-                    + ' 1 Swotvac'
+                    + f' {sem["weeks"]+1} Swotvac'
                 )
-            elif l_summary.startswith(sem['lname'] + ' examination period ends'):
+            elif l_summary.startswith(sem['lname'] + ' examination period ends') \
+                    or (sem['lname'] + ' examinations end ') in l_summary:
                 sem['exams end'] = next_weekday(date, 7)
 
                 week_defs.append(
                     date_str(sem['exams start'])
                     + ' ' + date_str(sem['exams end'])
-                    + ' 1 Exams'
+                    + f' {sem["weeks"]+2} Exams'
                 )
 
                 print(sem) 
