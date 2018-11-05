@@ -25,6 +25,9 @@ def parse_date(date_string):
 def date_str(datetime):
     return datetime.strftime('%Y-%m-%d')
 
+def sem_name(sem):
+    return ' '.join(sem.split(' ', 2)[:2])
+
 def main():
     os.chdir(os.path.dirname(__file__) or '.')
 
@@ -54,7 +57,7 @@ def main():
                 week_defs.append(
                     date_str(sem['term 1 start']) 
                     + ' ' + date_str(sem['term 1 end'])
-                    + ' 1 ' + sem['name']
+                    + ' 1 ' + sem_name(sem['name'])
                 )
             elif l_summary == sem['lname'] + ' mid-semester break commences':
                 sem['midsem start'] = date
@@ -63,7 +66,7 @@ def main():
                 week_defs.append(
                     date_str(sem['midsem start']) 
                     + ' ' + date_str(sem['midsem end'])
-                    + ' 1 Mid-semester Break — ' + sem['name']
+                    + ' 1 Mid-sem Break'
                 )
 
                 sem['term 2 start'] = date
@@ -73,7 +76,7 @@ def main():
                 week_defs.append(
                     date_str(sem['term 2 start']) 
                     + ' ' + date_str(sem['term 2 end'])
-                    + ' ' + str(weeks_in_term_1+2) + ' ' + sem['name']
+                    + ' ' + str(weeks_in_term_1+2) + ' ' + sem_name(sem['name'])
                 )
                 
             elif l_summary.startswith(sem['lname'] + ' revision period '):
@@ -86,7 +89,7 @@ def main():
                 week_defs.append(
                     date_str(sem['revision start'])
                     + ' ' + date_str(sem['revision end'])
-                    + ' 1 Revision Period — ' + sem['name']
+                    + ' 1 Swotvac'
                 )
             elif l_summary.startswith(sem['lname'] + ' examination period ends'):
                 sem['exams end'] = next_weekday(date, 7)
@@ -94,7 +97,7 @@ def main():
                 week_defs.append(
                     date_str(sem['exams start'])
                     + ' ' + date_str(sem['exams end'])
-                    + ' 1 Examination Period — ' + sem['name']
+                    + ' 1 Exams'
                 )
 
                 print(sem) 
