@@ -73,10 +73,14 @@ def main():
             elif l_summary == sem['lname'] + ' classes end':
                 sem['term 2 end'] = next_weekday(date, 7)
                 weeks_in_term_1 = int((sem['term 1 end'] - sem['term 1 start']) / dt.timedelta(days=7))
+                weeks_in_break = round((sem['midsem end'] - sem['midsem start']) / dt.timedelta(days=7))
+                
+                sem['weeks'] = int((sem['term 2 end'] - sem['term 1 start']) / dt.timedelta(days=7)) + 1 - weeks_in_break
+
                 week_defs.append(
                     date_str(sem['term 2 start']) 
                     + ' ' + date_str(sem['term 2 end'])
-                    + ' ' + str(weeks_in_term_1+2) + ' ' + sem_name(sem['name'])
+                    + ' ' + str(weeks_in_term_1+weeks_in_break+1) + ' ' + sem_name(sem['name'])
                 )
                 
             elif l_summary.startswith(sem['lname'] + ' revision period '):
