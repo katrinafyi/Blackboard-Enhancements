@@ -66,11 +66,6 @@ div.localViewToggle+div.pageTitle {
     background-image: none;
 }
 
-#puller {
-    display: none;
-}
-
-
 .global-nav-bar.logout {
     visibility: hidden;
 }
