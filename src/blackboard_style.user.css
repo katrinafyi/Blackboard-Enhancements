@@ -1,3 +1,11 @@
+/* ==UserStyle==
+@name Blackboard Stylesheet
+@author Kenton Lam
+@namespace KentonLam
+@description Makes Blackboard look less ugly.
+@version 0.1.0
+==/UserStyle== */
+
 @-moz-document url-prefix("https://learn.uq.edu.au/") {
 /*#pageBanner {
     display: none;
