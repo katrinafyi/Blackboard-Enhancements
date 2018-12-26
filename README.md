@@ -17,10 +17,21 @@ Press Ctrl+Space to open a search window for easy navigation across courses.
 5. Open the course page of each course and press Ctrl+Space.
 6. The search window should now show all your courses. Happy studying!
 
-## Blackboard Style Moderniser
+-----------------------------------
+
+## UQ Vector Logo
 Replaces the low-resolution UQ logo with its vector. 
-(Eventually, this should improve more, hence the name)
 
 ### Install
 Same as above, but install this userscript instead: 
 [blackboard_style_moderniser.user.js](https://github.com/KentonLam/Blackboard-Enhancements/raw/master/src/blackboard_style_moderniser.user.js)
+
+-----------------------------------
+
+## Blackboard Stylesheet
+Makes Blackboard look less ugly while changing as little as possible.
+
+![](https://i.imgur.com/HmoN2eY.png)
+
+### Install
+Get Stylus or equivalent. Install the stylesheet from [this link](https://github.com/KentonLam/Blackboard-Enhancements/raw/master/src/blackboard_style.user.css).
