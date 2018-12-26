@@ -1,0 +1,81 @@
+@-moz-document url-prefix("https://learn.uq.edu.au/") {
+/*#pageBanner {
+    display: none;
+}*/
+
+#quick_links_wrap, #arrowContext_1 {
+    display: none;
+}
+
+
+.localViewToggle {
+    display: none;
+}
+
+#pageTitleDiv {
+    padding-top: 20px;
+
+    border-bottom-style: solid;
+    border-bottom-color: #dedede;
+    border-top-style: solid;
+    border-top-color: #dedede;
+}
+
+div.localViewToggle+div.pageTitle {
+    box-shadow: none;
+}
+
+.pageTitle {
+    background: #eee;
+}
+
+#topTabs {
+    box-shadow: none;
+}
+
+.root.coursePath {
+    border-right-style: none;
+}
+
+
+.actionBarMicro.clearfix {
+    display: none;
+    /*background-color: #6a2885;
+    box-shadow: none;
+    background-image: none;*/
+}
+
+#courseMenu_combo {
+    display: none;
+}
+
+.navPaletteContent a.comboLink {
+    padding-right: 10px;
+    padding-bottom: 15px;
+}
+
+.navPaletteContent h3 a {
+    background-image: none;
+}
+
+#puller {
+    display: none;
+}
+
+
+.global-nav-bar.logout {
+    visibility: hidden;
+}
+
+.appTabs .active a {
+    text-shadow: none;
+}
+
+span.hideoff {
+    margin-bottom: -1px;
+}
+
+.eesy-tab2-container {
+    display: none;
+}
+}
