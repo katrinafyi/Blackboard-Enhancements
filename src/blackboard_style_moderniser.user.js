@@ -17,6 +17,7 @@
 
     let logoLink = document.querySelector('.brandingImgWrap a');
     logoLink.style.textDecoration = 'none';
+    logoLink.href = 'https://learn.uq.edu.au';
 
     let span = document.createElement('span');
     span.style.display = 'table';
