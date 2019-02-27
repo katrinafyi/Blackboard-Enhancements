@@ -3,7 +3,7 @@
 // @author      Kenton Lam
 // @description Improves some image assets on the site.
 // @match       https://learn.uq.edu.au/*
-// @version     0.1
+// @version     0.1.1
 // ==/UserScript==
 
 (function() {
