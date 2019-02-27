@@ -3,7 +3,7 @@
 // @author      Kenton Lam
 // @description Improves some image assets on the site.
 // @match       https://learn.uq.edu.au/*
-// @version     0.1.1
+// @version     0.1.2
 // ==/UserScript==
 
 (function() {
@@ -18,6 +18,7 @@
     let logoLink = document.querySelector('.brandingImgWrap a');
     logoLink.style.textDecoration = 'none';
     logoLink.href = 'https://learn.uq.edu.au';
+    logoLink.removeAttribute('target');
 
     let span = document.createElement('span');
     span.style.display = 'table';
