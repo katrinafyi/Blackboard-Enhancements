@@ -3,82 +3,86 @@
 @author Kenton Lam
 @namespace KentonLam
 @description Makes Blackboard look less ugly.
-@version 0.1.0
+@version 0.2.0
 ==/UserStyle== */
 
 @-moz-document url-prefix("https://learn.uq.edu.au/") {
-/*#pageBanner {
-    display: none;
-}*/
+    /* thanks UQ, I now hate open sans */
+    * { font-family: 'Arial', 'Helvetica', sans-serif; }
+    
+    /* vector logo */
+    .brandingImgWrap img {
+        background-image: url(https://static.uq.net.au/v3/logos/corporate/uq-logo-white.svg);
+        background-repeat: no-repeat;
+        max-width: 180px;
+        top: 19px;
+        object-position: -99999px 10px; /* hack to hide original image */
+    }
+    
+/*     bring back the purple */
+    #topTabs { background-color: #62257c}
+    
+/*     hide the tiny but useless links button */
+    #quick_links_wrap { display: none }
+/*     hide the folder and reload icon from sidebar */
+    .actionBarMicro { display: none }
+/*     hide looong course title from breadcrumbs */
+    .root.coursePath { display: none }
+    
+/*     fix ugly misaligned box when clicking links in left sidebar */
+    .listCm .courseMenu a {
+        margin: 0 4px 2px 2px; 
+        padding: 6px 6px 6px 30px;
+    }
+    
+/*     remove excessive padding from top left menu */
+    .appTabs a { padding: 8px; } 
 
-#quick_links_wrap, #arrowContext_1 {
-    display: none;
-}
+    .appTabs td { 
+        border-bottom: 3px solid #fff0; /* fix alignment of active vs inactive tabs. */
+        padding-bottom: 0px !important; /* remove excessive padding */
+    }
+    
+/*     undo excessively high sidebar */
+    .topTabs .tabWrapper-right { height: unset; }
+    
+/*     hide institution/course tabs */
+    .localViewToggle { display: none }
+    
+/*     seamlessly merge page title with content box  */
+    #pageTitleDiv {
+        margin: 6px 30px 0 30px !important;
+        padding: 15px 15px;
+        background-color: #f3f3f3 !important;
+        border: 1px solid #cdcdcd !important;
+        border-bottom: 0px !important;
+    }
+    #pageTitleText { font-weight: bold; }
+    #containerdiv { margin-top: 0 } /* remove space between title and content */
+    
+/*     why tf is there a strip of grey above the content */
+    .contentPane .shadow { border-top: 6px  solid #fff0; }
 
-
-.localViewToggle {
-    display: none;
-}
-
-#pageTitleDiv {
-    padding-top: 20px;
-
-    border-bottom-style: solid;
-    border-bottom-color: #dedede;
-    border-top-style: solid;
-    border-top-color: #dedede;
-}
-
-div.localViewToggle+div.pageTitle {
-    box-shadow: none;
-}
-
-.pageTitle {
-    background: #eee;
-}
-
-#topTabs {
-    box-shadow: none;
-}
-
-.root.coursePath {
-    border-right-style: none;
-}
-
-
-.actionBarMicro.clearfix {
-    display: none;
-    /*background-color: #6a2885;
-    box-shadow: none;
-    background-image: none;*/
-}
-
-#courseMenu_combo {
-    display: none;
-}
-
-.navPaletteContent a.comboLink {
-    padding-right: 10px;
-    padding-bottom: 15px;
-}
-
-.navPaletteContent h3 a {
-    background-image: none;
-}
-
-.global-nav-bar.logout {
-    visibility: hidden;
-}
-
-.appTabs .active a {
-    text-shadow: none;
-}
-
-span.hideoff {
-    margin-bottom: -1px;
-}
-
-.eesy-tab2-container {
-    display: none;
-}
+/*     fix breadcrumbs path */
+    .path .placeholder, .path li, .simplePath li { padding: 0 0 0 0;}
+    .path a { padding: 0 }
+    .path li:before { content: '»'; font-weight: normal; }
+    .path .placeholder { font-weight: bold; }
+    #breadcrumbs { padding-left: 19px; background-color: #f3f3f3 }
+    
+/*     hide help button in breadcrumbs */
+    #breadcrumb_controls_id { display: none }
+    
+/*     make welcome header bars and borders darker */
+    .portlet h2 { background-color: #e8e8e8; }
+    .portlet { border-color: #8a8a8a; }
+/*     hide customisation bar */
+    #actionbar { display: none}
+/*     don't expand rows when hovering */
+    .menu-item li:hover { white-space: nowrap; background: #d4d4d4; border-top: 0px; border-bottom: 1px solid white; }
+/*     vertically center semester headings */
+    .menu-item h4 { line-height: 23px; }
+    
+    nav:not([id]):not([class]) { box-shadow: none; border: 1px solid #cdcdcd}
+    
 }
