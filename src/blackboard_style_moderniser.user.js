@@ -3,7 +3,7 @@
 // @author      Kenton Lam
 // @description Improves some image assets on the site.
 // @match       https://learn.uq.edu.au/*
-// @version     0.1.3
+// @version     0.1.4
 // ==/UserScript==
 
 (function() {
@@ -22,7 +22,7 @@
     let span = document.createElement('span');
     span.style.display = 'flex';
     span.style.alignItems = 'center';
-    span.style.marginLeft = '9px';
+    span.style.marginLeft = '19px';
     span.style.marginTop = '19px';
 
     span.style.opacity = '0';
