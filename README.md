@@ -31,7 +31,7 @@ Same as above, but install this userscript instead:
 ## Blackboard Stylesheet
 Makes Blackboard look less ugly while changing as little as possible.
 
-![](https://i.imgur.com/HmoN2eY.png)
+![](https://i.imgur.com/VOVolNY.png)
 
 ### Install
 Get Stylus or equivalent. Install the stylesheet from [this link](https://github.com/KentonLam/Blackboard-Enhancements/raw/master/src/blackboard_style.user.css).
