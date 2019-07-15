@@ -3,7 +3,7 @@
 @author Kenton Lam
 @namespace KentonLam
 @description Makes Blackboard look less ugly.
-@version 0.2.0
+@version 0.2.1
 ==/UserStyle== */
 
 @-moz-document url-prefix("https://learn.uq.edu.au/") {
@@ -19,23 +19,23 @@
         object-position: -99999px 10px; /* hack to hide original image */
     }
     
-/*     bring back the purple */
+/*  bring back the purple */
     #topTabs { background-color: #62257c}
     
-/*     hide the tiny but useless links button */
+/*  hide the tiny but useless links button */
     #quick_links_wrap { display: none }
-/*     hide the folder and reload icon from sidebar */
+/*  hide the folder and reload icon from sidebar */
     .actionBarMicro { display: none }
-/*     hide looong course title from breadcrumbs */
+/*  hide looong course title from breadcrumbs */
     .root.coursePath { display: none }
     
-/*     fix ugly misaligned box when clicking links in left sidebar */
+/*  fix ugly misaligned box when clicking links in left sidebar */
     .listCm .courseMenu a {
         margin: 0 4px 2px 2px; 
         padding: 6px 6px 6px 30px;
     }
     
-/*     remove excessive padding from top left menu */
+/*  remove excessive padding from top left menu */
     .appTabs a { padding: 8px; } 
 
     .appTabs td { 
@@ -43,13 +43,13 @@
         padding-bottom: 0px !important; /* remove excessive padding */
     }
     
-/*     undo excessively high sidebar */
+/*  undo excessively high sidebar */
     .topTabs .tabWrapper-right { height: unset; }
     
-/*     hide institution/course tabs */
+/*  hide institution/course tabs on announcements */
     .localViewToggle { display: none }
     
-/*     seamlessly merge page title with content box  */
+/*  seamlessly merge page title with content box  */
     #pageTitleDiv {
         margin: 6px 30px 0 30px !important;
         padding: 15px 15px;
@@ -60,29 +60,30 @@
     #pageTitleText { font-weight: bold; }
     #containerdiv { margin-top: 0 } /* remove space between title and content */
     
-/*     why tf is there a strip of grey above the content */
+/*  why tf is there a strip of grey above the content */
     .contentPane .shadow { border-top: 6px  solid #fff0; }
 
-/*     fix breadcrumbs path */
+/*  fix breadcrumbs path */
     .path .placeholder, .path li, .simplePath li { padding: 0 0 0 0;}
     .path a { padding: 0 }
     .path li:before { content: '»'; font-weight: normal; }
     .path .placeholder { font-weight: bold; }
     #breadcrumbs { padding-left: 19px; background-color: #f3f3f3 }
     
-/*     hide help button in breadcrumbs */
+/*  hide help button in breadcrumbs */
     #breadcrumb_controls_id { display: none }
     
-/*     make welcome header bars and borders darker */
+/*  make welcome header bars and borders darker */
     .portlet h2 { background-color: #e8e8e8; }
     .portlet { border-color: #8a8a8a; }
-/*     hide customisation bar */
+/*  hide customisation bar */
     #actionbar { display: none}
-/*     don't expand rows when hovering */
+/*  don't expand course rows when hovering */
     .menu-item li:hover { white-space: nowrap; background: #d4d4d4; border-top: 0px; border-bottom: 1px solid white; }
-/*     vertically center semester headings */
+/*  vertically center semester headings */
     .menu-item h4 { line-height: 23px; }
     
-    nav:not([id]):not([class]) { box-shadow: none; border: 1px solid #cdcdcd}
+/*  darker borders for boxes in welcome page */
+    .portal nav { box-shadow: none; border: 1px solid #cdcdcd}
     
 }
