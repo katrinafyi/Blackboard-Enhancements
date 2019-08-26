@@ -3,12 +3,21 @@
 @author Kenton Lam
 @namespace KentonLam
 @description Makes Blackboard look less ugly.
-@version 0.2.1
+@version 0.3.0
 ==/UserStyle== */
 
+@import url('https://rsms.me/inter/inter.css');
+
 @-moz-document url-prefix("https://learn.uq.edu.au/") {
+    
+    a[target="_blank"]:after {
+        content: " 🔗";
+        text-decoration: none;
+/*         font-size: 70%; */
+    }
+    
     /* thanks UQ, I now hate open sans */
-    * { font-family: 'Arial', 'Helvetica', sans-serif; }
+    * { font-family: 'Inter', 'Arial', 'Helvetica', sans-serif; }
     
     /* vector logo */
     .brandingImgWrap img {
@@ -74,16 +83,37 @@
     #breadcrumb_controls_id { display: none }
     
 /*  make welcome header bars and borders darker */
-    .portlet h2 { background-color: #e8e8e8; }
-    .portlet { border-color: #8a8a8a; }
+    .portlet h2 { background-color: #f3f3f3; }
+    .portlet { border-color: #c2c2c2; }
 /*  hide customisation bar */
     #actionbar { display: none}
 /*  don't expand course rows when hovering */
-    .menu-item li:hover { white-space: nowrap; background: #d4d4d4; border-top: 0px; border-bottom: 1px solid white; }
+    .menu-item li:hover { white-space: nowrap; background: #e4e4e4; border-top: 0px; border-bottom: 1px solid white; }
+/*     .menu-item li:hover:nth-child(even) { background: #fff; } */
 /*  vertically center semester headings */
     .menu-item h4 { line-height: 23px; }
     
 /*  darker borders for boxes in welcome page */
     .portal nav { box-shadow: none; border: 1px solid #cdcdcd}
+}
+@-moz-document regexp("^https://learn\\.uq\\.edu\\.au/webapps/portal/execute/tabs/tabAction\\?.*tab_tab_group_id=_1_1.*$") {
+/*  hide unnecessary columns on front page and center remaining */
+    #column0 {
+        display: none;
+    }
+    #column2 > div:not([id="module:_1_1"]) {
+        display: none;
+    }
+    .containerPortal {
+        display: flex;
+        justify-content: center;
+    }
+    .container {
+        background: none;
+        border: none;
+    }
+    #column1 > [id="module:_2385_1"] {
+        display: none;
+    }
     
 }
