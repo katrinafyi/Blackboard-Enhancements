@@ -3,21 +3,23 @@
 @author Kenton Lam
 @namespace KentonLam
 @description Makes Blackboard look less ugly.
-@version 0.3.0
+@version 0.4.0
 ==/UserStyle== */
 
-@import url('https://rsms.me/inter/inter.css');
-
+:root {
+    --uq-purple: #62257c;
+    --uq-purple-darker: #561e6f;
+}
 @-moz-document url-prefix("https://learn.uq.edu.au/") {
     
-    a[target="_blank"]:after {
+    a[target="_blank"]:after:not([href="http://www.elearning.uq.edu.au"]) {
         content: " 🔗";
         text-decoration: none;
 /*         font-size: 70%; */
     }
     
     /* thanks UQ, I now hate open sans */
-    * { font-family: 'Inter', 'Arial', 'Helvetica', sans-serif; }
+    * { font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif; }
     
     /* vector logo */
     .brandingImgWrap img {
@@ -29,7 +31,13 @@
     }
     
 /*  bring back the purple */
-    #topTabs { background-color: #62257c}
+    #topTabs { 
+        background-color: var(--uq-purple);
+    }
+/* purple for sidebar menu */
+    #courseMenuPalette div.navPaletteContent, #courseMenuPalette_contents li {
+        background-color: var(--uq-purple-darker);
+    }
     
 /*  hide the tiny but useless links button */
     #quick_links_wrap { display: none }
