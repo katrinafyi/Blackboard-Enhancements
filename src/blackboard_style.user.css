@@ -87,7 +87,7 @@
     #breadcrumbs { padding-left: 19px; background-color: #f3f3f3 }
     
 /*  hide help button in breadcrumbs */
-    #breadcrumb_controls_id { display: none }
+    /*#breadcrumb_controls_id { display: none }*/
     
 /*  make welcome header bars and borders darker */
     .portlet h2 { background-color: #f3f3f3; }
