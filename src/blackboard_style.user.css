@@ -3,10 +3,11 @@
 @author Kenton Lam
 @namespace KentonLam
 @description Makes Blackboard look less ugly.
-@version 0.4.2
+@version 0.4.3
 ==/UserStyle== */
 @-moz-document url-prefix("https://learn.uq.edu.au/") {
     :root {
+        /* alternative grey: #333 */
         --uq-purple: #62257c;
         --uq-purple-darker: #561e6f;
     }
@@ -86,8 +87,13 @@
     .path .placeholder { font-weight: bold; }
     #breadcrumbs { padding-left: 19px; background-color: #f3f3f3 }
     
-/*  hide help button in breadcrumbs */
-    /*#breadcrumb_controls_id { display: none }*/
+/*  vertically center breadcrumbs and text */
+    #breadcrumbs {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    #breadcrumb_controls_id { order: 2 }
     
 /*  make welcome header bars and borders darker */
     .portlet h2 { background-color: #f3f3f3; }
@@ -102,6 +108,8 @@
     
 /*  darker borders for boxes in welcome page */
     .portal nav { box-shadow: none; border: 1px solid #cdcdcd}
+    
+    .navDivider { border-top: 1px solid #999; }
 }
 @-moz-document regexp("^https://learn\\.uq\\.edu\\.au/webapps/portal/execute/tabs/tabAction\\?.*tab_tab_group_id=_1_1.*$") {
 /*  hide unnecessary columns on front page and center remaining */
@@ -122,5 +130,7 @@
     #column1 > [id="module:_2385_1"] {
         display: none;
     }
-    
+    .menu-item h4 {
+        background: var(--uq-purple);
+    }
 }
