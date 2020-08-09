@@ -99,7 +99,12 @@
     .portlet h2 { background-color: #f3f3f3; }
     .portlet { border-color: #c2c2c2; }
 /*  hide customisation bar */
-    #actionbar { display: none}
+/*     #actionbar { display: none} */
+    #actionbar {
+        border: 1px solid #cdcdcd !important;
+        border-bottom-width: 0px !important;
+        margin: 0px 30px;
+    }
 /*  don't expand course rows when hovering */
     .menu-item li:hover { white-space: nowrap; background: #eee; border-top: 0px; border-bottom: 1px solid white; text-decoration: underline; }
     .menu-item li:hover:nth-child(even) { background: #fff; }
