@@ -3,7 +3,7 @@
 @author Kenton Lam
 @namespace KentonLam
 @description Makes Blackboard look less ugly.
-@version 0.4.4
+@version 0.5.0
 ==/UserStyle== */
 @-moz-document url-prefix("https://learn.uq.edu.au/") {
     :root {
@@ -37,6 +37,9 @@
 /* purple for sidebar menu */
     #courseMenuPalette div.navPaletteContent, #courseMenuPalette_contents li {
         background-color: var(--uq-purple);
+    }
+    #courseMenuPalette_paletteTitleHeading h3 {
+        background-color: inherit;
     }
     
 /*  hide the tiny but useless links button */
@@ -117,11 +120,8 @@
     .navDivider { border-top: 1px solid #999; }
 }
 @-moz-document regexp("^https://learn\\.uq\\.edu\\.au/webapps/portal/execute/tabs/tabAction\\?.*tab_tab_group_id=_1_1.*$") {
-/*  hide unnecessary columns on front page and center remaining */
+/*  hide everything in the leftmost column and center the remaining two columns */
     #column0 {
-        display: none;
-    }
-    #column2 > div:not([id="module:_1_1"]) {
         display: none;
     }
     .containerPortal {
@@ -132,10 +132,18 @@
         background: none;
         border: none;
     }
-    #column1 > [id="module:_2385_1"] {
-        display: none;
-    }
     .menu-item h4 {
         background: var(--uq-purple);
+    }
+/* hide welcome | notifications dashboard bar and edit bar */
+    .paneTabs, .actionBar {
+        display: none;
+    }
+}
+
+@-moz-document url-prefix("https://piazza.com/class/") {
+/*  hide donation banner */
+    .contributions {
+        display: none !important;
     }
 }
